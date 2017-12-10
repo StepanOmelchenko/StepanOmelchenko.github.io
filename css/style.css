@@ -112,7 +112,11 @@ body, ul{
 .main-body__logo{
     width: 901px;
     height: 300px;
-    background: url("../img/photo.jpg") center center no-repeat;
+    background: url("../img/bg/photo.jpg") center center no-repeat;
+}
+
+.main-body__img{
+    visibility: hidden;
 }
 
 .rates{
