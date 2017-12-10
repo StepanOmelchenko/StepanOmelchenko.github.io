@@ -11,8 +11,10 @@
        <div class="header">
            <div class="container">
                 <div class="header__logo">
-                    <a href="#">
-                        <img src="img/logo-header.png" alt="air planet logo">
+                    <a class="header__logo-link" href="#">
+                        <div class="main__logo-wrapper">
+                            <img class="header__logo-img" src="img/logo-header.png" alt="air planet logo">
+                        </div>
                     </a>
                 </div>
                 <div class="header__info">
@@ -28,22 +30,22 @@
                     <div class="main__sidebar">
                         <ul class="main__sidebar-menu">
                             <li class="sidebar-menu_item menu__item-aktiv">
-                                <div class="menu__img-wrapper">
-                                    <img src="img/sidebar/main-icon.png" alt="icon">
+                                <div class="menu_item-wrapper">
+                                    <img class="menu_item-img" src="img/sidebar/main-icon.png" alt="icon">
                                 </div>
-                                <a href="#">Главная</a>
+                                <a class="menu_item-link" href="#">Главная</a>
                             </li>
                             <li class="sidebar-menu_item">
-                                <div class="menu__img-wrapper">
-                                    <img src="img/sidebar/feed-icon.png" alt="icon">
+                                <div class="menu_item-wrapper">
+                                    <img class="menu_item-img" src="img/sidebar/feed-icon.png" alt="icon">
                                 </div>
-                                <a href="#">Отзывы</a>
+                                <a class="menu_item-link" href="#">Отзывы</a>
                             </li>
                             <li class="sidebar-menu_item">
-                                <div class="menu__img-wrapper">
-                                    <img src="img/sidebar/team-icon.png" alt="icon">
+                                <div class="menu_item-wrapper">
+                                    <img class="menu_item-img" src="img/sidebar/team-icon.png" alt="icon">
                                 </div>
-                                <a href="#">Экипаж</a>
+                                <a class="menu_item-link" href="#">Экипаж</a>
                             </li>    
                         </ul>
                     </div>
@@ -52,49 +54,49 @@
                             
                         </div>
                         <div class="main__body-rates">
-                            <h2>Тарифы</h2>
+                            <h2 class="body-rates_title">Тарифы</h2>
                             <ul class="rates__list">
                                 <li class="rates__item">
-                                    <div class="rates__item-logo">
-                                        <img src="img/rates/flower.png" alt="icon-flower">
+                                    <div class="rates__item-wrapper">
+                                        <img class="rates__item-img" src="img/rates/flower.png" alt="icon-flower">
                                     </div>
-                                    <h3>Стандарт</h3>
+                                    <h3 class="rates__item-title">Стандарт</h3>
                                     <div class="rates__item-info">
                                         <span class="item-info_tagline">Создан для вашего комфортного отдыха</span>
-                                        <ul class="item-info_options">
-                                            <li>Питание включено</li>
-                                            <li>Багаж (5кг)</li>
-                                            <li>Детское кресло</li>
+                                        <ul class="item-info_list">
+                                            <li class="info_list-item">Питание включено</li>
+                                            <li class="info_list-item">Багаж (5кг)</li>
+                                            <li class="info_list-item">Детское кресло</li>
                                         </ul>    
                                     </div>
                                     <span class="rates__item-price">$19</span>
                                 </li>
                                 <li class="rates__item">
-                                    <div class="rates__item-logo">
-                                        <img src="img/rates/mark-as-favorite-star.png" alt="icon-star">
+                                    <div class="rates__item-wrapper">
+                                        <img class="rates__item-img" src="img/rates/mark-as-favorite-star.png" alt="icon-star">
                                     </div>
-                                    <h3>Премиум</h3>
+                                    <h3 class="rates__item-title">Премиум</h3>
                                     <div class="rates__item-info">
                                         <span class="item-info_tagline">Для любителей хороших впечатлений</span>
-                                        <ul class="item-info_options">
-                                            <li>Питание включено</li>
-                                            <li>Багаж (5кг)</li>
-                                            <li>Детское кресло</li>
+                                        <ul class="item-info_list">
+                                            <li class="info_list-item">Питание включено</li>
+                                            <li class="info_list-item">Багаж (5кг)</li>
+                                            <li class="info_list-item">Детское кресло</li>
                                         </ul>
                                     </div>
                                     <span class="rates__item-price">$39</span>
                                 </li>
                                 <li class="rates__item">
-                                    <div class="rates__item-logo">
-                                        <img src="img/rates/painter-palette.png" alt="icon-palette">
+                                    <div class="rates__item-wrapper">
+                                        <img class="rates__item-img" src="img/rates/painter-palette.png" alt="icon-palette">
                                     </div>
-                                    <h3>Лакшери</h3>
+                                    <h3 class="rates__item-title">Лакшери</h3>
                                     <div class="rates__item-info">
                                         <span class="item-info_tagline">Всё самое лучшее и незабываемое</span>
-                                        <ul class="item-info_options">
-                                            <li>Питание включено</li>
-                                            <li>Багаж (5кг)</li>
-                                            <li>Детское кресло</li>
+                                        <ul class="item-info_list">
+                                            <li class="info_list-item">Питание включено</li>
+                                            <li class="info_list-item">Багаж (5кг)</li>
+                                            <li class="info_list-item">Детское кресло</li>
                                         </ul>    
                                     </div>
                                     <span class="rates__item-price">$99</span>
@@ -102,15 +104,17 @@
                             </ul>
                         </div>
                         <div class="main__body-news">
-                            <h2>Последние новости</h2>
+                            <h2 class="news-title">Последние новости</h2>
                             <ul class="news">
                                 <li class="news__item">
                                     <div class="news__item-container">
-                                        <img src="img/news/planeflying.jpg" alt="news-picture-plane">
+                                        <div class="news__item-wrapper">
+                                            <img class="news__item-img" src="img/news/planeflying.jpg" alt="news-picture-plane">
+                                        </div>
                                         <div class="news__item-info">
                                             <div class="item-info_data">10.12.2016</div>
                                             <div class="item-info_header">Ночные перелёты дешевле!</div>
-                                            <p>Ужасный полет, трясло первые полчаса так,
+                                            <p class="item-info_text">Ужасный полет, трясло первые полчаса так,
                                                 что я боялась отстегнуть ремни. Слава Богу,
                                                 ничего не случилось, но мне даже валерьянка не помогла,
                                                 так страшно было. Не рекомендую эту компанию, лучше доплатить и лететь с комфортом.
@@ -120,11 +124,13 @@
                                 </li>
                                 <li class="news__item">
                                     <div class="news__item-container">
-                                        <img src="img/news/photo.jpg" alt="news-picture-phota">
+                                        <div class="news__item-wrapper">
+                                            <img class="news__item-img" src="img/news/photo.jpg" alt="news-picture-phota">
+                                        </div>
                                         <div class="news__item-info">
                                             <div class="item-info_data">01.02.2016</div>
                                             <div class="item-info_header">Путешествие в Грузию стало доступнее</div>
-                                            <p>Все понравилось, вежливые стюардессы, вовремя убирают,
+                                            <p class="item-info_text">Все понравилось, вежливые стюардессы, вовремя убирают,
                                                 напитки предлагали 2 раза, а еду – 1 раз. Единственное,
                                                 что не понравилось, как то мало места для ног, но с этим у меня часто проблема, рост 2,1м.
                                             </p>
@@ -133,11 +139,13 @@
                                 </li>
                                 <li class="news__item">
                                     <div class="news__item-container">
-                                        <img src="img/news/child.jpg" alt="news-picture-child">
+                                        <div class="news__item-wrapper">
+                                            <img class="news__item-img" src="img/news/child.jpg" alt="news-picture-child">
+                                        </div>
                                         <div class="news__item-info">
                                             <div class="item-info_data">22.12.2015</div>
                                             <div class="item-info_header">Детские авиабилеты доступны для бизнес-класса</div>
-                                            <p>Не кормили вообще! Сказали, что это из-за того, что полет менее 2,5 часов.
+                                            <p class="item-info_text">Не кормили вообще! Сказали, что это из-за того, что полет менее 2,5 часов.
                                                 Но прибавьте к этому время регистрации в аэропорту. Летел с женой и мы очень проголодались.
                                                 Просто имейте это ввиду, берите с собой хотя бы бутерброды, чипсы какие-то или печенье.
                                             </p>
@@ -149,31 +157,31 @@
                                 <span>Страница 1 из 7</span>
                                 <ul class="news-pagination_list">
                                     <li class="pagination_list-item">
-                                        <a href="#">&lt;</a>
+                                        <a class="pagination_list-link" href="#">&lt;</a>
                                     </li>
                                     <li class="pagination_list-item list-item_active">
-                                        <a href="#">1</a>
+                                        <a class="pagination_list-link" href="#">1</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">2</a>
+                                        <a class="pagination_list-link" href="#">2</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">3</a>
+                                        <a class="pagination_list-link" href="#">3</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">4</a>
+                                        <a class="pagination_list-link" href="#">4</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">5</a>
+                                        <a class="pagination_list-link" href="#">5</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">6</a>
+                                        <a class="pagination_list-link" href="#">6</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">7</a>
+                                        <a class="pagination_list-link" href="#">7</a>
                                     </li>
                                     <li class="pagination_list-item">
-                                        <a href="#">&gt;</a>
+                                        <a class="pagination_list-link" href="#">&gt;</a>
                                     </li>
                                 </ul>
                             </div>
@@ -190,43 +198,45 @@
                     <div>Автор работы: <span class="footer__signature-bold">Омельченко Степан</span></div>
                 </div>
                 <div class="footer__logo">
-                    <a href="#">
-                        <img src="img/logo-header.png" alt="air planet logo">    
+                    <a class="footer__logo-link" href="#">
+                        <div class="main__logo-wrapper">
+                            <img class="footer__logo-img" src="img/logo-header.png" alt="air planet logo">    
+                        </div>
                     </a>
                 </div>
                 <div class="footer__social">
                     <span class="footer__social-title">Наши социальные сети</span>
                     <ul class="social-list">
                         <li class="social-list_item">
-                            <a href="#">
+                            <a class="social-list_link" href="#">
                                 <div class="list_item-wrapper">
                                     <img class="list_item-icon" src="img/social/vk.png" alt="icon-vk">
                                 </div>
                             </a>
                         </li>
                         <li class="social-list_item">
-                            <a href="#">
+                            <a class="social-list_link" href="#">
                                 <div class="list_item-wrapper">
                                     <img class="list_item-icon" src="img/social/fb.png" alt="icon-fb">
                                 </div>
                             </a>
                         </li>
                         <li class="social-list_item">
-                            <a href="#">
+                            <a class="social-list_link" href="#">
                                 <div class="list_item-wrapper">
                                     <img class="list_item-icon" src="img/social/google.png" alt="icon-google">
                                 </div>
                             </a>
                         </li>
                         <li class="social-list_item">
-                             <a href="#">
+                             <a class="social-list_link" href="#">
                                 <div class="list_item-wrapper">
                                    <img class="list_item-icon" src="img/social/twitter.png" alt="icon-twitter">
                                  </div>
                             </a>
                         </li>
                         <li class="social-list_item">
-                            <a href="#">
+                            <a class="social-list_link" href="#">
                                 <div class="list_item-wrapper">
                                     <img class="list_item-icon" src="img/social/mail.png" alt="icon-mail">
                                 </div>
