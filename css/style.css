@@ -56,12 +56,15 @@ body, ul{
 .header-info{
     margin: 20px 20px 0 0;
     float: right;
+    text-align: right;
 }
 
 .header-info__phone{
     color: #e7ecf5;
     font-size: 21px;
     font-family: 'robotobold';
+    display: block;
+    text-decoration: none;
 }
 
 .header-info__schedule{
@@ -182,6 +185,7 @@ body, ul{
     list-style-type: disc;
     color: #221f1f;
     font-size: 18px;
+    text-align: left;
 }
 
 .rates-list__option{
@@ -213,7 +217,7 @@ body, ul{
     list-style-type: none;
 }
 
-.news-list__container{
+.news-list__item{
     border-bottom: solid 1px #f5f5f5;
 }
 
@@ -271,8 +275,9 @@ body, ul{
     color: #ffffff;
 }
 
-.footer-signature__bold{
+.footer-signature__link{
     font-family: 'robotobold';
+    color: #ffffff;
 }
 
 .footer-logo{
