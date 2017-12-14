@@ -25,13 +25,29 @@
 
 }
 
-body{
-    font-family: 'robotolight';
+@font-face {
+    font-family: 'robotoregular';
+    src: url('roboto-regular-webfont.woff2') format('woff2'),
+         url('roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
-body, ul{
+body{
+    font-family: 'robotolight';
+    background-color: #ffffff;
+}
+
+ul{
     margin: 0;
     padding: 0; 
+}
+
+.wrapper{
+    overflow: hiden;
+    min-width: 1140px;
+    min-height: 100%;
 }
 
 .container{
@@ -39,9 +55,14 @@ body, ul{
     margin: 0 auto;
 }
 
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .header{
     background-color: #4b73b5;
-    height: 77px;
 }
 
 .header-logo{
@@ -193,9 +214,9 @@ body, ul{
 }
 
 .rates-list__price{
+    font-family: robotoregular;
     font-size: 54px;
     color: #212121;
-    font-weight: 400;
     letter-spacing: -1.07px;
     margin-top: 35px;
     display: inline-block;
@@ -266,7 +287,9 @@ body, ul{
 
 .footer{
     background-color: #4b73b5;
+    height: 75px;
     clear: both;
+    min-width: 1140px;
 }
 
 .footer-signature{
