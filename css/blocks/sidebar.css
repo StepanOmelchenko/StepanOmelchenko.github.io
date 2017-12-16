@@ -1,0 +1,39 @@
+.sidebar{
+    float: left;
+    margin-top: 45px;
+    margin-left: 20px;
+}
+
+.menu__list{
+    list-style-type: none;
+}
+
+.menu__wrapper{
+    width: 23px;
+    height: 18px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.menu__item{
+    margin-bottom: 30px;
+}
+
+.menu__link{
+    font-size: 12px;
+    font-family: 'robotobold';
+    text-decoration: none;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #4b73b5;
+    display: inline-block;
+}
+
+.menu__item--aсtive a{
+    color: #221f1f;
+}
+
+.menu__title{    
+    display: inline-block;
+}

@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Airplanet</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
    <div class="wrapper">
-       <div class="header">
+       <header class="header">
            <div class="container clearfix">
                 <div class="header-logo">
                     <a class="header-logo__link" href="#">
@@ -22,39 +21,41 @@
                     <div class="header-info__schedule">График работы</div>
                 </div>
             </div>
-       </div>
+        </header>
 
-       <div class="main">
+       <div class="maincontent">
            <div class="container clearfix">
-                <div class="sidebar">
-                    <ul class="sidebar-menu">
-                        <li class="sidebar-menu__item sidebar-menu__item--aсtiv">
-                            <a class="sidebar-menu__link" href="#">
-                                <div class="sidebar-menu__wrapper">
-                                    <img class="sidebar-menu__img" src="img/icons/main-icon.png" alt="icon">
-                                </div>
-                                <span class="sidebar-menu__title">Главная</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu__item">
-                            <a class="sidebar-menu__link" href="#">
-                                <div class="sidebar-menu__wrapper">
-                                    <img class="sidebar-menu__img" src="img/icons/feed-icon.png" alt="icon">
-                                </div>
-                                <span class="sidebar-menu__title">Отзывы</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-menu__item">
-                            <a class="sidebar-menu__link" href="#">
-                                <div class="sidebar-menu__wrapper">
-                                    <img class="sidebar-menu__img" src="img/icons/team-icon.png" alt="icon">
-                                </div>
-                                <span class="sidebar-menu__title">Экипаж</span>
-                            </a>
-                        </li>    
-                    </ul>
-                </div>
-                <div class="main-body">
+                <aside class="sidebar">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--aсtive">
+                                <a class="menu__link" href="#">
+                                    <div class="menu__wrapper">
+                                        <img class="menu__img" src="img/icons/main-icon.png" alt="icon">
+                                    </div>
+                                    <div class="menu__title">Главная</div>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <div class="menu__wrapper">
+                                        <img class="menu__img" src="img/icons/feed-icon.png" alt="icon">
+                                    </div>
+                                    <div class="menu__title">Отзывы</div>
+                                </a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#">
+                                    <div class="menu__wrapper">
+                                        <img class="menu__img" src="img/icons/team-icon.png" alt="icon">
+                                    </div>
+                                    <div class="menu__title">Экипаж</div>
+                                </a>
+                            </li>    
+                        </ul>
+                    </nav>
+                </aside>
+                <main class="main">
                     <div class="main-body__logo">
                         <img class="main-body__img" src="img/bg/photo.jpg" alt="airplane picture">    
                     </div>
@@ -181,10 +182,9 @@
                             <a class="pagination__btn-next" href="#">></a>
                           </div>
                     </div>
-                </div>
+                </main>
             </div>
        </div>
-  
    </div>   
 
    <div class="footer">
