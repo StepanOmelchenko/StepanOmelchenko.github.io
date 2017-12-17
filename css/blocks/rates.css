@@ -1,0 +1,88 @@
+.rates{
+    margin-bottom: 85px;
+}
+
+.rates-title{
+    color: #221f1f;
+    font-family: 'robotobold';
+    font-size: 49px;
+    margin: 5px 0 30px -5px;
+}
+
+.rates-list{
+    list-style-type: none;
+}
+
+.rates-list__item{
+    display: inline-block;
+    width: 250px;
+    margin-top: 40px;
+    text-align: center;
+    margin-right: 14px;
+}
+
+.rates-list__item--active{
+    border: solid 1px #f5f5f5;
+}
+
+.rates-list__title{
+    font-family: 'robotobold';
+    color: #212121;
+    font-size: 11px;
+    letter-spacing: 2.88px;
+    text-transform: uppercase;
+    margin: 33px 0 18px 4px;
+}
+
+.rates-list__wrapper{    
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #4b73b5;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.rates-list__tagline{
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.rates-list__img{
+    margin-top: 19px;
+}
+
+.rates-list__info{
+    color: #221f1f;
+    display: inline-block;
+    width: 188px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.rates-list__options{
+    list-style-type: disc;
+    color: #221f1f;
+    font-size: 18px;
+    text-align: center;
+    margin-left: 16px;
+}
+
+.rates-list__option{
+    margin-bottom: 14px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.rates-list__price{
+    font-family: robotoregular;
+    font-size: 54px;
+    color: #212121;
+    letter-spacing: -1.07px;
+    margin-top: 12px;
+    display: inline-block;
+}
+
+.rates-list__price::first-letter{
+    font-size: 34px;
+}
