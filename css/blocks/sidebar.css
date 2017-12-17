@@ -30,7 +30,7 @@
     display: inline-block;
 }
 
-.menu__item--aсtive a{
+.menu__link:hover{
     color: #221f1f;
 }
 

@@ -1,11 +1,11 @@
 .pagination{
-    text-align: center;
     margin-bottom: 50px;
 }
   
 .pagination__title{
     display: inline-block;
-    margin-right: 25px;
+    margin-right: 5px;
+    margin-left: 270px;
     font-size: 14px;
     color: #656464;
 }
@@ -13,6 +13,7 @@
 .pagination__list{
     list-style: none;
     display: inline-block;
+    text-align: center;
 }
   
 .pagination__item{
