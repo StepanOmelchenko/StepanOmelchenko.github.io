@@ -9,25 +9,3 @@
 @import url(./blocks/common-list.css);
 @import url(./blocks/pagination.css);
 @import url(./blocks/footer.css);
-
-
-
-.main{
-    float: right;
-}
-
-.main__logo{
-    margin-top: 12px;
-    background: url("../img/bg/photo.jpg") center center no-repeat;
-}
-
-.main__img{
-    visibility: hidden;
-}
-
-.news-title{
-    font-family: 'robotobold';
-    color: #221f1f;
-    font-size: 49px;
-}
-
