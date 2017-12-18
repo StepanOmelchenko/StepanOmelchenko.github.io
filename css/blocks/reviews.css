@@ -20,15 +20,15 @@
     background-repeat: no-repeat;
     background-color: green;
     color: #ffffff;
-    text-align: center;
     box-sizing: border-box;
-    padding-top: 48px;
+    padding-top: 40px;
     margin-bottom: 53px;
 }
 
 .green-block__wrapper{
     display: inline-block;
     max-width: 620px;
+    margin-left: 230px;
 }
 
 .green-block__text{

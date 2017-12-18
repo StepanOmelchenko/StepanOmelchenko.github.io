@@ -12,9 +12,15 @@
     font-size: 14px;
 }
 
+.form__row,
+.form__buttons{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .form__inner{
     margin-left: 24px;
-    max-width: 557px;
 }
 
 .form__title{
@@ -24,21 +30,11 @@
     margin-bottom: 17px;
 }
 
-.form__input-title{
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.form__input-elem{
-    width: 48%;
-}
-
-.form__elem--right{
-    float: right;
-}
-
-.form__elem--left{
+.form__lable{
+    display: block;
     float: left;
+    width: 270px;
+    margin-right: 23px;
 }
 
 .form__row{
@@ -47,31 +43,52 @@
 }
 
 .form__input{
+    margin-top: 7px;
     width: 100%;
     height: 42px;
     box-sizing: border-box;
     padding-left: 5px;
+    border-radius: 5px;
     border: none;
+    display: block;
+    opacity: .5;
+}
+
+.form__input-text{
+    margin-top: 21px;
 }
 
 .form__text{
-    margin-top: 1px;
+    display: block;
+}
+
+.form__textarea{
+    margin-top: 5px;
     min-width: 560px;
     min-height: 88px;
-    border: 1px #1c5bc3 solid;
     resize: none;
     box-sizing: border-box;
     padding: 7px;
     overflow-y: hidden;
+    outline: none;
+}
+
+.form__input:focus,
+.form__textarea:focus{
+    outline: none;
+    border: 1px #1c5bc3 solid;
 }
 
 .form__buttons{
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
-.form__controls,
-.form__submit{
-    display: inline-block;
+.form__controls{
+    float: left;
+}
+
+.form__controls-question{
+    margin-bottom: 10px;
 }
 
 .form__controls-btns{
@@ -79,12 +96,22 @@
 }
 
 .form__controls-radio{
-    margin-right: 20px;
+    float: left;
+    margin-right: 25px;
 }
 
+.form__radio{
+    display: inline-block;
+    margin-right: 3px;
+}
+
+.form__controls-title{
+    display: inline-block;
+}
 
 .form__submit{
-    margin-top: 5px;
+    float: left;
+    margin-left: 223px;
     background-color: #4b73b5;
     font-size: 12px;
     font-family: "robotobold";
@@ -108,8 +135,8 @@
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    right: 10px;
-    top: -3px;
+    right: 5px;
+    top: 0;
     width: 23px;
     height: 18px;
 }
