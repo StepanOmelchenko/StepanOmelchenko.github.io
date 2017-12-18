@@ -1,0 +1,23 @@
+.breadcrumbs{
+  font-family: robotolight_italic;
+  font-size: 14px;
+  margin-top: 44px;
+  margin-right: 4px;
+}
+
+.breadcrumbs__item{
+    display: inline-block;
+  }
+  
+  .breadcrumbs__item:after{
+    content: "/"
+  }
+  
+  .breadcrumbs__item:last-child:after{
+    display: none;
+  }
+  
+  .breadcrumbs__link--active{
+    text-decoration: none;
+    color: #221f1f;
+  }

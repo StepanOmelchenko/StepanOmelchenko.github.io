@@ -1,6 +1,12 @@
 .pagination{
     margin-bottom: 59px;
 }
+
+.pagination-reviews{
+    position: relative;
+    top: -9px;
+    margin-bottom: 45px;
+}
   
 .pagination__title{
     display: inline-block;
@@ -8,6 +14,10 @@
     margin-left: 270px;
     font-size: 14px;
     color: #656464;
+}
+
+.pagination__title--reviews{
+    margin-left: 220px;
 }
   
 .pagination__list{
