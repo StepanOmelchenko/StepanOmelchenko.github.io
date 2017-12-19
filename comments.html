@@ -155,24 +155,24 @@
                   </div>
                 </div>
                 <section class="form-wrapper">
-                  <form class="form">
+                  <form class="form" action="post">
                     <div class="form__inner">
                       <h2 class="form__title">Оставить отзыв</h2>
                       <fieldset class="form__row clearfix">
-                        <lable class="form__lable" for="form-name">
+                        <label class="form__lable" for="firstname">
                           Ваше имя
-                          <input class="form__input" name="name" type="text" placeholder="Андрей">
-                        </lable>
-                        <lable class="form__lable" for="form-social">
+                          <input class="form__input" name="firstname" type="text" id="firstname" placeholder="Андрей">
+                        </label>
+                        <label class="form__lable" for="social-link">
                           Ссылка на профиль VK
-                          <input class="form__input" name="social-link" type="text" placeholder=" vk.com/example">
-                        </lable>
+                          <input class="form__input" name="social-link" type="text" id="social-link" placeholder=" vk.com/example">
+                        </label>
                       </fieldset>
                       <div class="form__input-text">
-                        <lable class="form__text" for="form-text">
+                        <label class="form__text" for="form-text">
                           Текст отзыва
-                          <textarea class="form__textarea" name="text" placeholder="Мне понравилось"></textarea>
-                        </lable>
+                          <textarea class="form__textarea" name="form-text" id="form-text" placeholder="Мне понравилось"></textarea>
+                        </label>
                       </div>
                       <fieldset class="form__buttons clearfix">
                         <div class="form__controls">

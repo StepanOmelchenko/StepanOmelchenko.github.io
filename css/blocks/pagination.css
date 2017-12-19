@@ -5,7 +5,7 @@
 .pagination-reviews{
     position: relative;
     top: -9px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
 }
   
 .pagination__title{
@@ -54,6 +54,12 @@
 }
   
 .pagination__link--active{
+    color: #ffffff;
+    background-color: #4b73b5;
+    pointer-events: none;
+}
+
+.pagination__link:hover{
     color: #ffffff;
     background-color: #4b73b5;
 }

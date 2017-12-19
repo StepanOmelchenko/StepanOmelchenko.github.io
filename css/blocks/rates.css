@@ -23,7 +23,7 @@
     margin-right: 14px;
 }
 
-.rates-list__item--active{
+.rates-list__item:hover{
     border: solid 1px #f5f5f5;
 }
 

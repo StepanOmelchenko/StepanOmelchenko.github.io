@@ -31,7 +31,6 @@
 }
 
 .form__lable{
-    display: block;
     float: left;
     width: 270px;
     margin-right: 23px;
@@ -110,8 +109,8 @@
 }
 
 .form__submit{
-    float: left;
-    margin-left: 223px;
+    float: right;
+    margin-right: 31px;
     background-color: #4b73b5;
     font-size: 12px;
     font-family: "robotobold";
@@ -119,6 +118,10 @@
     height: 47px;
     border-radius: 7%;
     color: #ffffff;
+    line-height: 47px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .form__submit-text{
