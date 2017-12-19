@@ -21,6 +21,7 @@
     padding-top: 40px;
     text-align: center;
     margin-right: 14px;
+    box-sizing: border-box;
 }
 
 .rates-list__item:hover{

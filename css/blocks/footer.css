@@ -52,17 +52,47 @@
 .footer-social__link{
     text-decoration: none;
     display: inline-block;
-}
-
-.footer-social__wrapper{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #ffffff;
-    text-align: center;
+    background-color: #d2def3;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
-.footer-social__icon{
-    margin-top: 3px;
+.footer-social__link:hover{
+    background-color: #ffffff;
+}
+
+.footer-social__vk{
+    background-image: url("../../img/icons/vk.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-social__fb{
+    background-image: url("../../img/icons/fb.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.footer-social__google{
+    background-image: url("../../img/icons/google.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.footer-social__twitter{
+    background-image: url("../../img/icons/twitter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.footer-social__mail{
+    background-image: url("../../img/icons/mail.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
