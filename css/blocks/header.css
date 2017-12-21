@@ -16,6 +16,7 @@
     margin: 16px 21px 0 0;
     float: right;
     text-align: right;
+    position: relative;
 }
 
 .header-info__phone{
@@ -32,4 +33,56 @@
     font-size: 14px;
     font-family: 'robotobold', arial, sans-serif;
     text-decoration: underline;
+    cursor: pointer;
+}
+
+.header-info__schedule:hover + .header-info__dropdown{
+    display: block;
+}
+
+.header-info__dropdown{
+    display: none;
+    position: absolute;
+    width: 175px;
+    height: 75px;
+    background-color: #fff;
+    left: 0;
+    top: 140%;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px;
+}
+
+.header-info__dropdown:before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 80%;
+    top: -10px;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+}
+
+.header-info__dropdown-inner{
+    display: inline-block;
+    position: absolute;
+    width: 125px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+}
+
+.header-info__dropdown-time{
+    font-family: "robotobold", arial, sans-serif;
+    color: #1c5bc3;
+}
+
+.header-info__dropdown-lunch{
+    color: #221f1f;
 }
