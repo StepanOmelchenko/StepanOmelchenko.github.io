@@ -1,5 +1,5 @@
 body{
-    font-family: 'robotolight';
+    font-family: 'robotolight', arial, sans-serif;
     background-color: #ffffff;
 }
 
@@ -45,7 +45,7 @@ ul, h2, p{
 }
 
 .news-title{
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     color: #221f1f;
     font-size: 49px;
 }

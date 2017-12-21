@@ -28,7 +28,7 @@
 .menu__link{
     vertical-align: middle;
     font-size: 12px;
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     text-decoration: none;
     letter-spacing: 2.4px;
     text-transform: uppercase;

@@ -24,7 +24,7 @@
 }
 
 .form__title{
-    font-family: "robotobold";
+    font-family: "robotobold", arial, sans-serif;
     font-size: 49px;
     color: #221f1f;
     margin-bottom: 17px;
@@ -142,7 +142,7 @@
     margin-right: 31px;
     background-color: #4b73b5;
     font-size: 12px;
-    font-family: "robotobold";
+    font-family: "robotobold", arial, sans-serif;
     width: 155px;
     height: 47px;
     border: 1px solid #4b73b5;

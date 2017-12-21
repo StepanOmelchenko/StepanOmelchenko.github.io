@@ -21,7 +21,7 @@
 .header-info__phone{
     color: #e7ecf5;
     font-size: 21px;
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     display: block;
     text-decoration: none;
 }
@@ -30,6 +30,6 @@
     margin: 3px 1px 0 0;
     color: #bfcde4;
     font-size: 14px;
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     text-decoration: underline;
 }

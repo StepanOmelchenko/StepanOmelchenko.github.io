@@ -56,7 +56,7 @@
 }
 
 .common-list__header{
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     margin-bottom: 12px;
 }
 

@@ -19,7 +19,7 @@
 }
 
 .footer-signature__link{
-    font-family: 'robotobold';
+    font-family: 'robotobold', arial, sans-serif;
     color: #ffffff;
 }
 
@@ -36,7 +36,7 @@
 .footer-social__title{
     font-size: 14px;
     color: #ffffff;
-    font-family: 'robotobold'
+    font-family: 'robotobold', arial, sans-serif;
 }
 
 .footer-social__list{
