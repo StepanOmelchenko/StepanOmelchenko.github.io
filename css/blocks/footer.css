@@ -2,6 +2,7 @@
     background-color: #4b73b5;
     min-width: 1140px;
     margin-top: -75px;
+    height: 75px;
 }
 
 .footer__left,
@@ -65,34 +66,39 @@
 }
 
 .footer-social__vk{
-    background-image: url("../../img/icons/vk.png");
+    background-image: url("../../img/icons/icons-sprite.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-position: -7px -247px;
 }
 
 .footer-social__fb{
-    background-image: url("../../img/icons/fb.png");
+    background-image: url("../../img/icons/icons-sprite.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-position: -3px -286px;
 }
 
 
 .footer-social__google{
-    background-image: url("../../img/icons/google.png");
+    background-image: url("../../img/icons/icons-sprite.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-position: -7px -210px;
 }
 
 
 .footer-social__twitter{
-    background-image: url("../../img/icons/twitter.png");
+    background-image: url("../../img/icons/icons-sprite.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-position: -6px -266px;
 }
 
 
 .footer-social__mail{
-    background-image: url("../../img/icons/mail.png");
+    background-image: url("../../img/icons/icons-sprite.png");
     background-position: center;
     background-repeat: no-repeat;
+    background-position: -6px -230px;
 }
