@@ -1,0 +1,27 @@
+.team{
+    float: left;
+    margin-left: 70px;
+}
+
+.team__title{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.team__list{
+    max-width: 840px;
+}
+
+.team__item{
+    display: inline-block;
+    width: 260px;
+}
+
+.team__photo{
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+

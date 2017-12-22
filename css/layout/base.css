@@ -6,8 +6,6 @@ body{
 body, html{
     width: 100%;
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 ul, h2, p{
@@ -16,17 +14,15 @@ ul, h2, p{
 }
 
 .wrapper{
-    position: relative;
     overflow: hidden;
     min-width: 1140px;
     min-height: 100%;
-    height: auto!important;
 }
 
 .wrapper:after{
     content: "";
     display: block;
-    height: 75px;
+    padding-bottom: 80px;
 }
 
 .container{
@@ -53,7 +49,7 @@ ul, h2, p{
     visibility: hidden;
 }
 
-.news-title{
+.main-title{
     font-family: 'robotobold', arial, sans-serif;
     color: #221f1f;
     font-size: 49px;
