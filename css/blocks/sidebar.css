@@ -4,6 +4,10 @@
     margin-left: 20px;
 }
 
+.menu{
+    margin-bottom: 30px;
+}
+
 .menu__list{
     list-style-type: none;
 }
@@ -101,4 +105,42 @@
 
 .menu__title{    
     display: inline-block;
+}
+
+.adv{
+    max-width: 150px;
+}
+
+.adv__title{
+    font-family: 'robotobold', arial, sans-serif;
+    font-size: 12px;
+    color: #221f1f;
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+}
+
+.adv__list{
+    list-style: none;
+}
+
+.adv__item{
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.adv__link{
+    display: block;
+    text-decoration: none;
+}
+
+.adv__img{
+    visibility: hidden;
+}
+
+.adv__item--afrodita{
+    background-image: url("../../img/adv/afrodita.jpg");
+}
+
+.adv__item--coworking{
+    background-image: url("../../img/adv/coworking.jpg");
 }

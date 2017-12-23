@@ -1,22 +1,25 @@
 .team{
-    float: left;
-    margin-left: 70px;
+    float: right;
 }
 
 .team__title{
-    margin-bottom: 30px;
-    margin-top: 20px;
+    margin-bottom: 37px;
+    margin-top: 17px;
 }
 
 .team__list{
-    max-width: 840px;
+    max-width: 890px;
+    margin-left: 13px;
     list-style: none;
 }
 
 .team__item{
     display: inline-block;
     width: 260px;
+    margin-right: 34px;
+    margin-bottom: 43px;
     text-align: center;
+    vertical-align: top;
 }
 
 .team__photo{
@@ -25,7 +28,7 @@
     height: 163px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     background-position: center;
     background-repeat: no-repeat;
     color: #ffffff;
@@ -55,6 +58,26 @@
     background-image: url("../../img/photos/team/alex.jpg");
 }
 
+.team__photo-boris{
+    background-image: url("../../img/photos/team/boris.jpg");
+}
+
+.team__photo-elena{
+    background-image: url("../../img/photos/team/elena.jpg");
+}
+
+.team__photo-elina{
+    background-image: url("../../img/photos/team/elina.jpg");
+}
+
+.team__photo-inna{
+    background-image: url("../../img/photos/team/inna.jpg");
+}
+
+.team__photo-yrii{
+    background-image: url("../../img/photos/team/yrii.jpg");
+}
+
 .team__fullname{
     display: inline-block;
     color: #221f1f;
@@ -65,12 +88,15 @@
 .team__position{
     display: inline-block;
     color: #4b73b5;
+    font-size: 14px;
     font-family: "robotobold", arial, sans-serif;
+    margin-bottom: 8px;
 }
 
 .team__about{
     display: inline-block;
-    max-width: 256px;
+    max-width: 260px;
     line-height: 21px;
+    font-size: 14px;
 }
 

@@ -1,6 +1,6 @@
 .main-reviews{
-    float: left;
-    margin-left: 73px;
+    float: right;
+    margin-right: 27px;
     margin-bottom: 10px;
 }
 
@@ -13,29 +13,20 @@
 
 .green-block{
     width: 1100px;
-    height: 173px;
-    position: relative;
     overflow: hidden;
     background: url("../../img/bg/green-logo.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-color: green;
     color: #ffffff;
     box-sizing: border-box;
     text-align: center;
     margin-bottom: 57px;
+    padding: 40px 0 40px 0;
 }
 
 .green-block__wrapper{
     display: inline-block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
     max-width: 620px;
-    max-height: 80px;
 }
 
 .green-block__text{

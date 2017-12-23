@@ -1,10 +1,10 @@
 .header{
     background-color: #4b73b5;
-    padding-bottom: 16px;
+    padding: 18px 0 16px 0;
 }
 
 .header-logo{
-    margin: 20px 0 0 20px;
+    margin-left: 20px;
     float: left;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .header-info{
-    margin: 16px 21px 0 0;
+    margin-right: 21px;
     float: right;
     text-align: right;
     position: relative;

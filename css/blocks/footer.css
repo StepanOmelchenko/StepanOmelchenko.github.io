@@ -28,6 +28,10 @@
     margin: 20px 0 14px 123px;
 }
 
+.footer-logo__link{
+    display: inline-block;
+}
+
 .footer-social{
     display: inline-block;
     margin: 16px 0 10px 191px;
