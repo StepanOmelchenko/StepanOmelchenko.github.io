@@ -10,18 +10,67 @@
 
 .team__list{
     max-width: 840px;
+    list-style: none;
 }
 
 .team__item{
     display: inline-block;
     width: 260px;
+    text-align: center;
 }
 
 .team__photo{
+    position: relative;
     width: 163px;
     height: 163px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    font-size: 24px;
+    font-family: "robotobold", arial, sans-serif;
+}
+
+.team__photo-img{
+    visibility: hidden;
+    position: absolute;
+}
+
+.team__photo-name{
+    position: absolute;
+    display: inline-block;
+    width: 100px;
+    height: 20px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.team__photo-alex{
+    background-image: url("../../img/photos/team/alex.jpg");
+}
+
+.team__fullname{
+    display: inline-block;
+    color: #221f1f;
+    font-size: 18px;
+    font-family: "robotobold", arial, sans-serif;
+}
+
+.team__position{
+    display: inline-block;
+    color: #4b73b5;
+    font-family: "robotobold", arial, sans-serif;
+}
+
+.team__about{
+    display: inline-block;
+    max-width: 256px;
+    line-height: 21px;
 }
 
