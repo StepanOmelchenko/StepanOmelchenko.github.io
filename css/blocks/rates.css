@@ -36,18 +36,28 @@
     width: 68px;
     height: 68px;
     border-radius: 50%;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-color: #4b73b5;
+    background-repeat: no-repeat;
     text-align: center;
     margin: 0 auto;
+}
+
+.rates-list__wrapper--flower{
+    background-position: -66px -441px;
+}
+
+.rates-list__wrapper--star{
+    background-position: -103px -341px;
+}
+
+.rates-list__wrapper--palette{
+    background-position: -102px -390px;
 }
 
 .rates-list__tagline{
     line-height: 30px;
     margin-bottom: 10px;
-}
-
-.rates-list__img{
-    margin-top: 19px;
 }
 
 .rates-list__info{

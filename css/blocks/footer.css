@@ -28,8 +28,17 @@
     margin: 20px 0 14px 123px;
 }
 
+.footer-logo__img{
+    visibility: hidden;
+}
+
 .footer-logo__link{
     display: inline-block;
+    text-decoration: none;
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-position: -20px -301px;
+    width: 120px;
+    height: 36px;
 }
 
 .footer-social{
@@ -69,39 +78,34 @@
 }
 
 .footer-social__vk{
-    background-image: url("../../img/icons/icons-sprite.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-repeat: no-repeat;
-    background-position: -7px -247px;
+    background-position: -52px -578px;
 }
 
 .footer-social__fb{
-    background-image: url("../../img/icons/icons-sprite.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-repeat: no-repeat;
-    background-position: -3px -286px;
+    background-position: -54px -522px;
 }
 
 
 .footer-social__google{
-    background-image: url("../../img/icons/icons-sprite.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-repeat: no-repeat;
-    background-position: -7px -210px;
+    background-position: -94px -567px;
 }
 
 
 .footer-social__twitter{
-    background-image: url("../../img/icons/icons-sprite.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-repeat: no-repeat;
-    background-position: -6px -266px;
+    background-position: -16px -591px;
 }
 
 
 .footer-social__mail{
-    background-image: url("../../img/icons/icons-sprite.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
     background-repeat: no-repeat;
-    background-position: -6px -230px;
+    background-position: -128px -566px;
 }

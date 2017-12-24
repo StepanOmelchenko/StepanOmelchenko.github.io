@@ -170,18 +170,21 @@
 .form__submit-text:after{
     content: "";
     display: inline-block;
-    background-image: url("../../img/icons/form-button.png");
-    background-position: center;
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-position: -20px -563px;
+    width: 15px;
+    height: 14px;
     background-repeat: no-repeat;
     position: absolute;
     right: 5px;
     top: 0;
-    width: 23px;
-    height: 18px;
 }
 
 .form__submit:hover .form__submit-text:after{
-    background-image: url("../../img/icons/form-button-hover.png");
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-position: -86px -441px;
+    width: 15px; height: 14px;
+    background-repeat: no-repeat;
 }
 
 

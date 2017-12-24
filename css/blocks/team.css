@@ -3,7 +3,7 @@
 }
 
 .team__title{
-    margin-bottom: 37px;
+    margin-bottom: 33px;
     margin-top: 17px;
 }
 
@@ -36,9 +36,19 @@
     font-family: "robotobold", arial, sans-serif;
 }
 
+.team__photo:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #4b73b5;
+    opacity: 0.6;
+}
+
 .team__photo-img{
     visibility: hidden;
-    position: absolute;
 }
 
 .team__photo-name{
@@ -98,5 +108,66 @@
     max-width: 260px;
     line-height: 21px;
     font-size: 14px;
+}
+
+.team-partners__list{
+    margin-top: 37px;
+    margin-bottom: 41px;
+}
+
+.team-partners__item{
+    vertical-align: middle;
+    margin-bottom: 60px;
+}
+
+.team-partners__logo{
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter .2s;
+}
+
+.team-partners__logo:hover{
+    filter: none;
+}
+
+.team-partners__logo--bmp{    
+    background-position: -20px -84px;
+    width: 159px;
+    height: 30px;
+}
+
+.team-partners__logo--tetra{
+    background-position: -20px 0;
+    width: 161px;
+    height: 64px;
+}
+
+.team-partners__logo--siberia{
+    background-position: -20px -217px;
+    width: 133px;
+    height: 64px;
+}
+
+.team-partners__logo--oneair{
+    background-position: -20px -134px;
+    width: 141px;
+    height: 63px;
+}
+
+.team-partners__logo--bingair{
+    background-position: -20px -441px;
+    width: 46px;
+    height: 64px;
+}
+
+.team-partners__logo--ural{
+    background-position: -20px -357px;
+    width: 82px;
+    height: 64px;
 }
 

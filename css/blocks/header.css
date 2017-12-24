@@ -8,8 +8,17 @@
     float: left;
 }
 
+.header-logo__img{
+    visibility: hidden;
+}
+
 .header-logo__link{
     display: inline-block;
+    text-decoration: none;
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-position: -20px -301px;
+    width: 120px;
+    height: 36px;
 }
 
 .header-info{
@@ -43,11 +52,11 @@
 .header-info__dropdown{
     display: none;
     position: absolute;
-    width: 175px;
-    height: 75px;
+    width: 161px;
+    height: 77px;
     background-color: #fff;
-    left: 0;
-    top: 140%;
+    left: 6%;
+    top: 135%;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px;
 }
@@ -58,11 +67,11 @@
     position: absolute;
     width: 0;
     height: 0;
-    left: 80%;
-    top: -10px;
-    border-right: 10px solid transparent;
-    border-left: 10px solid transparent;
-    border-bottom: 10px solid #ffffff;
+    left: 90%;
+    top: -7px;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
 }
 
 .header-info__dropdown-inner{
@@ -84,5 +93,6 @@
 }
 
 .header-info__dropdown-lunch{
+    margin-top: 5px;
     color: #221f1f;
 }
