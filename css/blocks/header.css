@@ -45,7 +45,8 @@
     cursor: pointer;
 }
 
-.header-info__schedule:hover + .header-info__dropdown{
+.header-info__schedule:hover + .header-info__dropdown,
+.header-info__dropdown:hover{
     display: block;
 }
 
@@ -59,6 +60,8 @@
     top: 135%;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px;
+    
+    transition: display .3s;
 }
 
 .header-info__dropdown:before{
