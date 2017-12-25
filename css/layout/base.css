@@ -1,6 +1,8 @@
 body{
     font-family: 'robotolight', arial, sans-serif;
     background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body, html{

@@ -88,7 +88,7 @@
     color: #212121;
     letter-spacing: -1.07px;
     margin-top: 12px;
-    display: inline-block;
+    display: block;
 }
 
 .rates-list__price::first-letter{
