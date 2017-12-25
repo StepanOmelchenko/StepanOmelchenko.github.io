@@ -36,6 +36,10 @@ ul, h2, p{
     clear: both;
 }
 
+.visually-hidden{
+    visibility: hidden;
+}
+
 .main{
     float: right;
 }

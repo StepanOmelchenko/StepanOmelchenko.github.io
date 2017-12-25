@@ -65,6 +65,7 @@
 .footer-social__link{
     text-decoration: none;
     display: inline-block;
+    position: relative;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -73,39 +74,50 @@
     box-sizing: border-box;
 }
 
+.footer-social__link:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/icons/icons-sprite-se.png");
+    background-repeat: no-repeat;
+}
+
 .footer-social__link:hover{
     background-color: #ffffff;
 }
 
-.footer-social__vk{
-    background-image: url("../../img/icons/icons-sprite-se.png");
-    background-repeat: no-repeat;
-    background-position: -52px -578px;
+.footer-social__link--vk:before{
+    background-position: -55px -585px;
+    width: 12px;
+    height: 7px;
 }
 
-.footer-social__fb{
-    background-image: url("../../img/icons/icons-sprite-se.png");
-    background-repeat: no-repeat;
-    background-position: -54px -522px;
-}
-
-
-.footer-social__google{
-    background-image: url("../../img/icons/icons-sprite-se.png");
-    background-repeat: no-repeat;
-    background-position: -94px -567px;
+.footer-social__link--fb:before{
+    background-position: -60px -525px;
+    width: 6px;
+    height: 13px;
 }
 
 
-.footer-social__twitter{
-    background-image: url("../../img/icons/icons-sprite-se.png");
-    background-repeat: no-repeat;
-    background-position: -16px -591px;
+.footer-social__link--google:before{
+    background-position: -97px -572px;
+    width: 15px;
+    height: 9px;
 }
 
 
-.footer-social__mail{
-    background-image: url("../../img/icons/icons-sprite-se.png");
-    background-repeat: no-repeat;
-    background-position: -128px -566px;
+.footer-social__link--twitter:before{
+    background-position: -20px -597px;
+    width: 11px;
+    height: 9px;
+}
+
+
+.footer-social__link--mail:before{
+    background-position: -60px -525px;
+    width: 6px;
+    height: 13px;
 }
