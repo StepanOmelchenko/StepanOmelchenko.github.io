@@ -54,6 +54,18 @@
     background-image: url("../../img/photos/anastasia.jpg");
 }
 
+.common-list__wrapper--planeflying{
+    background-image: url("../../img/news/planeflying.jpg");
+}
+
+.common-list__wrapper--photo{
+    background-image: url("../../img/news/photo.jpg");
+}
+
+.common-list__wrapper--child{
+    background-image: url("../../img/news/child.jpg");
+}
+
 .common-list__img{
     visibility: hidden;
 }
