@@ -28,10 +28,6 @@
     margin: 20px 0 14px 123px;
 }
 
-.footer-logo__img{
-    visibility: hidden;
-}
-
 .footer-logo__link{
     display: inline-block;
     text-decoration: none;

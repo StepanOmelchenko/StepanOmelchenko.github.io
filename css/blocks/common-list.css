@@ -34,6 +34,28 @@
     overflow: hidden;
     border-radius: 50%;
     margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.common-list__wrapper--irina{
+    background-image: url("../../img/photos/irina.jpg");
+}
+
+.common-list__wrapper--alex{
+    background-image: url("../../img/photos/alex.jpg");
+}
+
+.common-list__wrapper--empty{
+    background-image: url("../../img/photos/empty.jpg");
+}
+
+.common-list__wrapper--anastasia{
+    background-image: url("../../img/photos/anastasia.jpg");
+}
+
+.common-list__img{
+    visibility: hidden;
 }
 
 .common-list__wrapper--reviews{

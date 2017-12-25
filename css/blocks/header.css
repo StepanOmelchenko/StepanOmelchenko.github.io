@@ -8,10 +8,6 @@
     float: left;
 }
 
-.header-logo__img{
-    visibility: hidden;
-}
-
 .header-logo__link{
     display: inline-block;
     text-decoration: none;

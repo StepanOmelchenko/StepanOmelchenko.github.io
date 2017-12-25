@@ -129,11 +129,17 @@
 .adv__item{
     background-position: center;
     background-repeat: no-repeat;
+    filter: grayscale(50%);
+    transition: filter .2s;
 }
 
 .adv__link{
     display: block;
     text-decoration: none;
+}
+
+.adv__item:hover{
+    filter: none;
 }
 
 .adv__img{
