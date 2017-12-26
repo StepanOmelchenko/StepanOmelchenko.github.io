@@ -13,9 +13,9 @@
 .rates-list__item{
     display: inline-block;
     width: 250px;
-    padding-top: 40px;
+    padding-top: 39px;
     text-align: center;
-    margin-right: 14px;
+    margin-right: 15px;
     box-sizing: border-box;
 }
 
@@ -56,7 +56,7 @@
 }
 
 .rates-list__tagline{
-    line-height: 30px;
+    line-height: 1.7;
     margin-bottom: 10px;
 }
 
@@ -87,7 +87,7 @@
     font-size: 54px;
     color: #212121;
     letter-spacing: -1.07px;
-    margin-top: 12px;
+    margin-top: 10px;
     display: block;
 }
 

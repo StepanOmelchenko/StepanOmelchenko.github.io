@@ -94,10 +94,7 @@
     margin-bottom: 12px;
 }
 
-.common-list__text{
-    line-height: 30px;
-}
-
+.common-list__text,
 .common-list__content--reviews{
-    line-height: 30px;
+    line-height: 1.6;
 }

@@ -1,7 +1,6 @@
 .pagination-reviews{
     position: relative;
     top: -9px;
-    margin-bottom: 40px;
 }
   
 .pagination__title{
@@ -34,7 +33,7 @@
     color: #221f1f;
     width: 25px;
     height: 25px;
-    line-height: 25px;
+    line-height: 1.8;
     display: block;
     border-radius: 3px;  
 }
