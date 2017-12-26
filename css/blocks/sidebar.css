@@ -129,7 +129,7 @@
 .adv__item{
     background-position: center;
     background-repeat: no-repeat;
-    filter: grayscale(50%);
+    filter: grayscale(75%);
     transition: filter .2s;
 }
 
