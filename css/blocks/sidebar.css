@@ -10,6 +10,7 @@
 
 .menu__list{
     list-style-type: none;
+    margin-bottom: 55px;
 }
 
 .menu__wrapper{
@@ -22,6 +23,10 @@
 
 .menu__item{
     margin-bottom: 30px;
+}
+
+.menu__item:last-child{
+    margin-bottom: 0;
 }
 
 .menu__item--active .menu__link{
@@ -120,6 +125,7 @@
     color: #221f1f;
     text-transform: uppercase;
     letter-spacing: 2.4px;
+    margin-bottom: 20px;
 }
 
 .adv__list{
