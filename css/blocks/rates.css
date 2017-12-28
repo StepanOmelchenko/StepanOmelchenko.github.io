@@ -1,5 +1,5 @@
 .rates{
-    margin-bottom: 89px;
+    margin-bottom: 87px;
 }
 
 .rates-title{
@@ -17,10 +17,11 @@
     text-align: center;
     margin-right: 15px;
     box-sizing: border-box;
+    border: solid 1px transparent;
 }
 
 .rates-list__item:hover{
-    border: solid 1px #f5f5f5;
+    border-color: #f5f5f5;
 }
 
 .rates-list__title{

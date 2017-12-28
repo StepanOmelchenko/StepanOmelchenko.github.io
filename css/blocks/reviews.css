@@ -20,13 +20,13 @@
     color: #ffffff;
     box-sizing: border-box;
     text-align: center;
-    margin-bottom: 54px;
+    margin-bottom: 56px;
     padding: 40px 0 40px 0;
 }
 
 .green-block__wrapper{
     display: inline-block;
-    max-width: 620px;
+    max-width: 650px;
 }
 
 .green-block__text{

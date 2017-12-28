@@ -1,6 +1,6 @@
 .form-wrapper{
     width: 100%;
-    margin-bottom: 53.5px;
+    margin-bottom: 55px;
   }
   
 .form{
@@ -20,14 +20,14 @@
 }
 
 .form__inner{
-    margin-left: 24px;
+    margin-left: 22px;
 }
 
 .form__title{
     font-family: "robotobold", arial, sans-serif;
     font-size: 49px;
     color: #221f1f;
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 }
 
 .form__lable{
@@ -37,23 +37,22 @@
 }
 
 .form__row{
-    margin-bottom: 15px;
     margin-top: 15px;
 }
 
 .form__input{
-    margin-top: 7px;
+    margin-top: 8px;
     width: 100%;
     height: 42px;
     box-sizing: border-box;
-    padding: 0 8px 0 8px;
+    padding: 0 11px 0 11px;
     border-radius: 5px;
     border: none;
     display: block;
 }
 
 .form__input-text{
-    margin-top: 21px;
+    margin-top: 20px;
 }
 
 .form__text{
@@ -62,12 +61,14 @@
 
 .form__textarea{
     margin-top: 5px;
+    border: none;
     min-width: 560px;
     min-height: 88px;
     resize: none;
     box-sizing: border-box;
-    padding: 7px;
-    overflow-y: hidden;
+    border-radius: 5px;
+    padding: 11px;
+    overflow-y: auto;
     outline: none;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .form__buttons{
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 .form__controls{
@@ -147,6 +148,7 @@
     border: 1px solid #4b73b5;
     border-radius: 7%;
     color: #ffffff;
+    transition: background-color .5s, border-color .5s;
     line-height: 3.9;
     overflow: hidden;
     white-space: nowrap;

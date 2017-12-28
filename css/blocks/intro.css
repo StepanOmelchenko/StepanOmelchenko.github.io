@@ -4,6 +4,8 @@
     position: relative;
     background-image: url("../../img/bg/intro-bg.jpg");
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .intro-block{
@@ -40,6 +42,7 @@
     border: 1px solid #1c5bc4;
     border-radius: 5px;
     overflow: hidden;
+    transition: background-color .5s;
 }
 
 .intro-block__link:hover{

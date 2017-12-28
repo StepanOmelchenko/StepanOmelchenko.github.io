@@ -1,6 +1,6 @@
 .header{
     background-color: #4b73b5;
-    padding: 18px 0 16px 0;
+    padding: 18px 0 14px 0;
 }
 
 .header-logo{
@@ -48,12 +48,11 @@
 .header-info__dropdown{
     right: -9999px;
     position: absolute;
-    width: 161px;
-    height: 77px;
+    padding: 20px;
     background-color: #fff;
     box-sizing: border-box;
     box-shadow: 5px 5px 10px;
-    margin-top: 15px;
+    margin-top: 14px;
     margin-left: 10px;
     z-index: 10;
 }
@@ -83,12 +82,6 @@
 
 .header-info__dropdown-inner{
     display: inline-block;
-    position: absolute;
-    width: 125px;
-    height: 40px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 14px;
     line-height: 1.3;
     text-align: left;
@@ -100,6 +93,7 @@
 }
 
 .header-info__dropdown-lunch{
+    font-family: 'robotolight', arial, sans-serif;
     margin-top: 5px;
     color: #221f1f;
 }
