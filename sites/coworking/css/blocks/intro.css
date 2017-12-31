@@ -6,16 +6,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: GothamPro-Bold, arial, sans-serif;
 }
 
 .intro__block{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     animation-name: grow;
-    animation-duration: 1s;
-    animation-fill-mode: backwards;
+    animation-delay: 1s;
+    animation-duration: .5s;
+    animation-fill-mode: both;
 }
 
 .intro__logo{
@@ -44,8 +45,10 @@
 @keyframes grow{
     from {
         opacity: 0;
+        transform: translate(-50%, -50%) scale3d(.3, .3, .3);
     }
     to {
         opacity: 1;
+        transform: translate(-50%, -50%) scale3d(1, 1, 1);
     }
 }
