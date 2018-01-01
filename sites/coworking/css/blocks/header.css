@@ -1,0 +1,36 @@
+.header{
+    background-color: #27273e;
+    padding-top: 12px;
+    padding-bottom: 13px;
+}
+
+.header__logo{
+    display: block;
+    text-decoration: none;
+    width: 99px;
+    height: 51px;
+    float: left;
+    margin-left: 19px;
+    cursor: pointer;
+    background-image: url("../../img/icons/logo-fig.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header__info{
+    float: right;
+    margin-right: 21px;
+    font-family: "GothamPro-Bold", Arial, sans-serif;
+}
+
+.header__info-phone{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+}
+
+.header__info-shedule{
+    color: #ec1e79;
+    font-size: 14px;
+}
