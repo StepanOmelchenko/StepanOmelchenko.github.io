@@ -65,14 +65,17 @@
     background-image: url("../../img/icons/wallet-icon.png");
 }
 
-.sidebar-list__item--active .sidebar-list__title--main:before{
+.sidebar-list__item--active .sidebar-list__title--main:before,
+.sidebar-list__title--main:hover:before{
     background-image: url("../../img/icons/main-icon-active.png");
 }
 
-.sidebar-list__item--active .sidebar-list__title--star:before{
+.sidebar-list__item--active .sidebar-list__title--star:before,
+.sidebar-list__title--star:hover:before{
     background-image: url("../../img/icons/feed-icon-active.png");
 }
 
-.sidebar-list__item--active .sidebar-list__title--wallet:before{
+.sidebar-list__item--active .sidebar-list__title--wallet:before,
+.sidebar-list__title--wallet:hover:before{
     background-image: url("../../img/icons/wallet-icon-active.png");
 }
