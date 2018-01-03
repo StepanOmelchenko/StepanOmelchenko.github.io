@@ -1,4 +1,4 @@
-.main-page__banner{
+.main-banner{
     width: 1100px;
     height: 359px;
     background-image: url("../../img/bg/banner.jpg");
@@ -7,5 +7,6 @@
 }
 
 .main{
-    float: right;
+    float: left;
+    margin: 67px 0 0 70px;
 }

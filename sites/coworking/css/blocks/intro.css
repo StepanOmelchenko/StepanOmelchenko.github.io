@@ -9,15 +9,29 @@
     font-family: GothamPro-Bold, arial, sans-serif;
 }
 
-.intro__block{
+.intro__inner{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.intro__inner:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.intro__block{
+    display: inline-block;
+    vertical-align: middle;
     animation-name: grow;
     animation-delay: 1s;
     animation-duration: .5s;
-    animation-fill-mode: both;
+    animation-fill-mode: backwards;
 }
 
 .intro__logo{
@@ -43,6 +57,7 @@
     margin-top: 29px;
     text-decoration: none;
     cursor: pointer;
+    transition: color 1s;
 }
 
 .intro__link:hover{
@@ -51,12 +66,21 @@
 }
 
 @keyframes grow{
-    from {
+    from{
+        transform: scale(.6) rotate(-10deg);
         opacity: 0;
-        transform: translate(-50%, -50%) scale3d(.3, .3, .3);
     }
-    to {
+    50%{
+        transform: scale(.9) rotate(-10deg);
         opacity: 1;
-        transform: translate(-50%, -50%) scale3d(1, 1, 1);
+    }
+    70%{
+        transform: scale(1) rotate(-10deg);
+    }
+    80%{
+        transform: rotate(3deg);
+    }
+    90%{
+        transform: rotate(-3deg);
     }
 }
