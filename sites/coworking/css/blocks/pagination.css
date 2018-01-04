@@ -1,0 +1,49 @@
+.pagination{
+    display: inline-block;
+    font-size: 14px;
+}
+
+.pagination__wrapper{
+    text-align: center;
+}
+
+.pagination__info{
+    display: inline-block;
+    color: #656464;
+    line-height: 2;
+    vertical-align: middle;
+}
+
+.pagination__list{
+    display: inline-block;
+    list-style-type: none;
+    font-family: "GothamPro-Bold", Arial, sans-serif;
+    color: #221f1f;
+    vertical-align: middle;
+}
+
+.pagination__item{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    overflow: hidden;
+    transition: color .2s;
+}
+
+.pagination__item:hover{
+    color: #ae2264;
+}
+
+.pagination__link{
+    display: inline-block;
+    cursor: pointer;
+    line-height: 2;
+}
+
+.pagination__item--active{
+    color: #fff;
+    background-color: #27273e;
+    border-radius: 10%;
+    pointer-events: none;
+}
