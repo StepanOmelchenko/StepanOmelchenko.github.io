@@ -1,0 +1,51 @@
+.common-list{
+    list-style-type: none;
+    color: #221f1f;
+    font-size: 18px;
+}
+
+.common-list__item{
+    padding-bottom: 24px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f5f5f5;
+}
+
+.common-list__item:last-child{
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0; 
+}
+
+.common-list__link{
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.common-list__img{
+    display: inline-block;
+    width: 163px;
+    height: 163px;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+.common-list__info{
+    display: inline-block;
+    max-width: 685px;
+    vertical-align: top;
+    margin-left: 20px;
+}
+
+.common-list__date{
+    font-size: 14px;
+    color: #656464;
+}
+
+.common-list__title{
+    font-family: "GothamPro-Bold", Arial, sans-serif;
+}
+
+.common-list__new{
+    line-height: 1.6;
+}

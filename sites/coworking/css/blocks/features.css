@@ -1,33 +1,79 @@
 .features{
     text-align: left;
     color: #221f1f;
-    font-weight: 400;
-}
-
-.features__header{
-    font-size: 49px;
-    font-family: "GothamPro-Bold", Arial, sans-serif;
+    font-weight: 600;
 }
 
 .features__list{
     list-style-type: none;
 }
 
+.features__list{
+    margin-top: 64px;
+}
+
 .features__item{
     display: inline-block;
-    width: 195px;
+    width: 205px;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
+    line-height: 1.7;
+    vertical-align: top;
+    margin-right: 68px;
+}
+
+.features__item:last-child{
+    margin-right: 0;
+}
+
+.features__item-img{
+    width: 71px;
+    height: 71px;
+    border-radius: 50%;
+    background-color: #27273e;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.features__item-img--flower{
+    background-image: url("../../img/icons/flower.png");
+}
+
+.features__item-img--star{
+    background-image: url("../../img/icons/mark-as-favorite-star.png");
+}
+
+.features__item-img--palette{
+    background-image: url("../../img/icons/painter-palette.png");
 }
 
 .features__item-title{
     font-size: 11px;
     font-family: "GothamPro-Bold", Arial, sans-serif;
     text-transform: uppercase;
+    margin-top: 35px;
+}
+
+.features__item-info{
+    margin-top: 28px;
 }
 
 .features__item-positions{
     text-align: left;
-    list-style-position: inside;
+    list-style-type: none;
+}
+
+.features__item-position{
+    padding-left: 35px;
+    position: relative;
+}
+
+.features__item-position:before{
+    content: "•";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    color: #cc3366;
 }

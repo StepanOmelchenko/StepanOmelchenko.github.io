@@ -9,4 +9,10 @@
 .main{
     float: left;
     margin: 67px 0 0 70px;
+    max-width: 900px;
+}
+
+.main--header{
+    font-size: 49px;
+    font-family: "GothamPro-Bold", Arial, sans-serif;
 }
