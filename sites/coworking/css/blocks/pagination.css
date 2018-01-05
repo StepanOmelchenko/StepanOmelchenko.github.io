@@ -39,6 +39,7 @@
     display: inline-block;
     cursor: pointer;
     line-height: 2;
+    text-decoration: none;
 }
 
 .pagination__item--active{
