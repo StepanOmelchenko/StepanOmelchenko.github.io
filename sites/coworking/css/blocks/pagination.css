@@ -10,8 +10,6 @@
 .pagination__info{
     display: inline-block;
     color: #656464;
-    line-height: 2;
-    vertical-align: middle;
 }
 
 .pagination__list{
@@ -19,15 +17,13 @@
     list-style-type: none;
     font-family: "GothamPro-Bold", Arial, sans-serif;
     color: #221f1f;
-    vertical-align: middle;
+    text-align: center;
 }
 
 .pagination__item{
     display: inline-block;
     width: 28px;
     height: 28px;
-    text-align: center;
-    overflow: hidden;
     transition: color .2s;
 }
 
