@@ -1,0 +1,16 @@
+.social__title{
+    color: #ffffff;
+    font-family: "GothamPro-Bold", Arial, sans-serif;
+}
+
+.social__list{
+    list-style-type: none;
+}
+
+.social__item{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #d4d4d8;
+}

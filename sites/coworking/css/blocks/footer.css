@@ -1,4 +1,51 @@
 .footer{
     margin-top: -80px;
+    height: 80px;
     background-color: #27273e;
+    padding-top: 14px;
+    box-sizing: border-box;
+}
+
+.footer__left{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+}
+
+.footer__center{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footer__right{
+    width: 33.3%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+.footer__text{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.footer__text-link{
+    text-decoration: none;
+    display: inline-block;
+    color: #ffffff;
+    font-family: "GothamPro-Bold", Arial, sans-serif;
+}
+
+.footer__logo{
+    display: inline-block;
+    text-decoration: none;
+    width: 99px;
+    height: 51px;
+    cursor: pointer;
+    background-image: url("../../img/icons/logo-fig.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
