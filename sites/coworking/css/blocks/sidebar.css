@@ -45,38 +45,48 @@
     content: "";
     display: inline-block;
     position: absolute;
-    width:20px;
-    height: 19px;
     left: 0;
     top: -3px;
     vertical-align: middle;
-    background-position: center;
+    background-image: url("../../img/icons/sprite.png");
     background-repeat: no-repeat;
 }
 
 .sidebar-list__title--main:before{
-    background-image: url("../../img/icons/main-icon.png");
+    background-position: -58px -295px;
+    width: 17px;
+    height: 15px;
 }
 
 .sidebar-list__title--star:before{
-    background-image: url("../../img/icons/feed-icon.png");
+    background-position: -138px -178px;
+    width: 22px;
+    height: 19px;
 }
 
 .sidebar-list__title--wallet:before{
-    background-image: url("../../img/icons/wallet-icon.png");
+    background-position: -111px -261px;
+    width: 19px;
+    height: 16px;
 }
 
 .sidebar-list__item--active .sidebar-list__title--main:before,
 .sidebar-list__title--main:hover:before{
-    background-image: url("../../img/icons/main-icon-active.png");
+    background-position: -20px -262px;
+    width: 18px;
+    height: 17px;
 }
 
 .sidebar-list__item--active .sidebar-list__title--star:before,
 .sidebar-list__title--star:hover:before{
-    background-image: url("../../img/icons/feed-icon-active.png");
+    background-position: -139px -139px;
+    width: 22px;
+    height: 19px;
 }
 
 .sidebar-list__item--active .sidebar-list__title--wallet:before,
 .sidebar-list__title--wallet:hover:before{
-    background-image: url("../../img/icons/wallet-icon-active.png");
+    background-position: -72px -259px;
+    width: 19px;
+    height: 16px;
 }

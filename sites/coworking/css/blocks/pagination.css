@@ -10,7 +10,7 @@
 .pagination__info{
     display: inline-block;
     color: #656464;
-    margin: 0 3px 0 50px;
+    margin: 0 3px 0 31px;
 }
 
 .pagination__list{
@@ -25,8 +25,8 @@
 
 .pagination__item{
     display: inline-block;
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     transition: color .2s;
 }
 

@@ -10,7 +10,7 @@
 }
 
 .features__list{
-    margin: 53px 0 0 20px;
+    margin: 54px 0 0 20px;
 }
 
 .features__item{
@@ -29,25 +29,41 @@
 }
 
 .features__item-img{
-    width: 71px;
-    height: 71px;
+    width: 68px;
+    height: 68px;
+    position: relative;
     border-radius: 50%;
     background-color: #27273e;
-    background-position: center;
-    background-repeat: no-repeat;
     margin: 0 auto;
 }
 
-.features__item-img--flower{
-    background-image: url("../../img/icons/flower.png");
+.features__item-img:before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/icons/sprite.png");
+    background-repeat: no-repeat;
 }
 
-.features__item-img--star{
-    background-image: url("../../img/icons/mark-as-favorite-star.png");
+.features__item-img--flower:before{
+    background-position: -120px -210px;
+    width: 27px;
+    height: 31px;
 }
 
-.features__item-img--palette{
-    background-image: url("../../img/icons/painter-palette.png");
+.features__item-img--star:before{
+    background-position: -20px -210px;
+    width: 32px;
+    height: 32px;
+}
+
+.features__item-img--palette:before{
+    background-position: -72px -210px;
+    width: 28px;
+    height: 29px;
 }
 
 .features__item-title{

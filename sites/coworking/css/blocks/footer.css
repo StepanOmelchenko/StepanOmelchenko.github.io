@@ -43,10 +43,14 @@
 .footer__logo{
     display: inline-block;
     text-decoration: none;
+    cursor: pointer;
+    background-image: url("../../img/icons/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -139px;
     width: 99px;
     height: 51px;
-    cursor: pointer;
-    background-image: url("../../img/icons/logo-fig.png");
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+.footer__social{
+    margin: 5px 19px 0 0;
 }
