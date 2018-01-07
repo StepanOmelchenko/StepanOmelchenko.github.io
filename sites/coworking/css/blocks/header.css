@@ -19,8 +19,9 @@
 
 .header__info{
     float: right;
-    margin-right: 21px;
+    margin: 5px 18px 0 0;
     font-family: "GothamPro-Bold", Arial, sans-serif;
+    text-align: right;
 }
 
 .header__info-phone{
@@ -33,4 +34,7 @@
 .header__info-shedule{
     color: #ec1e79;
     font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 3px 3px 0 0;
 }

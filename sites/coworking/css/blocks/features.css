@@ -2,6 +2,7 @@
     text-align: left;
     color: #221f1f;
     font-weight: 600;
+    margin-left: 6px;
 }
 
 .features__list{
@@ -9,18 +10,18 @@
 }
 
 .features__list{
-    margin-top: 64px;
+    margin: 53px 0 0 20px;
 }
 
 .features__item{
     display: inline-block;
-    width: 205px;
+    width: 209px;
     text-align: center;
     box-sizing: border-box;
     font-size: 18px;
     line-height: 1.7;
     vertical-align: top;
-    margin-right: 68px;
+    margin-right: 57px;
 }
 
 .features__item:last-child{
@@ -53,21 +54,28 @@
     font-size: 11px;
     font-family: "GothamPro-Bold", Arial, sans-serif;
     text-transform: uppercase;
-    margin-top: 35px;
+    margin: 27px 0 0 2px;
+    letter-spacing: 2.88px;
 }
 
 .features__item-info{
-    margin-top: 28px;
+    margin-top: 16px;
 }
 
 .features__item-positions{
     text-align: left;
     list-style-type: none;
+    margin: 4px 0 0 4px;
 }
 
 .features__item-position{
     padding-left: 35px;
     position: relative;
+    margin-bottom: 4px;
+}
+
+.features__item-position:last-child{
+    margin-bottom: 0;
 }
 
 .features__item-position:before{
