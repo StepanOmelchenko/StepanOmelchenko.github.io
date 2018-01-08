@@ -6,7 +6,6 @@
 .sidebar-list{
     list-style-type: none;
     font-family: "GothamPro-Bold", Arial, sans-serif;
-    color: #ec1e79;
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1.2px;
@@ -20,11 +19,11 @@
     margin-bottom: 0;
 }
 
-.sidebar-list__item:hover{
+.sidebar-list__item:hover .sidebar-list__link{
     color: #000;
 }
 
-.sidebar-list__item--active {
+.sidebar-list__item--active .sidebar-list__link{
     color: #000;
     pointer-events: none;
     text-decoration: underline;
@@ -33,6 +32,8 @@
 .sidebar-list__link{
     display: block;
     cursor: pointer;
+    text-decoration: none;
+    color: #ec1e79;
 }
 
 .sidebar-list__title{
