@@ -48,3 +48,11 @@
     border-radius: 10%;
     pointer-events: none;
 }
+
+.pagination__item--active-comments{
+    color: #ec1e79;
+    background-color: #27273e;
+    border-radius: 10%;
+    pointer-events: none;
+}
+
