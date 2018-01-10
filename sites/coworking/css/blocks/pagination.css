@@ -3,14 +3,26 @@
     font-size: 14px;
 }
 
+.pagination--comments{
+    margin-left: 181px;
+}
+
 .pagination__wrapper{
     text-align: center;
+}
+
+.pagination__wrapper--comments{
+    text-align: left;
 }
 
 .pagination__info{
     display: inline-block;
     color: #656464;
     margin: 0 3px 0 31px;
+}
+
+.pagination__info--comments{
+    margin-right: 14px;
 }
 
 .pagination__list{

@@ -30,7 +30,7 @@
         </header>
         <div class="main-wrapper">
             <div class="container clearfix">
-                <aside class="sidebar">
+                <aside class="sidebar comments__sidebar--edit">
                     <nav class="sidebar-navigation">
                         <ul class="sidebar-list">
                             <li class="sidebar-list__item">
@@ -51,7 +51,7 @@
                         </ul>
                     </nav>
                 </aside>
-                <main class="main">
+                <main class="main comments__main--edit">
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item">
                             <a class="breadcrumbs__link" href="main.html">Главная</a>
@@ -62,8 +62,8 @@
                     </ul>
                     <section class="comments">
                         <h2 class="comments__header main__header">Отзывы</h2>
-                        <ul class="comments__list--edit common-list">
-                            <li class="common-list__item">
+                        <ul class="common-list common-list--comments">
+                            <li class="common-list__item common-list__item--comments">
                                 <a class="common-list__link">
                                     <div class="common-list__wrapper">
                                         <img class="common-list__img" src="img/content/comments/vcvb.jpg" alt="comment">
@@ -71,7 +71,7 @@
                                     <div class="common-list__info">
                                         <div class="common-list__date">12.10.2016</div>
                                         <div class="common-list__title">Олег Павлов</div>
-                                        <div class="common-list__new">
+                                        <div class="common-list__new common-list__new--comments">
                                             Пользуемся услугами коворкинга стабильно раз в неделю,
                                             когда проводим совещания директоров. Получается намного
                                             дешевле и удобно всем добираться. Единственное пожелание
@@ -82,7 +82,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="common-list__item">
+                            <li class="common-list__item common-list__item--comments">
                                 <a class="common-list__link">
                                     <div class="common-list__wrapper">
                                         <img class="common-list__img" src="img/content/comments/fdfd.jpg" alt="comment">
@@ -90,7 +90,7 @@
                                     <div class="common-list__info">
                                         <div class="common-list__date">01.02.2016</div>
                                         <div class="common-list__title">Эрнест Изиль</div>
-                                        <div class="common-list__new">
+                                        <div class="common-list__new common-list__new--comments">
                                             Я фрилансер, программист, работать дома не могу,
                                             так как мешают дети. Здесь нашел то, что давно искал
                                             – тишину и спокойствие. Эффективность работы выросла,
@@ -103,7 +103,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="common-list__item">
+                            <li class="common-list__item common-list__item--comments">
                                 <a class="common-list__link">
                                     <div class="common-list__wrapper common-list__wrapper--noimg">
                                         <img class="common-list__img" src="#" alt="comment">
@@ -111,7 +111,7 @@
                                     <div class="common-list__info">
                                         <div class="common-list__date">22.12.2015</div>
                                         <div class="common-list__title">Елена Сургай</div>
-                                        <div class="common-list__new">
+                                        <div class="common-list__new common-list__new--comments">
                                             Захожу сюда не часто, так как не мой район, но когда бываю в центре,
                                             то периодически нужно место для плодотворной работы. Интернет-клубы не подходят,
                                             так как не обеспечивают такой уровень сервиса, как Воркадиум.
@@ -122,7 +122,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="common-list__item">
+                            <li class="common-list__item common-list__item--comments">
                                 <a class="common-list__link">
                                     <div class="common-list__wrapper">
                                         <img class="common-list__img" src="img/content/comments/marroquin.jpg" alt="comment">
@@ -130,7 +130,7 @@
                                     <div class="common-list__info">
                                         <div class="common-list__date">14.08.2015</div>
                                         <div class="common-list__title">Наталья Осадчая</div>
-                                        <div class="common-list__new">
+                                        <div class="common-list__new common-list__new--comments">
                                             Провожу здесь встречи с клиентами в неформальной обстановке.
                                             Удобно, что при необходимости все под рукой – и ксерокс,
                                             и принтер и магазин канцелярии. Заключаю здесь свои лучшие договора.
@@ -142,9 +142,9 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="pagination__wrapper">
-                                <div class="pagination">
-                                    <div class="pagination__info">Страница 1 из 7</div>
+                        <div class="pagination__wrapper pagination__wrapper--comments">
+                                <div class="pagination pagination--comments">
+                                    <div class="pagination__info pagination__info--comments">Страница 1 из 7</div>
                                     <a class="pagination__link" href="#">&lt;</a>
                                     <ul class="pagination__list">
                                         <li class="pagination__item pagination__item--active-comments">
@@ -182,19 +182,43 @@
                         преимущества коворкинга «Воркадиум»!
                    </p>
                 </div>
-                <form class="form">
-                    <h2 class="form__title main__header">Оставить отзыв</h2>
-                    <fieldset class="form__field">
-                        <label class="form__label">
-                            <span class="form__label-title">Ваше имя</span>
-                            <input class="form__input" name="firstname" type="text" placeholder="Андрей">
+                <form class="form" method="post">
+                    <h2 class="main__header form__header">Оставить отзыв</h2>
+                    <fieldset class="form__field clearfix">
+                        <label class="form__label form__label--left">
+                            <span class="form__label-title">Ваше имя</span><br>
+                            <input class="form__input" type="text" placeholder="Андрей">
                         </label>
-                        <label class="form__label">
-                            <span class="form__label-title">Ссылка на профиль VK</span>
-                            <input class="form__input" name="firstname" type="text" placeholder="vk.com/example">
-                        </label>
+                        <label class="form__label form__label--right">
+                            <span class="form__label-title">Ссылка на профиль VK</span><br>
+                            <input class="form__input" type="text" placeholder="vk.com/example">
+                        </label>    
                     </fieldset>
-                </form>
+                    <label class="form__label-textarea">
+                        <span class="form__label-title">Текст отзыва</span>
+                        <textarea class="form__textarea" placeholder="Мне понравилось"></textarea>
+                    </label>
+                    <fieldset class="form__buttons clearfix">
+                        <div class="form__buttons-set">
+                            <span class="form__buttons-title>">Отображать фото в отзыве?</span>
+                            <div class="form__buttons-inner">
+                                <label class="form__buttons-label">
+                                    <input class="form__buttons-radio" name="photo" type="radio" checked>
+                                    <span class="form__buttons-circle"></span>
+                                    <span class="form__buttons-title">Да</span>
+                                </label>
+                                <label class="form__buttons-label">
+                                    <input class="form__buttons-radio" name="photo" type="radio">
+                                    <span class="form__buttons-circle"></span>
+                                    <span class="form__buttons-title">Нет</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form__submit">
+                            <span class="form__submit-text">Отправить</span>
+                        </div>
+                    </fieldset>
+                  </form>
             </div>
         </div>
     </div>
