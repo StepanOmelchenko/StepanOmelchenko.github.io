@@ -72,16 +72,54 @@
     margin: 20px 0;
 }
 
-.pairs__link{
-    display: block;
-}
-
-.pairs__img{
+.pairs__inner{
     width: 250px;
-    filter: grayscale(90%);
-    transition: filter .5s;
 }
 
-.pairs__img:hover{
+.pairs__link{
+    display: inline-block;
+    filter: grayscale(90%);
+    transition: filter .2s;
+    background-image: url("../../img/content/pairs/sprite.png");
+    background-repeat: no-repeat;
+}
+
+.pairs__link:hover{
     filter: none;
+}
+
+.pairs__link--vinter{
+    background-position: -20px -0px;
+    width: 160px;
+    height: 41px;
+}
+
+.pairs__link--drop{
+    background-position: -20px -305px;
+    width: 123px;
+    height: 62px;
+}
+
+.pairs__link--anna{
+    background-position: -20px -223px;
+    width: 130px;
+    height: 62px;
+}
+
+.pairs__link--tishkin{
+    background-position: -20px -61px;
+    width: 160px;
+    height: 60px;
+}
+
+.pairs__link--pufok{
+    background-position: -20px -141px;
+    width: 137px;
+    height: 62px;
+}
+
+.pairs__link--avantaj{
+    background-position: -20px -387px;
+    width: 51px;
+    height: 62px;
 }
