@@ -26,7 +26,6 @@
 .sidebar-list__item--active .sidebar-list__link{
     color: #000;
     pointer-events: none;
-    text-decoration: underline;
 }
 
 .sidebar-list__link{

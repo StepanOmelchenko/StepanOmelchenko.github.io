@@ -44,6 +44,10 @@
     cursor: pointer;
 }
 
+.header__info-shedule:hover{
+    color: #5dd1f8;
+}
+
 .header__info-shedule:hover .header__dropdown{
     right: 0;
 }
@@ -57,6 +61,7 @@
     padding: 10px;
     background-color: #fff;
     border-radius: 5%;
+    box-shadow: 5px 5px 5px #000;
 }
 
 .header__dropdown:before{
