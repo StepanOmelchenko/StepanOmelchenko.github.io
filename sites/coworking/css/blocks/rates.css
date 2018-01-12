@@ -1,13 +1,16 @@
 .rates{
     font-size: 14px;
+    margin-top: 18px;
 }
 
 .rates__list{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     color: #221f1f;
+    margin-top: 37px;
+    max-width: 863px;
 }
 
 .rates__img-wrapper{
@@ -34,11 +37,14 @@
     font-family: "GothamPro-Bold", Arial, sans-serif;
     font-size: 24px;
     color: #5dd1f8;
+    text-align: center;
+    line-height: 1.4;
 }
 
 .rates__item{
     width: 250px;
     overflow: hidden;
+    margin-bottom: 43px;
 }
 
 .rates__img-wrapper{
@@ -49,6 +55,7 @@
     text-align: center;
     font-family: "GothamPro-Bold", Arial, sans-serif;
     font-size: 18px;
+    margin: 23px 0 0 1px;
 }
 
 .rates__title--vip{
@@ -58,22 +65,25 @@
 .rates__text{
     text-align: center;
     line-height: 1.5;
+    margin: 9px 0 0 2px;
+}
+
+.pairs{
+    margin: 0 0 72px 5px;
 }
 
 .pairs__list{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    max-width: 755px;
 }
 
 .pairs__item{
-    margin: 20px 0;
-}
-
-.pairs__inner{
-    width: 250px;
+    margin: 35px 0 20px 0;
+    width: 200px;
 }
 
 .pairs__link{
