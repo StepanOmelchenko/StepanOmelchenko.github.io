@@ -1,0 +1,75 @@
+.header{
+    width: 100%;
+    background-color: #fff;
+}
+
+.header__up{
+    width: 100%;
+    text-align: center;
+    padding-top: 66px;
+}
+
+.header__title{
+    font-family: "gilda_displayregular", times, serif;
+    font-size: 48px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.header__subtitle{
+    font-size: 12px;
+    font-family: "quattrocento_sansbold", arial, sans-serif;
+    color: #cccccc;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+}
+
+.header__down{
+    padding-top: 35px;
+    display: flex;
+}
+
+.header__colum{
+    width: 33.3%;
+}
+
+.social__list{
+    list-style-type: none;
+}
+
+.social__item{
+    display: inline-block;
+}
+
+.social__link{
+    display: block;
+    text-decoration: none;
+}
+
+.menu{
+    
+}
+
+.menu__list{
+    list-style-type: none;
+    font-size: 14px;
+    color: #111111;
+    font-family: "quattrocento_sansbold", arial, sans-serif;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+}
+
+.menu__item{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.menu__item:last-child{
+    margin-right: 0;
+}
+
+.menu__link{
+    text-decoration: none;
+    display: inline-block;
+}

@@ -143,6 +143,9 @@
 .adv__link{
     display: block;
     text-decoration: none;
+    overflow: hidden;
+    max-width: 135px;
+    margin: 0 auto;
 }
 
 .adv__item:hover{
