@@ -1,0 +1,35 @@
+.main__logo{
+    max-width: 1920px;
+    height: 690px;
+    background-image: url("../../img/bg/layer-101.svg");
+    background-color: #111111;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.main__logo-inner{
+    position: absolute;
+    width: 880px;
+    left: 50%;
+    bottom: 65px;
+    transform: translate(-50%);
+    text-align: center;
+}
+
+.main__logo-link{
+    display: inline-block;
+    font-family: "quattrocento_sansbold", arial, sans-serif;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main__logo-header{
+    color: #ffffff;
+    font-size: 50px;
+    font-family: "rufinabold", times, serif;
+}
