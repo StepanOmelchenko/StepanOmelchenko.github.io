@@ -33,3 +33,116 @@
     font-size: 50px;
     font-family: "rufinabold", times, serif;
 }
+
+.main__wrapper{
+    max-width: 1270px;
+    margin: 0 auto;
+    padding-top: 92px;
+}
+
+.content{
+    
+}
+
+.content__list{
+    max-width: 840px;
+    max-height: 3750px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 80px;
+}
+
+.content__item{
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.content__img-wrapper{
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.content__img--green{
+    background-color: #6ad98a;
+}
+
+.content__img-btns{
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    display: inline-block;
+}
+
+.content__img-arrow{
+    display: block;
+    background-image: url("../../img/icons/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -35px;
+    width: 16px;
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.content__img-coments{
+    display: block;
+    background-image: url("../../img/icons/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -20px -0px;
+    width: 16px;
+    height: 15px;
+}
+
+.content__item:last-child{
+    margin-bottom: 0;
+}
+
+.content__link{
+    display: block;
+}
+
+.content__inner{
+    width: 370px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.content__title{
+    display: inline-block;
+    color: #898989;
+    font-family: "quattrocento_sansitalic", arial, sans-serif;
+    font-size: 12px;
+    border-bottom: 1px solid #898989;
+}
+
+.content__header{
+    margin-top: 19px;
+    font-family: "rufinabold", times, serif;
+    font-size: 24px;
+    color:   #111111;
+}
+
+.content__text{
+    color: #898989;
+    line-height: 1.85;
+    margin-top: 26px;
+}
+
+.content__date{
+    font-size: 13px;
+    margin-top: 38px;
+}
+
+.content__date-month{
+    color: #111111;
+}
+
+.content__date-year{
+    color: #898989;
+}

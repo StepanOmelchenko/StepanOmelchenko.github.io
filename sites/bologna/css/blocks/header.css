@@ -38,10 +38,8 @@
 }
 
 .social__list{
-    list-style-type: none;
     margin-left: 69px;
-    font-family: "gilda_displayregular", times, serif;
-    color: #111111;
+    font-family: "fa-regular", times, serif;
 }
 
 .social__item{
@@ -51,6 +49,7 @@
 .social__link{
     display: block;
     text-decoration: none;
+    color: #111111;
 }
 
 .menu{
@@ -58,7 +57,6 @@
 }
 
 .menu__list{
-    list-style-type: none;
     font-size: 14px;
     color: #111111;
     font-family: "quattrocento_sansbold", arial, sans-serif;
