@@ -1,0 +1,44 @@
+.first{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-image: url("../../img/bg/first-texture.png"), url("../../img/bg/first-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first__inner{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.first__header{
+    width: 940px;
+    display: flex;
+}
+
+.first__logo{
+    background-image: url("../../img/icons/logo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 92px;
+    height: 69px;
+}
+
+.first-menu__list{
+    display: flex;
+    font-family: "ubuntumedium", sans-serif;
+    font-size: 13px;
+}
+
+.first-menu__item:after{
+    content: "•";
+    display: inline-block;
+    margin: 0 10px;
+    color: inherit;
+}
+
+.first-menu__item:last-child:after{
+    content: "";
+}
