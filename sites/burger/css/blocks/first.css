@@ -19,9 +19,8 @@
 .first__header{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top: 12px;
+    justify-content: space-between;
+    padding: 12px 10px 0 0;
 }
 
 .first__logo{
@@ -33,22 +32,26 @@
     margin-right: auto;
 }
 
+.first-menu{
+    margin-top: 20px;
+}
+
 .first-menu__list{
-    display: flex;
+    display: inline-block;
     font-family: "ubuntumedium", sans-serif;
     font-size: 13px;
     text-transform: uppercase;
 }
 
 .first-menu__item{
-    margin-left: 2px;
     vertical-align: middle;
+    display: inline-block;
 }
 
-.first-menu__item:after{
+.first-menu__item:before{
     content: "";
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 11px 0 12px;
     background-color: #fff;
     width: 5px;
     height: 5px;
@@ -56,19 +59,26 @@
     vertical-align: middle;
 }
 
-.first-menu__item:last-child:after{
+.first-menu__item:first-child:before{
     display: none;
 }
 
-.first__button{
-    padding: 10px;
+.first-menu__link{
+    vertical-align: middle;
+}
+
+.first__btn{
+    display: inline-block;
+    margin: 16px 0 0 19px;
+}
+
+.first__btn-link{
+    padding: 10px 17px;
     text-transform: uppercase;
     font-size: 13px;
-    color: #fff;
     border-radius: 5%;
     background-color: #e45028;
-    margin-left: 30px;
-    cursor: pointer;
+    vertical-align: middle;
 }
 
 .first-box{
@@ -83,7 +93,7 @@
     display: flex;
     width: 417px;
     height: 424px;
-    background-image: url("../../img/bg/first-burger.png"), url("../../img/bg/drops.png");
+    background-image: url("../../img/content/first-burger.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -92,21 +102,23 @@
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    padding-top: 12%;
+    letter-spacing: -1.63px;
 }
 
 .first-box__title{
     font-family: "gagalinregular", sans-serif;
-    font-size: 65px;
+    font-size: 75px;
     color: #f9b43b;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .first-box__subtitle{
     font-family: "lifehackmedium", sans-serif;
     font-size: 65px;
-    color: #fff;
     text-transform: lowercase;
+    margin-top: 2%;
 }
 
 .first__arrow{
