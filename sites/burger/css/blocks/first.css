@@ -4,11 +4,16 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #fff;
+}
+
+.first__inner{
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
 .first__header{
@@ -16,7 +21,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 15%;
+    padding-top: 12px;
 }
 
 .first__logo{
@@ -58,9 +63,10 @@
 .first__button{
     padding: 10px;
     text-transform: uppercase;
+    font-size: 13px;
     color: #fff;
     border-radius: 5%;
-    background-color: red;
+    background-color: #e45028;
     margin-left: 30px;
     cursor: pointer;
 }
@@ -73,6 +79,7 @@
 }
 
 .first-box__img{
+    flex-basis: 50%;
     display: flex;
     width: 417px;
     height: 424px;
@@ -82,44 +89,24 @@
 }
 
 .first-box__header{
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
 
-.first-sidebar__list{
-    position: absolute;
-    right: 5%;
-    top: 15%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.first-box__title{
+    font-family: "gagalinregular", sans-serif;
+    font-size: 65px;
+    color: #f9b43b;
+    text-transform: uppercase;
 }
 
-.first-sidebar__item{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-bottom: 5.5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.first-sidebar__item:last-child{
-    margin: 0;
-}
-
-.first-sidebar__item--active{
-    border: 1px solid #fff;
-}
-
-.first-sidebar__content{
-    background-color: #fff;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
+.first-box__subtitle{
+    font-family: "lifehackmedium", sans-serif;
+    font-size: 65px;
+    color: #fff;
+    text-transform: lowercase;
 }
 
 .first__arrow{
@@ -128,5 +115,5 @@
     background-repeat: no-repeat;
     width: 29px;
     height: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
