@@ -1,9 +1,5 @@
 .first{
     background-image: url("../../img/bg/first-texture.png"), url("../../img/bg/first-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #fff;
 }
 
 .first__inner{
@@ -102,7 +98,7 @@
     flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    padding-top: 12%;
+    padding: 78px 0 0 5px;
     letter-spacing: -1.63px;
 }
 
@@ -118,7 +114,8 @@
     font-family: "lifehackmedium", sans-serif;
     font-size: 65px;
     text-transform: lowercase;
-    margin-top: 2%;
+    margin-top: 10px;
+    line-height: 1;
 }
 
 .first__arrow{
@@ -127,5 +124,5 @@
     background-repeat: no-repeat;
     width: 29px;
     height: 14px;
-    margin-bottom: 40px;
+    padding: 7% 0;
 }
