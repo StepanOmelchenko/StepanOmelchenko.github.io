@@ -1,5 +1,5 @@
 .first{
-    background-image: url("../../img/bg/first-texture.png"), url("../../img/bg/first-bg.jpg");
+    background-image: url("../img/bg/first-texture.png"), url("../img/bg/first-bg.jpg");
 }
 
 .first__inner{
@@ -20,7 +20,7 @@
 }
 
 .first__logo{
-    background-image: url("../../img/icons/logo.png");
+    background-image: url("../img/icons/logo.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 92px;
@@ -34,7 +34,7 @@
 
 .first-menu__list{
     display: inline-block;
-    font-family: "ubuntumedium", sans-serif;
+    font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
     font-size: 13px;
     text-transform: uppercase;
 }
@@ -42,21 +42,21 @@
 .first-menu__item{
     vertical-align: middle;
     display: inline-block;
-}
 
-.first-menu__item:before{
-    content: "";
-    display: inline-block;
-    margin: 0 11px 0 12px;
-    background-color: #fff;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    vertical-align: middle;
-}
+    &:before{
+        content: "";
+        display: inline-block;
+        margin: 0 11px 0 12px;
+        background-color: $white;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
 
-.first-menu__item:first-child:before{
-    display: none;
+    &:first-child:before{
+        display: none;
+    }
 }
 
 .first-menu__link{
@@ -73,8 +73,12 @@
     text-transform: uppercase;
     font-size: 13px;
     border-radius: 5%;
-    background-color: #e45028;
+    background-color: $orange;
     vertical-align: middle;
+
+    &:hover{
+        background-color: $orange-hover;
+    }
 }
 
 .first-box{
@@ -89,7 +93,7 @@
     display: flex;
     width: 417px;
     height: 424px;
-    background-image: url("../../img/content/first-burger.png");
+    background-image: url("../img/content/first-burger.png");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -103,15 +107,11 @@
 }
 
 .first-box__title{
-    font-family: "gagalinregular", sans-serif;
-    font-size: 75px;
-    color: #f9b43b;
-    text-transform: uppercase;
-    font-weight: 400;
+    color: $yellow;
 }
 
 .first-box__subtitle{
-    font-family: "lifehackmedium", sans-serif;
+    font-family: "lifehackmedium",Arial, Helvetica, sans-serif;
     font-size: 65px;
     text-transform: lowercase;
     margin-top: 10px;
@@ -119,7 +119,7 @@
 }
 
 .first__arrow{
-    background-image: url("../../img/icons/arrow-scroll.png");
+    background-image: url("../img/icons/arrow-scroll.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 29px;

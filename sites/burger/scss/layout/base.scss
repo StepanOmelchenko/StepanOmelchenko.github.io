@@ -12,9 +12,9 @@ html,
 }
 
 .wrapper{
-    font-family: "ubuntulight", sans-serif;
+    font-family: "ubuntulight", Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: #fff;
+    color: $white;
 }
 
 ul{
@@ -38,5 +38,12 @@ a{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #fff;
+    background-color: $white;
+}
+
+.common-header{
+    font-family: "gagalinregular", Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    text-transform: uppercase;
+    font-weight: 400;
 }

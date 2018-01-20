@@ -1,0 +1,24 @@
+.second{
+    background-image: url("../img/bg/second-bg.jpg");
+}
+
+.second__inner{
+    width: 940px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second__box{
+    padding-bottom: 10%;
+}
+
+.second__header--color{
+    color: $black;
+}
+
+.second__img{
+    
+}
