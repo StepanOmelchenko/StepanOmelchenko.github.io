@@ -13,12 +13,52 @@
 
 .second__box{
     padding-bottom: 10%;
+    width: 100%;
 }
 
-.second__header--color{
+.second__header{
     color: $black;
+    text-align: center;
+}
+
+.second__list{
+    margin-top: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.second__item{
+    width: 281px;
+    text-align: center;
 }
 
 .second__img{
-    
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@each $img in (meat, hand, natural) {
+
+    .second__img--#{$img}{
+        background-image: url("../img/content/#{$img}.png")
+    }
+
+}
+
+.second__title{
+    color: $black;
+    font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin-top: 34px;
+}
+
+.second__text{
+    text-align: justify;
+    margin-top: 20px;
+    color: $black;
+    line-height: 1.7;
 }

@@ -74,9 +74,12 @@ a {
 
 .common-header {
   font-family: "gagalinregular", Arial, Helvetica, sans-serif;
-  font-size: 75px;
+  font-size: 72px;
   text-transform: uppercase;
   font-weight: 400; }
+
+.sidebar {
+  z-index: 10; }
 
 .sidebar__list {
   position: fixed;
@@ -244,7 +247,7 @@ a {
   color: #f9b43b; }
 
 .first-box__subtitle {
-  font-family: "lifehackmedium",Arial, Helvetica, sans-serif;
+  font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
   font-size: 65px;
   text-transform: lowercase;
   margin-top: 10px;
@@ -276,7 +279,141 @@ a {
   align-items: center; }
 
 .second__box {
-  padding-bottom: 10%; }
+  padding-bottom: 10%;
+  width: 100%; }
 
-.second__header--color {
-  color: #2f3234; }
+.second__header {
+  color: #2f3234;
+  text-align: center; }
+
+.second__list {
+  margin-top: 55px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.second__item {
+  width: 281px;
+  text-align: center; }
+
+.second__img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.second__img--meat {
+  background-image: url("../img/content/meat.png"); }
+
+.second__img--hand {
+  background-image: url("../img/content/hand.png"); }
+
+.second__img--natural {
+  background-image: url("../img/content/natural.png"); }
+
+.second__title {
+  color: #2f3234;
+  font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin-top: 34px; }
+
+.second__text {
+  text-align: justify;
+  margin-top: 20px;
+  color: #2f3234;
+  line-height: 1.7; }
+
+.sixth__inner {
+  width: 100%;
+  height: 100%; }
+
+.sixth__list {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
+.sixth__item {
+  width: 25%;
+  height: 50%; }
+
+.sixth__img {
+  width: 100%;
+  height: 100%;
+  padding: 15% 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden; }
+  .sixth__img:hover {
+    -webkit-filter: grayscale(50%);
+    filter: grayscale(50%); }
+  .sixth__img:hover .sixth__img-inner {
+    visibility: visible; }
+
+.sixth__img--client1 {
+  background-image: url("../img/content/clients/client1.jpg"); }
+
+.sixth__img--client2 {
+  background-image: url("../img/content/clients/client2.jpg"); }
+
+.sixth__img--client3 {
+  background-image: url("../img/content/clients/client3.jpg"); }
+
+.sixth__img--client4 {
+  background-image: url("../img/content/clients/client4.jpg"); }
+
+.sixth__img--client5 {
+  background-image: url("../img/content/clients/client5.jpg"); }
+
+.sixth__img--client6 {
+  background-image: url("../img/content/clients/client6.jpg"); }
+
+.sixth__img--client7 {
+  background-image: url("../img/content/clients/client7.jpg"); }
+
+.sixth__img--client8 {
+  background-image: url("../img/content/clients/client8.jpg"); }
+
+.sixth__img-inner {
+  visibility: hidden;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.sixth__img-title {
+  font-family: "gagalinregular", Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+.sixth__img-text {
+  line-height: 1.7; }
+
+.sixth__img-btn {
+  background-color: #2f3234;
+  display: block;
+  width: 110px;
+  padding: 10px; }
+  .sixth__img-btn:hover {
+    background-color: #1f2122; }
+
+.sixth__img-link {
+  font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-transform: uppercase; }
