@@ -16,7 +16,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 12px 10px 0 0;
+    flex-basis: 13%;
+    padding-top: 12px;
 }
 
 .first__logo{
@@ -43,24 +44,28 @@
     vertical-align: middle;
     display: inline-block;
 
-    &:before{
-        content: "";
-        display: inline-block;
-        margin: 0 11px 0 12px;
-        background-color: $white;
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        vertical-align: middle;
-    }
+        &:before{
+            content: "";
+            display: inline-block;
+            margin: 0 11px 0 12px;
+            background-color: $white;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
 
-    &:first-child:before{
-        display: none;
-    }
+        &:first-child:before{
+            display: none;
+        }
 }
 
 .first-menu__link{
     vertical-align: middle;
+
+        &:hover{
+            text-decoration: underline;
+        }
 }
 
 .first__btn{
@@ -76,13 +81,13 @@
     background-color: $orange;
     vertical-align: middle;
 
-    &:hover{
-        background-color: $orange-hover;
-    }
+        &:hover{
+            background-color: $orange-hover;
+        }
 }
 
 .first-box{
-    flex: 1;
+    flex-basis: 74%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,10 +124,12 @@
 }
 
 .first__arrow{
+    flex-basis: 13%;
     background-image: url("../img/icons/arrow-scroll.png");
     background-position: center;
     background-repeat: no-repeat;
-    width: 29px;
-    height: 14px;
-    padding: 7% 0;
+
+        &:hover{
+
+        }
 }

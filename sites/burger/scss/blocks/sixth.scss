@@ -23,14 +23,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+    filter: grayscale(100%);
 
-    &:hover{
-        filter: grayscale(50%);
-    }
+        &:hover .sixth__img-inner{
+            visibility: visible;
+        }
 
-    &:hover .sixth__img-inner{
-        visibility: visible;
-    }
 }
 
 @each $photo in (client1, client2, client3, client4, client5, client6, client7, client8) { 
