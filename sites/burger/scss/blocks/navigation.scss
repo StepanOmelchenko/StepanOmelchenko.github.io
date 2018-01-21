@@ -29,6 +29,7 @@
     height: 15px;
     border-radius: 50%;
     position: relative;
+    transition: border .5s;
         
         &:hover{
             border: 1px solid #fff;
@@ -46,8 +47,4 @@
             height: 5px;
             border-radius: 50%;
         }
-}
-
-.navigation__content{
-    
 }

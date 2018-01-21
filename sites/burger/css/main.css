@@ -110,7 +110,10 @@ a {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  position: relative; }
+  position: relative;
+  -webkit-transition: border .5s;
+  -o-transition: border .5s;
+  transition: border .5s; }
   .navigation__link:hover {
     border: 1px solid #fff; }
   .navigation__link:after {
@@ -376,7 +379,7 @@ a {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
   .sixth__img:hover .sixth__img-inner {
-    visibility: visible; }
+    opacity: 1; }
 
 .sixth__img--client1 {
   background-image: url("../img/content/clients/client1.jpg"); }
@@ -403,10 +406,14 @@ a {
   background-image: url("../img/content/clients/client8.jpg"); }
 
 .sixth__img-inner {
-  visibility: hidden;
+  opacity: 0;
   width: 100%;
   height: 100%;
   padding: 14% 7%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,7 +422,10 @@ a {
   -ms-flex-direction: column;
   flex-direction: column;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  -webkit-box-align: left;
+  -ms-flex-align: left;
+  align-items: left; }
 
 .sixth__img-title {
   font-family: "gagalinregular", Arial, Helvetica, sans-serif;
@@ -426,14 +436,14 @@ a {
 
 .sixth__img-btn {
   background-color: #2f3234;
-  display: block;
-  width: 110px;
-  padding: 10px;
+  display: inline-block;
   border-radius: 5%; }
   .sixth__img-btn:hover {
     background-color: #1f2122; }
 
 .sixth__img-link {
+  text-align: center;
+  padding: 10px;
   font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
   font-size: 13px;
   text-transform: uppercase; }
