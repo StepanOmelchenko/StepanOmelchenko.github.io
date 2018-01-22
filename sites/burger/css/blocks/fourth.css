@@ -1,0 +1,15 @@
+.fourth {
+  background-image: url("../img/bg/fourth-bg.jpg"); }
+
+.fourth__inner {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.fourth-box {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0; }
