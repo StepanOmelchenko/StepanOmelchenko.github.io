@@ -260,8 +260,9 @@ a {
   flex-direction: column;
   padding-top: 8%; }
 
-.first-box__title {
-  color: #f9b43b; }
+.first-box__title-up {
+  color: #f9b43b;
+  display: inline-block; }
 
 .first-box__title-down {
   font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
@@ -269,7 +270,8 @@ a {
   text-transform: lowercase;
   margin-top: 17px;
   line-height: 1;
-  color: #fff; }
+  color: #fff;
+  display: inline-block; }
 
 .first__arrow {
   -ms-flex-preferred-size: 13%;

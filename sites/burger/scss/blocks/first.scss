@@ -116,8 +116,9 @@
     padding-top: 8%;
 }
 
-.first-box__title{
+.first-box__title-up{
     color: $yellow;
+    display: inline-block
 }
 
 .first-box__title-down{
@@ -127,6 +128,7 @@
     margin-top: 17px;
     line-height: 1;
     color: $white;
+    display: inline-block;
 }
 
 .first__arrow{
