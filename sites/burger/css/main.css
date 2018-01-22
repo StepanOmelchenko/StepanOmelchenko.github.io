@@ -263,12 +263,13 @@ a {
 .first-box__title {
   color: #f9b43b; }
 
-.first-box__subtitle {
+.first-box__title-down {
   font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
   font-size: 65px;
   text-transform: lowercase;
   margin-top: 17px;
-  line-height: 1; }
+  line-height: 1;
+  color: #fff; }
 
 .first__arrow {
   -ms-flex-preferred-size: 13%;
@@ -350,6 +351,33 @@ a {
   margin-top: 10px;
   color: #2f3234;
   line-height: 1.7; }
+
+.fourth {
+  background-image: url("../img/bg/fourth-bg.jpg"); }
+
+.fourth__inner {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.fourth__inner-right {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #2f3234;
+  opacity: .9;
+  padding-right: 10%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .sixth__inner {
   width: 100%;
