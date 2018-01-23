@@ -107,8 +107,8 @@ a {
     pointer-events: none; }
 
 .navigation__link {
-  width: 15px;
-  height: 15px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   position: relative;
   -webkit-transition: border .5s;
@@ -126,8 +126,8 @@ a {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     background-color: #fff;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%; }
 
 .first {
@@ -238,9 +238,6 @@ a {
 .first-box__img {
   -ms-flex-preferred-size: 50%;
   flex-basis: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 417px;
   height: 424px;
   background-image: url("../img/content/first-burger.png");
@@ -274,6 +271,8 @@ a {
   display: inline-block; }
 
 .first__arrow {
+  width: 100px;
+  height: 50px;
   -ms-flex-preferred-size: 13%;
   flex-basis: 13%;
   background-image: url("../img/icons/arrow-scroll.png");

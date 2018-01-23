@@ -100,7 +100,6 @@
 
 .first-box__img{
     flex-basis: 50%;
-    display: flex;
     width: 417px;
     height: 424px;
     background-image: url("../img/content/first-burger.png");
@@ -132,6 +131,8 @@
 }
 
 .first__arrow{
+    width: 100px;
+    height: 50px;
     flex-basis: 13%;
     background-image: url("../img/icons/arrow-scroll.png");
     background-position: center;
