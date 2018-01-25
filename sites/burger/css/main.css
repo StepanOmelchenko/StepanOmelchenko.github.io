@@ -233,7 +233,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 0 8% 3%;
+  padding: 0 0 5% 3%;
   overflow: hidden; }
 
 .first-box__img {
@@ -383,13 +383,81 @@ a {
   bottom: 0;
   background-color: #2f3234;
   opacity: .9;
-  padding-right: 10%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+
+.fourth__header {
+  color: #f9b43b; }
+
+.fourth__list {
+  margin-top: 45px; }
+
+.fourth__item {
+  margin-bottom: 35px;
+  position: relative;
+  padding-left: 25px; }
+  .fourth__item:last-child {
+    margin-bottom: 0; }
+  .fourth__item--active .fourth__worker {
+    height: auto; }
+  .fourth__item--active .fourth__link {
+    color: #f9b43b; }
+    .fourth__item--active .fourth__link:before {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg); }
+
+.fourth__link {
+  font-size: 14px; }
+  .fourth__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    border-top: 8px solid #f9b43b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; }
+
+.fourth__worker {
+  overflow: hidden;
+  height: 0;
+  margin-top: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.fourth__worker-wrapper {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.fourth__worker-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-left: 20px; }
+
+.fourth__worker-position {
+  font-family: "ubuntubold", Arial, Helvetica, sans-serif; }
+
+.fourth__worker-discription {
+  width: 208px;
+  line-height: 1.7; }
 
 .sixth__inner {
   width: 100%;
