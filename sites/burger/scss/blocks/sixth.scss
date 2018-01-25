@@ -1,8 +1,3 @@
-.sixth__inner{
-    width: 100%;
-    height: 100%;
-}
-
 .sixth__list{
     width: 100%;
     height: 100%;
@@ -13,37 +8,51 @@
 .sixth__item{
     width: 25%;
     height: 50%;
-}
-
-.sixth__img{
-    width: 100%;
-    height: 100%;
+    position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
     filter: grayscale(100%);
 
-        &:hover .sixth__img-inner{
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+            opacity: 0;
+            transition: opacity .3s;            
+        }
+
+        &:hover:before{
             opacity: 1;
         }
 
+        &:hover .sixth__inner{
+            opacity: 1;
+        }
 }
 
 @each $photo in (client1, client2, client3, client4, client5, client6, client7, client8) { 
 
-    .sixth__img--#{$photo}{
+    .sixth__item--#{$photo}{
         background-image: url("../img/content/clients/#{$photo}.jpg");
     }
 
 }
 
-.sixth__img-inner{
+.sixth__inner{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     opacity: 0;
-    width: 100%;
-    height: 100%;
-    padding: 14% 7%;
-    background-color: rgba(0, 0, 0, .5);
+    width: 90%;
+    height: 80%;
     transition: opacity .3s;
     display: flex;
     flex-direction: column;
@@ -51,16 +60,16 @@
     align-items: flex-start;
 }
 
-.sixth__img-title{
+.sixth__inner-title{
     font-family: "gagalinregular", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
-.sixth__img-text{
+.sixth__inner-text{
     line-height: 1.7;
 }
 
-.sixth__img-btn{
+.sixth__inner-btn{
     background-color: $black;
     display: inline-block;
     border-radius: 5%;
@@ -70,7 +79,7 @@
     }
 }
 
-.sixth__img-link{
+.sixth__inner-link{
     text-align: center;
     padding: 10px;
     font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
