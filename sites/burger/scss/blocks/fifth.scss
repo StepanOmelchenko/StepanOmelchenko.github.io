@@ -1,3 +1,97 @@
 .fifth{
     background-image: url("../img/bg/fifth-bg.jpg"); 
 }
+
+.fifth__inner{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fifth__header{
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+
+.fifth__list{
+    overflow: hidden;
+    display: flex;
+}
+  
+.fifth__item{
+    display: flex;
+}
+  
+.fifth__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(20, 20, 20, 0.7);
+        }
+
+        &:hover + .fifth__container,
+        &--active + .fifth__container{
+            width: 470px;
+        }
+
+        &:hover,
+        &--active{
+            color: $yellow;
+        }
+
+}
+
+@each $img in (meat, vegan, diet){
+
+    .fifth__link--#{$img} {
+        background-image: url("../img/content/menu/#{$img}.jpg");
+    }
+    
+}
+
+.fifth__link-text{
+    width: 80px;
+    transform: rotate(-90deg);
+    text-transform: uppercase;
+    font-size: 40px;
+    flex: 0 0 600px;
+    text-align: left;
+    overflow: hidden;
+}
+
+
+.fifth__container{
+    height: 100%;
+    width: 0px;
+    overflow: hidden;
+    transition: width .4s;
+    padding-top: 30px;
+    background-color: $black;
+    opacity: .9;
+
+        &:hover{
+            width: 470px;
+        }
+        
+}
+
+.fifth__container-inner{
+    width: 350px;
+    margin-left: 30px;
+}
