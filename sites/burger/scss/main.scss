@@ -1,5 +1,6 @@
 @import "layout/fonts.scss";
 @import "config/variables.scss";
+@import "config/mixin.scss";
 @import "layout/base.scss";
 
 @import "blocks/navigation.scss";
@@ -9,3 +10,6 @@
 @import "blocks/fourth.scss";
 @import "blocks/fifth.scss";
 @import "blocks/sixth.scss";
+@import "blocks/seventh.scss";
+@import "blocks/form.scss";
+@import "blocks/order-btn.scss";

@@ -1,9 +1,10 @@
 .first{
     background-image: url("../img/bg/first-texture.png"), url("../img/bg/first-bg.jpg");
-    padding-top: 12px;
+    padding-top: rem(12px);
 }
 
 .first__inner{
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,18 +16,19 @@
     display: flex;
     justify-content: space-between;
     flex-basis: 13%;
-    padding: 0 7px 0 19px;
+    padding-right: rem(7px);
+    padding-left: rem(19px);
 }
 
 .first__logo{
-    width: 92px;
-    height: 69px;
+    width: rem(92px);
+    height: rem(69px);
     margin-right: auto;
     transition: transform .2s;
 
         &-svg{
-            width: 92px;
-            height: 69px;
+            width: rem(92px);
+            height: rem(69px);
         }
 
         &:hover{
@@ -35,7 +37,7 @@
 }
 
 .first-menu{
-    margin-top: 20px;
+    margin-top: rem(20px);
 }
 
 .first-menu__list{
@@ -43,6 +45,10 @@
     font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
     font-size: 13px;
     text-transform: uppercase;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .first-menu__item{
@@ -52,10 +58,11 @@
         &:before{
             content: "";
             display: inline-block;
-            margin: 0 11px 0 12px;
+            margin-right: rem(11px);
+            margin-left: rem(12px);
             background-color: $white;
-            width: 5px;
-            height: 5px;
+            width: rem(5px);
+            height: rem(5px);
             border-radius: 50%;
             vertical-align: middle;
         }
@@ -75,13 +82,14 @@
 
 .first__btn{
     display: inline-block;
-    margin: 16px 0 0 19px;
+    margin-top: rem(16px);
+    margin-left: rem(19px);
 }
 
-.first__btn-link{
-    padding: 10px 17px;
+/*.first__btn-link{
+    padding: rem(10px) rem(17px);
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: rem(13px);
     border-radius: 5%;
     background-color: $orange;
     vertical-align: middle;
@@ -89,21 +97,27 @@
         &:hover{
             background-color: $orange-hover;
         }
-}
+}*/
 
 .first-box{
     flex-basis: 74%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 0 5% 3%;
+    padding-bottom: rem(30px);
+    padding-left: rem(20px);
     overflow: hidden;
+
+    @include tablets {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
 }
 
 .first-box__img{
     flex-basis: 50%;
-    width: 417px;
-    height: 424px;
+    width: rem(417px);
+    height: rem(424px);
     background-image: url("../img/content/first-burger.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -112,9 +126,11 @@
 
 .first-box__header{
     flex-basis: 50%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 8%;
+    padding-top: rem(50px);
+
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .first-box__title-up{
@@ -124,15 +140,15 @@
 
 .first-box__title-down{
     font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
-    font-size: 65px;
+    font-size: rem(65px);
     text-transform: lowercase;
-    margin-top: 17px;
+    margin-top: rem(17px);
     line-height: 1;
     color: $white;
     display: inline-block;
 }
 
-.first__footer{
+.first__bottom{
     flex-basis: 13%;
     display: flex;
     align-items: center;
@@ -141,11 +157,11 @@
 
 .first__arrow{
     transition: transform .2s;
-    padding-top: 10px;
+    padding-top: rem(10px);
 
         &-svg{
-            width: 29px;
-            height: 14px;
+            width: rem(29px);
+            height: rem(14px);
         }
 
         &:hover{

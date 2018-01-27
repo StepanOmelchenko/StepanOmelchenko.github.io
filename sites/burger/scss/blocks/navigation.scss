@@ -3,6 +3,10 @@
     position: fixed;
     right: 30px;
     top: 90px;
+
+    @include tablets{
+        display: none;
+    }
 }
 
 .navigation__list{

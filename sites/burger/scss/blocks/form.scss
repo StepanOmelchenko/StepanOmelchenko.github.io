@@ -1,0 +1,136 @@
+.form{
+    width: 100%;
+    display: flex;
+    margin-top: rem(40px);
+}
+
+.form__column{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__row{
+    display: flex;
+    margin-top: rem(19px);
+
+        &:first-child{
+            margin-top: 0;
+        }
+}
+
+.form__label{
+    width: 100%;
+    text-align: left;
+    margin-right: rem(20px);
+
+        &:last-child{
+            margin-right: rem(20px);
+        }
+}
+
+.form__input{
+    border-radius: rem(5px);
+    outline: none;
+    width: 100%;
+    height: rem(36px);
+    margin-top: rem(9px);
+    padding: rem(12px) rem(20px);
+    color: $black;
+}
+
+.form__textarea{
+    border-radius: rem(5px);
+    outline: none;
+    width: 100%;
+    height: rem(110px);
+    margin-top: rem(9px);
+    padding: rem(12px) rem(20px);
+    color: $black;
+    resize: none;
+}
+
+.form__radio,
+.form__checkbox{
+    display: flex;
+    cursor: pointer;
+
+        &:hover{
+            color: $orange;
+        }
+}
+
+.form__radio{
+    margin-right: rem(25px);
+
+        &:last-child{
+            margin-right: 0;
+        }
+}
+
+.form__radio-btn{
+    display: none;
+
+        &:checked{
+            & + .form__radio-img{
+                &:after{
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: rem(7px);
+                    height: rem(7px);
+                    border-radius: 50%;
+                    background-color: $orange;
+                }
+            }
+        }
+}
+
+.form__radio-img{
+    position: relative;
+    width: rem(15px);
+    height: rem(15px);
+
+        &:before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(15px);
+            height: rem(15px);
+            border-radius: 50%;
+            background-color: $white;
+        }
+}
+
+.form__radio-title,
+.form__checkbox-title{
+    margin-left:rem(10px);
+}
+
+.form__checkbox-btn{
+    display: none;
+}
+
+.form__checkbox-img{
+    position: relative;
+    width: rem(15px);
+    height: rem(15px);
+
+        &:before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: rem(15px);
+            height: rem(15px);
+            background-color: $white;
+        }
+}

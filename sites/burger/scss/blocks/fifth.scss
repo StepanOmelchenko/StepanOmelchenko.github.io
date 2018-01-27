@@ -86,12 +86,16 @@
     opacity: .9;
 
         &:hover{
-            width: 470px;
+            width: 540px;
         }
         
 }
 
 .fifth__container-inner{
-    width: 350px;
+    width: 470px;
     margin-left: 30px;
+}
+
+.fifth__container-inner p{
+    margin: 10px 0;
 }
