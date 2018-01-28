@@ -21,11 +21,28 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+        @include phones{
+            margin-top: rem(10px);
+            padding: 0;
+            flex-direction: column;
+        }
+
 }
 
 .second__item{
-    width: rem(285px);
+    width: 30%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
+        @include phones{
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+
 }
 
 .second__img{
@@ -34,6 +51,10 @@
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
+
+        @include phones{
+        }
+
 }
 
 @each $img in (meat, hand, natural) {
@@ -42,6 +63,13 @@
         background-image: url("../img/content/#{$img}.png")
     }
 
+}
+
+.second__info{
+    @include phones{
+        text-align: left;
+        max-width: 60%;
+    }
 }
 
 .second__title{
@@ -56,4 +84,13 @@
     margin-top: rem(10px);
     color: $black;
     line-height: rem(24px);
+
+        @include tablets{
+            text-align: center;
+        }
+
+        @include phones{
+            text-align: left;
+        }
+
 }

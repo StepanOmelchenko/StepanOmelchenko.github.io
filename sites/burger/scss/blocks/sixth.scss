@@ -35,6 +35,12 @@
         &:hover .sixth__inner{
             opacity: 1;
         }
+
+        @include tablets{
+            width: 50%;
+            height: 25%;
+        }
+
 }
 
 @each $photo in (client1, client2, client3, client4, client5, client6, client7, client8) { 
@@ -58,15 +64,35 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+
+        @include tablets{
+            width: 80%;
+            align-items: center;
+        }
 }
 
 .sixth__inner-title{
     font-family: "gagalinregular", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+
+        @include phones{
+            text-align: center;
+            font-size: 24px;
+        }
+
 }
 
 .sixth__inner-text{
     line-height: rem(24px);
+
+        @include tablets{
+            text-align: center;
+        }
+
+        @include phones{
+            display: none;
+        }
+
 }
 
 .sixth__inner-btn{

@@ -41,8 +41,11 @@
                         </ul>
                     </nav>
                     <div class="first__btn">
-                        <a class="first__btn-link order-btn" href="#">Заказать</a>
+                        <a class="first__btn-link order-btn" href="#order-section">Заказать</a>
                     </div>
+                    <a class="first__hamburger hamburger" href="#">
+                        <div class="hamburger__btn"></div>
+                    </a>
                 </header>
                 <div class="first-box">
                     <div class="first-box__img">
@@ -73,32 +76,38 @@
                             <div class="second__img second__img--meat">
                                 <span class="hidden">лого</span>
                             </div>
-                            <h3 class="second__title">100% свежее мясо</h3>
-                            <p class="second__text">
-                                Драма представляет собой деструктивный цикл.
-                                Анапест представляет собой анапест. Ямб неравномерен.
-                            </p>
+                            <div class="second__info">
+                                <h3 class="second__title">100% свежее мясо</h3>
+                                <p class="second__text">
+                                    Драма представляет собой деструктивный цикл.
+                                    Анапест представляет собой анапест. Ямб неравномерен.
+                                </p>
+                            </div>
                         </li>
                         <li class="second__item">
                             <div class="second__img second__img--hand">
                                 <span class="hidden">лого</span>
                             </div>
-                            <h3 class="second__title">Ручная  сборка</h3>
-                            <p class="second__text">
-                                Драма представляет собой деструктивный цикл.
-                                Анапест представляет собой анапест.
-                                Первое полустишие притягивает сюжетный реформаторский пафос.
-                            </p>
+                            <div class="second__info">
+                                <h3 class="second__title">Ручная  сборка</h3>
+                                <p class="second__text">
+                                    Драма представляет собой деструктивный цикл.
+                                    Анапест представляет собой анапест.
+                                    Первое полустишие притягивает сюжетный реформаторский пафос.
+                                </p>
+                            </div>
                         </li>
                         <li class="second__item">
                             <div class="second__img second__img--natural">
                                 <span class="hidden">лого</span>
                             </div>
-                            <h3 class="second__title">Натуральные ингредиенты</h3>
-                            <p class="second__text">
-                                Драма представляет собой деструктивный цикл.
-                                Анапест представляет собой анапест.
-                            </p>
+                            <div class="second__info">
+                                <h3 class="second__title">Натуральные ингредиенты</h3>
+                                <p class="second__text">
+                                    Драма представляет собой деструктивный цикл.
+                                    Анапест представляет собой анапест.
+                                </p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -353,7 +362,7 @@
                 </li>
             </ul>
         </section>
-        <section class="section seventh">
+        <section class="section seventh" id="order-section">
             <div class="seventh__inner container">
                 <h2 class="seventh__header common-header">Закажите доставку</h2>
                 <form class="seventh__form form" action="post">
@@ -419,13 +428,13 @@
                                 <div class="form__checkbox-title">Не перезванивать</div>
                             </label>
                         </div>
-                        <div class="form__row">
+                        <div class="form__btns-set">
                             <div class="form__btn">
                                 <a class="order-btn" href="#">Заказать</a>
                             </div>
                             <label class="form__reset">
                                 <div class="form__reset-title">Очистить</div>
-                                <input class="form__rese-btn" type="reset">
+                                <input class="form__reset-btn" type="reset">
                             </label>
                         </div>
                     </div>
@@ -444,11 +453,34 @@
                             <span class="footer__phone-number">+7 (812) 377-13-77</span>
                         </a>
                     </div>
-                    <ul class="footer__social">
-                        <li>
-                            <svg class="footer__vk">
-                                <use width="23" height="13" xlink:href="#vk"></use>
-                            </svg>
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                <svg class="footer__svg" width="23" height="13">
+                                    <use width="23" height="13" xlink:href="#vk"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__item" >
+                            <a class="footer__link" href="#">
+                                <svg class="footer__svg" width="20" height="20">
+                                    <use width="20" height="20" xlink:href="#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                <svg class="footer__svg" width="20" height="20">
+                                    <use width="20" height="20" xlink:href="#inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">
+                                <svg class="footer__svg" width="20" height="16">
+                                    <use width="20" height="16" xlink:href="#tw"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </div> 

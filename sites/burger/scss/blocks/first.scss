@@ -18,6 +18,12 @@
     flex-basis: 13%;
     padding-right: rem(7px);
     padding-left: rem(19px);
+
+        @include tablets{
+            padding-right: 0;
+            padding-left: rem(10px);
+        }
+
 }
 
 .first__logo{
@@ -88,6 +94,7 @@
 
 .first-box{
     flex-basis: 74%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,21 +109,29 @@
 }
 
 .first-box__img{
-    flex-basis: 50%;
-    width: rem(417px);
-    height: rem(424px);
+    width: 50%;
+    height: 100%;
+    max-height: rem(424px);
     background-image: url("../img/content/first-burger.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+
+        @include tablets{
+            width: 100%;
+        }
+
 }
 
 .first-box__header{
-    flex-basis: 50%;
+    width: 50%;
     padding-top: rem(50px);
 
     @include tablets{
+        width: 100%;
         text-align: center;
+        padding-top: rem(20px);
+        max-width: rem(480px);
     }
 }
 

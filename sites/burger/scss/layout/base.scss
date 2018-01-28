@@ -46,6 +46,14 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $white;
+
+        @include tablets{
+            height: rem(1024px);
+        }
+
+        @include phones{
+            height: rem(800px);
+        }
 }
 
 .common-header{
@@ -54,23 +62,20 @@ a{
     text-transform: uppercase;
     font-weight: 400;
 
-    @include tablets{
-        font-size: rem(65px);
+    @include phones{
+        font-size: rem(50px);
     }
 }
 
 .container{
-    width: rem(970px);
+    width: 100%;
+    max-width: rem(940px);
     margin: 0 auto;
 
     @include tablets{
-        width: 480px;
-    }
-
-    @include phones{
         width: 95%;
     }
-
+    
 }
 
 label,

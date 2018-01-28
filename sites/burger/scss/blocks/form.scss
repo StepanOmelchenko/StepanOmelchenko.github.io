@@ -2,21 +2,49 @@
     width: 100%;
     display: flex;
     margin-top: rem(40px);
+
+        @include tablets{
+            flex-direction: column;
+            max-width: rem(480px);
+            margin-right: auto;
+            margin-left: auto;
+        }
+
 }
 
 .form__column{
-    flex-basis: 50%;
+    width: 50%;
     display: flex;
     flex-direction: column;
+    margin-right: rem(20px);
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @include tablets{
+            width: 100%;
+            margin-top: rem(13px);
+
+                &:first-child{
+                    margin-top: 0;
+                }
+        }
+
 }
 
 .form__row{
     display: flex;
-    margin-top: rem(19px);
+    margin-top: rem(17px);
 
         &:first-child{
             margin-top: 0;
         }
+
+        @include phones{
+            justify-content: center;
+        }
+
 }
 
 .form__label{
@@ -25,7 +53,7 @@
     margin-right: rem(20px);
 
         &:last-child{
-            margin-right: rem(20px);
+            margin-right: 0;
         }
 }
 
@@ -118,8 +146,28 @@
 }
 
 .form__checkbox-btn,
-.form__rese-btn{
+.form__reset-btn{
     display: none;
+}
+
+.form__checkbox-btn:checked{
+
+    & + .form__checkbox-img{
+        &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 15%;
+            top: 15%;
+            transform: rotate(-45deg);
+            width: rem(8px);
+            height: rem(5px);
+            border-left: rem(3px) solid $orange;
+            border-bottom: rem(3px) solid $orange;
+        }
+    }
+
+
 }
 
 .form__checkbox-img{
@@ -138,6 +186,20 @@
             height: rem(15px);
             background-color: $white;
         }
+}
+
+.form__btns-set{
+    display: flex;
+    margin-top: rem(20px);
+
+        @include tablets{
+            margin-top: rem(30px);
+        }
+
+        @include phones{
+            justify-content: center;
+        }
+
 }
 
 .form__reset{
