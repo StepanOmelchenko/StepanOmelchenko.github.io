@@ -21,22 +21,16 @@
     align-items: center;
 }
 
-.fourth__accordion{
-    
-}
-
 .fourth__header{
     color: $yellow;
 }
 
 .fourth__list{
-    margin-top: 45px;
+    margin-top: rem(45px);
 }
 
 .fourth__item{
-    margin-bottom: 35px;
-    position: relative;
-    padding-left: 25px;
+    margin-bottom: rem(35px);
 
         &:last-child{
             margin-bottom: 0;
@@ -57,30 +51,36 @@
 }
 
 .fourth__link{
-    font-size: 14px;
+    font-size: rem(14px);
+    position: relative;
+    padding-left: rem(25px);
 
         &:before{
             content: "";
             display: block;
             position: absolute;
             left: 0;
-            top: 4px;
-            border-top: 8px solid $yellow;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
+            top: rem(4px);
+            border-top: rem(8px) solid $yellow;
+            border-left: rem(5px) solid transparent;
+            border-right: rem(5px) solid transparent;
+        }
+
+        &:hover{
+            color: $yellow;
         }
 }
 
 .fourth__worker{
     overflow: hidden;
     height: 0;
-    margin-top: 17px;
+    margin-top: rem(17px);
     display: flex;
 }
 
 .fourth__worker-wrapper{
-    width: 98px;
-    height: 98px;
+    width: rem(98px);
+    height: rem(98px);
     border-radius: 50%;
     overflow: hidden;
     background-position: center;
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-left: rem(20px);
 }
 
 .fourth__worker-position{
@@ -99,6 +99,6 @@
 }
 
 .fourth__worker-discription{
-    width: 208px;
-    line-height: 1.7;
+    width: rem(208px);
+    line-height: rem(24px);
 }

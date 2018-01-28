@@ -47,7 +47,7 @@
 
         &:hover + .fifth__container,
         &--active + .fifth__container{
-            width: 470px;
+            width: rem(540px);
         }
 
         &:hover,
@@ -66,11 +66,11 @@
 }
 
 .fifth__link-text{
-    width: 80px;
+    width: rem(80px);
     transform: rotate(-90deg);
     text-transform: uppercase;
-    font-size: 40px;
-    flex: 0 0 600px;
+    font-size: rem(40px);
+    flex: 0 0 rem(600px);
     text-align: left;
     overflow: hidden;
 }
@@ -78,24 +78,24 @@
 
 .fifth__container{
     height: 100%;
-    width: 0px;
+    width: 0;
     overflow: hidden;
     transition: width .4s;
-    padding-top: 30px;
+    padding-top: rem(30px);
     background-color: $black;
     opacity: .9;
 
         &:hover{
-            width: 540px;
+            width: rem(540px);
         }
         
 }
 
 .fifth__container-inner{
-    width: 470px;
-    margin-left: 30px;
+    width: rem(470px);
+    margin-left: rem(30px);
 }
 
 .fifth__container-inner p{
-    margin: 10px 0;
+    margin: rem(10px) 0;
 }

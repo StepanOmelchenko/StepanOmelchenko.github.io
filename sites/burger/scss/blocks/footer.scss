@@ -1,0 +1,39 @@
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: rem(10px) 0;
+    background-image: url("../img/bg/footer.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__phone{
+    margin-top: rem(10px);
+    font-family: "ubuntubold", Arial, Helvetica, sans-serif;
+    color: $orange;
+}
+
+.footer__phone-icon{
+    display: inline-block;
+    width: rem(12px);
+    height: rem(11px);
+}
+
+.footer__phone-number{
+    display: inline-block;
+    margin-left: rem(5px);
+}
+
+.footer__vk{
+    display: inline-block;
+    width: rem(23px);
+    height: rem(13px);
+}

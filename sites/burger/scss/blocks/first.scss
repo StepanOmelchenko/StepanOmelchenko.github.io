@@ -43,7 +43,7 @@
 .first-menu__list{
     display: inline-block;
     font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: rem(13px);
     text-transform: uppercase;
 
     @include tablets {
@@ -85,19 +85,6 @@
     margin-top: rem(16px);
     margin-left: rem(19px);
 }
-
-/*.first__btn-link{
-    padding: rem(10px) rem(17px);
-    text-transform: uppercase;
-    font-size: rem(13px);
-    border-radius: 5%;
-    background-color: $orange;
-    vertical-align: middle;
-
-        &:hover{
-            background-color: $orange-hover;
-        }
-}*/
 
 .first-box{
     flex-basis: 74%;

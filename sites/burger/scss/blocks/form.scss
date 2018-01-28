@@ -31,7 +31,6 @@
 
 .form__input{
     border-radius: rem(5px);
-    outline: none;
     width: 100%;
     height: rem(36px);
     margin-top: rem(9px);
@@ -48,6 +47,11 @@
     padding: rem(12px) rem(20px);
     color: $black;
     resize: none;
+}
+
+.form__input:focus,
+.form__textarea:focus{
+    border: 2px solid $yellow;
 }
 
 .form__radio,
@@ -113,7 +117,8 @@
     margin-left:rem(10px);
 }
 
-.form__checkbox-btn{
+.form__checkbox-btn,
+.form__rese-btn{
     display: none;
 }
 
@@ -132,5 +137,15 @@
             width: rem(15px);
             height: rem(15px);
             background-color: $white;
+        }
+}
+
+.form__reset{
+    padding: rem(10px);
+    margin-left: rem(10px);
+    cursor: pointer;
+
+        &:hover{
+            color: $orange;
         }
 }

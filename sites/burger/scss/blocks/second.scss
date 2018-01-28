@@ -5,7 +5,8 @@
 }
 
 .second__box{
-    padding: 0 0 35px 20px;
+    padding-bottom: rem(35px);
+    padding-left: rem(20px);
     width: 100%;
 }
 
@@ -15,21 +16,21 @@
 }
 
 .second__list{
-    margin-top: 35px;
-    padding: 0 12px;
+    margin-top: rem(35px);
+    padding: 0 rem(12px);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .second__item{
-    width: 285px;
+    width: rem(285px);
     text-align: center;
 }
 
 .second__img{
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,13 +47,13 @@
 .second__title{
     color: $black;
     font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    margin-top: 30px;
+    font-size: rem(24px);
+    margin-top: rem(30px);
 }
 
 .second__text{
     text-align: justify;
-    margin-top: 10px;
+    margin-top: rem(10px);
     color: $black;
-    line-height: 1.7;
+    line-height: rem(24px);
 }
