@@ -191,7 +191,9 @@ input {
   @media (max-width: 768px) {
     .first__header {
       padding-right: 0;
-      padding-left: 0.71429rem; } }
+      padding-left: 0.71429rem;
+      -ms-flex-preferred-size: unset;
+      flex-basis: unset; } }
   @media (max-width: 340px) {
     .first__header {
       padding-left: 0; } }
@@ -297,15 +299,20 @@ input {
     .first-box__header {
       width: 100%;
       text-align: center;
-      padding-top: 1.42857rem;
+      padding-top: 0;
+      margin-top: 1.42857rem;
       max-width: 34.28571rem; } }
   @media (max-width: 480px) {
     .first-box__header {
-      font-size: 4.5rem; } }
+      font-size: 4.5rem;
+      margin-top: 2.14286rem; } }
 
 .first-box__title-up {
   color: #f9b43b;
   display: inline-block; }
+  @media (max-width: 480px) {
+    .first-box__title-up {
+      font-size: 4.5rem; } }
 
 .first-box__title-down {
   font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
@@ -364,6 +371,10 @@ input {
   padding-bottom: 2.5rem;
   padding-left: 1.42857rem;
   width: 100%; }
+  @media (max-width: 768px) {
+    .second__box {
+      padding-bottom: 0;
+      padding-left: 0; } }
 
 .second__header {
   color: #2f3234;
@@ -796,7 +807,9 @@ input {
 
 .sixth__inner-title {
   font-family: "gagalinregular", Arial, Helvetica, sans-serif;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px; }
   @media (max-width: 480px) {
     .sixth__inner-title {
       text-align: center;
@@ -1014,7 +1027,7 @@ input {
   margin-top: 1.42857rem; }
   @media (max-width: 768px) {
     .form__btns-set {
-      margin-top: 2.14286rem; } }
+      margin-top: 2.5rem; } }
   @media (max-width: 480px) {
     .form__btns-set {
       -webkit-box-pack: center;

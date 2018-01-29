@@ -74,6 +74,8 @@
 .sixth__inner-title{
     font-family: "gagalinregular", Arial, Helvetica, sans-serif;
     text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
 
         @include phones{
             text-align: center;

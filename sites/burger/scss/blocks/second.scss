@@ -8,6 +8,12 @@
     padding-bottom: rem(35px);
     padding-left: rem(20px);
     width: 100%;
+
+        @include tablets{
+            padding-bottom: 0;
+            padding-left: 0;
+        }
+
 }
 
 .second__header{

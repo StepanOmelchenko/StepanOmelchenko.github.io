@@ -22,6 +22,7 @@
         @include tablets{
             padding-right: 0;
             padding-left: rem(10px);
+            flex-basis: unset;
         }
 
         @include phones-less{
@@ -138,18 +139,24 @@
     @include tablets{
         width: 100%;
         text-align: center;
-        padding-top: rem(20px);
+        padding-top: 0;
+        margin-top: rem(20px);
         max-width: rem(480px);
     }
 
     @include phones{
         font-size: rem(63px);
+        margin-top: rem(30px);
     }
 }
 
 .first-box__title-up{
     color: $yellow;
-    display: inline-block
+    display: inline-block;
+
+        @include phones{
+            font-size: rem(63px);
+        }
 }
 
 .first-box__title-down{
