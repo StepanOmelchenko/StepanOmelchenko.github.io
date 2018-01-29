@@ -17,6 +17,10 @@
             left: 2%;
         }
 
+        @include phones{
+            left: 10%;
+        }
+
 }
 
 .fifth__list{
@@ -54,7 +58,7 @@
 
         &:hover + .fifth__container,
         &--active + .fifth__container{
-            width: rem(540px);
+            width: rem(400px);
         }
 
         &:hover,
@@ -80,6 +84,15 @@
     flex: 0 0 rem(600px);
     text-align: left;
     overflow: hidden;
+
+        @include tablets{
+            flex: 0 0 rem(900px);
+        }
+
+        @include phones{
+            flex: 0 0 rem(700px);
+        }
+
 }
 
 
@@ -93,7 +106,7 @@
     opacity: .9;
 
         &:hover{
-            width: rem(540px);
+            width: rem(400px);
         }
         
 }

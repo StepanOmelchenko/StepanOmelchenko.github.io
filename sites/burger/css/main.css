@@ -209,9 +209,9 @@ input {
     width: 92px;
     height: 69px; }
   .first__logo:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2); }
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1); }
 
 .first-menu {
   margin-top: 1.42857rem; }
@@ -299,6 +299,9 @@ input {
       text-align: center;
       padding-top: 1.42857rem;
       max-width: 34.28571rem; } }
+  @media (max-width: 480px) {
+    .first-box__header {
+      font-size: 4.5rem; } }
 
 .first-box__title-up {
   color: #f9b43b;
@@ -341,8 +344,8 @@ input {
   transition: transform .2s, -webkit-transform .2s;
   padding-top: 0.71429rem; }
   .first__arrow-svg {
-    width: 2.07143rem;
-    height: 1rem; }
+    width: 29px;
+    height: 14px; }
   .first__arrow:hover {
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
@@ -594,6 +597,9 @@ input {
   @media (max-width: 768px) {
     .fifth__header {
       left: 2%; } }
+  @media (max-width: 480px) {
+    .fifth__header {
+      left: 10%; } }
 
 .fifth__list {
   position: absolute;
@@ -635,7 +641,7 @@ input {
     background-color: rgba(20, 20, 20, 0.7); }
   .fifth__link:hover + .fifth__container,
   .fifth__link--active + .fifth__container {
-    width: 38.57143rem; }
+    width: 28.57143rem; }
   .fifth__link:hover, .fifth__link--active {
     color: #f9b43b; }
 
@@ -660,6 +666,16 @@ input {
   flex: 0 0 42.85714rem;
   text-align: left;
   overflow: hidden; }
+  @media (max-width: 768px) {
+    .fifth__link-text {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 64.28571rem;
+      flex: 0 0 64.28571rem; } }
+  @media (max-width: 480px) {
+    .fifth__link-text {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 50rem;
+      flex: 0 0 50rem; } }
 
 .fifth__container {
   height: 100%;
@@ -672,7 +688,7 @@ input {
   background-color: #2f3234;
   opacity: .9; }
   .fifth__container:hover {
-    width: 38.57143rem; }
+    width: 28.57143rem; }
 
 .fifth__container-inner {
   width: 33.57143rem;
@@ -886,7 +902,7 @@ input {
   width: 100%;
   height: 2.57143rem;
   margin-top: 0.64286rem;
-  padding: 0.85714rem 1.42857rem;
+  padding: 0.78571rem 1.42857rem;
   color: #2f3234; }
 
 .form__textarea {
