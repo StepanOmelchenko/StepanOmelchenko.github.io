@@ -62,8 +62,9 @@
     width: 100%;
     height: rem(36px);
     margin-top: rem(9px);
-    padding: rem(11px) rem(20px);
+    padding: rem(10px) rem(20px);
     color: $black;
+    border: 2px solid transparent;
 }
 
 .form__textarea{
@@ -75,6 +76,7 @@
     padding: rem(12px) rem(20px);
     color: $black;
     resize: none;
+    border: 2px solid transparent;
 }
 
 .form__input:focus,
