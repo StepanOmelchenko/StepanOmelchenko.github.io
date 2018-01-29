@@ -35,4 +35,8 @@
         @include tablets{
             display: inline-block;
         }
+
+        @include phones-less{
+            margin-left: rem(10px);
+        }
 }

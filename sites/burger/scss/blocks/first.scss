@@ -24,6 +24,10 @@
             padding-left: rem(10px);
         }
 
+        @include phones-less{
+            padding-left: 0;
+        }
+
 }
 
 .first__logo{
@@ -32,9 +36,9 @@
     margin-right: auto;
     transition: transform .2s;
 
-        &-svg{
-            width: rem(92px);
-            height: rem(69px);
+        &-svg{              // const
+            width: 92px;    
+            height: 69px;
         }
 
         &:hover{
@@ -102,6 +106,10 @@
     padding-left: rem(20px);
     overflow: hidden;
 
+    @include horizontal{
+        padding-left: 0;
+    }
+
     @include tablets {
         flex-direction: column;
         padding-bottom: 0;
@@ -116,7 +124,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-
+    
         @include tablets{
             width: 100%;
         }
@@ -146,8 +154,17 @@
     text-transform: lowercase;
     margin-top: rem(17px);
     line-height: 1;
+    letter-spacing: rem(-1.63px);
     color: $white;
     display: inline-block;
+
+        @include phones{
+            font-size: rem(54px);
+        }
+
+        @include phones-less{
+            font-size: rem(38px);
+        }
 }
 
 .first__bottom{

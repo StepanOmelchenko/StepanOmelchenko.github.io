@@ -77,6 +77,11 @@
     font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
     font-size: rem(24px);
     margin-top: rem(30px);
+
+        @include phones-less{
+            margin-top: rem(5px);
+            font-size: rem(18px);
+        }
 }
 
 .second__text{

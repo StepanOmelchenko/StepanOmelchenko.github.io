@@ -192,6 +192,9 @@ input {
     .first__header {
       padding-right: 0;
       padding-left: 0.71429rem; } }
+  @media (max-width: 340px) {
+    .first__header {
+      padding-left: 0; } }
 
 .first__logo {
   width: 6.57143rem;
@@ -203,8 +206,8 @@ input {
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s; }
   .first__logo-svg {
-    width: 6.57143rem;
-    height: 4.92857rem; }
+    width: 92px;
+    height: 69px; }
   .first__logo:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -264,6 +267,9 @@ input {
   padding-bottom: 2.14286rem;
   padding-left: 1.42857rem;
   overflow: hidden; }
+  @media (max-width: 980px) {
+    .first-box {
+      padding-left: 0; } }
   @media (max-width: 768px) {
     .first-box {
       -webkit-box-orient: vertical;
@@ -304,8 +310,15 @@ input {
   text-transform: lowercase;
   margin-top: 1.21429rem;
   line-height: 1;
+  letter-spacing: -0.11643rem;
   color: #fff;
   display: inline-block; }
+  @media (max-width: 480px) {
+    .first-box__title-down {
+      font-size: 3.85714rem; } }
+  @media (max-width: 340px) {
+    .first-box__title-down {
+      font-size: 2.71429rem; } }
 
 .first__bottom {
   -ms-flex-preferred-size: 13%;
@@ -421,6 +434,10 @@ input {
   font-family: "lifehackmedium", Arial, Helvetica, sans-serif;
   font-size: 1.71429rem;
   margin-top: 2.14286rem; }
+  @media (max-width: 340px) {
+    .second__title {
+      margin-top: 0.35714rem;
+      font-size: 1.28571rem; } }
 
 .second__text {
   text-align: justify;
@@ -1114,3 +1131,6 @@ input {
   @media (max-width: 768px) {
     .hamburger__btn {
       display: inline-block; } }
+  @media (max-width: 340px) {
+    .hamburger__btn {
+      margin-left: 0.71429rem; } }
