@@ -65,6 +65,10 @@
     padding: rem(10px) rem(20px);
     color: $black;
     border: 2px solid transparent;
+
+        @include phones{
+            padding: rem(10px) rem(5px);
+        }
 }
 
 .form__textarea{

@@ -15,14 +15,12 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-basis: 13%;
     padding-right: rem(7px);
     padding-left: rem(19px);
 
         @include tablets{
             padding-right: 0;
             padding-left: rem(10px);
-            flex-basis: unset;
         }
 
         @include phones-less{
@@ -98,7 +96,7 @@
 }
 
 .first-box{
-    flex-basis: 74%;
+    flex: 1;
     max-width: 100%;
     display: flex;
     justify-content: center;
@@ -169,6 +167,10 @@
     color: $white;
     display: inline-block;
 
+        @include tablets{
+            margin-top: 0;
+        }
+
         @include phones{
             font-size: rem(54px);
         }
@@ -179,7 +181,7 @@
 }
 
 .first__bottom{
-    flex-basis: 13%;
+    flex-basis: 10%;
     display: flex;
     align-items: center;
     justify-content: center;

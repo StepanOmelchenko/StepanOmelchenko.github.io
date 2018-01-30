@@ -46,14 +46,6 @@ a{
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $white;
-
-        @include tablets{
-            height: rem(1024px);
-        }
-
-        @include phones{
-            height: rem(800px);
-        }
 }
 
 .common-header{
