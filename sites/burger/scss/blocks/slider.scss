@@ -1,56 +1,94 @@
 .slider{
     position: relative;
-}
 
-.slider__item{
-    display: flex;
-    width: 100%;
-}
+    &__link{
+        position: absolute;
 
-.slider__left,
-.slider__right{
-    display: flex;
-    width: 50%;
-}
+            &--left{
+                left: rem(-30px);
+                top: 50%;
+                transform: translateY(-50%) rotate(90deg);
+                transition: scale .3;
 
-.slider__left{
-    justify-content: center;
-    align-items: center;
-}
+                    &:hover{
+                        transform: translateY(-50%) rotate(90deg) scale(1.2);
+                    }
 
-.slider__right{
-    justify-content: space-between;
-    flex-direction: column;
-    padding-left: 5%;
-}
+            }
 
-.slider__text{
-    margin-top: rem(40px);
-    line-height: rem(23.97px);
-}
+            &--right{
+                right: rem(-40px);
+                top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+                transition: scale .3;
 
-.slider__footer{
-    margin-top: 10px;
-    display: flex;
-    align-items: baseline;
-}
+                    &:hover{
+                        transform: translateY(-50%) rotate(-90deg) scale(1.2);
+                    }
+            }
 
-.slider__price{
-    color: #e35028;
+    }
 
-        &-left{
-            line-height: initial;
-            letter-spacing: rem(-1.79px);
-        }
+    &__arrow-left,
+    &__arrow-right{
+        width: 29px;
+        height: 14px;
+    }
 
-        &-right{
-            font-size: 30px;
-            text-transform: lowercase;
-            letter-spacing: rem(-0.75px);
-        }
+    &__item{
+        display: flex;
+        width: 100%;
+    }
 
-}
+    &__left,
+    &__right{
+        display: flex;
+        width: 50%;
+    }
 
-.slider__btn{
-    margin-left: rem(20px);
+    &__left{
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__right{
+        justify-content: space-between;
+        flex-direction: column;
+        padding-left: 3%;
+    }
+
+    &__text{
+        margin-top: rem(40px);
+        line-height: rem(23.97px);
+    }
+
+    &__footer{
+        margin-top: 10px;
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__price{
+        color: $orange-light;
+        display: flex;
+        align-items: flex-end;
+
+            &-left{
+                line-height: initial;
+                letter-spacing: rem(-1.79px);
+            }
+
+            &-right{
+                margin-left: rem(10px);
+                font-size: rem(30px);
+                text-transform: lowercase;
+                letter-spacing: rem(-0.75px);
+            }
+
+    }
+
+    &__btn{
+        margin-left: rem(20px);
+    }
+
 }

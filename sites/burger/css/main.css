@@ -1173,60 +1173,89 @@ input {
 
 .slider {
   position: relative; }
-
-.slider__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%; }
-
-.slider__left,
-.slider__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%; }
-
-.slider__left {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.slider__right {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding-left: 5%; }
-
-.slider__text {
-  margin-top: 2.85714rem;
-  line-height: 1.71214rem; }
-
-.slider__footer {
-  margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline; }
-
-.slider__price {
-  color: #e35028; }
-  .slider__price-left {
-    line-height: initial;
-    letter-spacing: -0.12786rem; }
-  .slider__price-right {
-    font-size: 30px;
-    text-transform: lowercase;
-    letter-spacing: -0.05357rem; }
-
-.slider__btn {
-  margin-left: 1.42857rem; }
+  .slider__link {
+    position: absolute; }
+    .slider__link--left {
+      left: -2.14286rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(90deg);
+      -ms-transform: translateY(-50%) rotate(90deg);
+      transform: translateY(-50%) rotate(90deg);
+      -webkit-transition: scale .3;
+      -o-transition: scale .3;
+      transition: scale .3; }
+      .slider__link--left:hover {
+        -webkit-transform: translateY(-50%) rotate(90deg) scale(1.2);
+        -ms-transform: translateY(-50%) rotate(90deg) scale(1.2);
+        transform: translateY(-50%) rotate(90deg) scale(1.2); }
+    .slider__link--right {
+      right: -2.85714rem;
+      top: 50%;
+      -webkit-transform: translateY(-50%) rotate(-90deg);
+      -ms-transform: translateY(-50%) rotate(-90deg);
+      transform: translateY(-50%) rotate(-90deg);
+      -webkit-transition: scale .3;
+      -o-transition: scale .3;
+      transition: scale .3; }
+      .slider__link--right:hover {
+        -webkit-transform: translateY(-50%) rotate(-90deg) scale(1.2);
+        -ms-transform: translateY(-50%) rotate(-90deg) scale(1.2);
+        transform: translateY(-50%) rotate(-90deg) scale(1.2); }
+  .slider__arrow-left, .slider__arrow-right {
+    width: 29px;
+    height: 14px; }
+  .slider__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%; }
+  .slider__left, .slider__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%; }
+  .slider__left {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .slider__right {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 3%; }
+  .slider__text {
+    margin-top: 2.85714rem;
+    line-height: 1.71214rem; }
+  .slider__footer {
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline; }
+  .slider__price {
+    color: #e35028;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .slider__price-left {
+      line-height: initial;
+      letter-spacing: -0.12786rem; }
+    .slider__price-right {
+      margin-left: 0.71429rem;
+      font-size: 2.14286rem;
+      text-transform: lowercase;
+      letter-spacing: -0.05357rem; }
+  .slider__btn {
+    margin-left: 1.42857rem; }
