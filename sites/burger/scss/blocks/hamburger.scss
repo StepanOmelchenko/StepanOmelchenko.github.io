@@ -1,10 +1,7 @@
 .hamburger__btn{
-    display: none;
     position: relative;
     width: rem(24px);
     height: rem(4px);
-    margin-left: rem(25px);
-    margin-top: rem(25px);
     border-radius: 20%;
     background-color: $white;
 
@@ -30,13 +27,5 @@
             top: rem(16px);
             border-radius: 20%;
             background-color: $white;
-        }
-
-        @include tablets{
-            display: inline-block;
-        }
-
-        @include phones-less{
-            margin-left: rem(10px);
         }
 }

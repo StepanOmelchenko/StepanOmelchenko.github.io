@@ -27,7 +27,6 @@
 
 .fourth__header{
     color: $yellow;
-    text-align: center;
 }
 
 .fourth__list{
@@ -41,7 +40,7 @@
 }
 
 .fourth__item{
-    margin-bottom: rem(35px);
+    margin-bottom: rem(20px);
 
         &:last-child{
             margin-bottom: 0;
@@ -95,6 +94,7 @@
     height: 0;
     margin-top: rem(17px);
     display: flex;
+    padding-left: rem(15px);
 
         @include tablets{
             flex-direction: column;
