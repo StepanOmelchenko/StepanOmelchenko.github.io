@@ -27,6 +27,11 @@
 
 .fourth__header{
     color: $yellow;
+
+        @include tablets{
+            text-align: center;
+        }
+
 }
 
 .fourth__list{
