@@ -44,7 +44,12 @@
         transition: opacity .3s;
 
             @include tablets{
-                top: -15%;
+                top: -10%;
+            }
+
+            @include phones{
+                top: -20%;
+                left: -5%;
             }
 
             &:hover{
@@ -76,6 +81,11 @@
                 border-radius: rem(5px);
                 padding: rem(20px);
                 color: $black;
+
+                    @include phones{
+                        padding: rem(5px);
+                    }
+
             }
 
     }
@@ -91,7 +101,12 @@
                 right: 0;
                 left: initial;
                 bottom: initial;
-                top: -15%;
+                top: -10%;
+            }
+
+            @include phones{
+                top: -20%;
+                right: -5%;
             }
 
             &-svg{
@@ -159,10 +174,10 @@
         justify-content: center;
         align-items: center;
 
-        &-img{
-            max-width: 100%;
-            max-height: 100%;
-        }
+            &-img{
+                max-width: 100%;
+                max-height: 100%;
+            }
     }
 
     &__right{
@@ -178,6 +193,12 @@
             }
     }
 
+    &__header{
+        @include phones-less{
+            font-size: rem(24px);
+        }
+    }
+    
     &__text{
         margin-top: rem(40px);
         line-height: rem(23.97px);
@@ -192,12 +213,21 @@
         margin-top: 10px;
         display: flex;
         align-items: baseline;
+
+            @include tablets{
+                align-items: center;
+            }
+
     }
 
     &__price{
         color: $orange-light;
         display: flex;
         align-items: flex-end;
+
+            @include phones-less{
+                flex-wrap: wrap;
+            }
 
             &-left{
                 line-height: initial;

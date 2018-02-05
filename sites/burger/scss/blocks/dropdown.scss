@@ -3,6 +3,11 @@
     &__table{
         width: rem(270px);
         height: rem(330px);
+
+        @include phones-less{
+            width: rem(200px);
+        }
+
     }
 
     &__tbody{

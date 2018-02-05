@@ -1229,7 +1229,11 @@ input {
     transition: opacity .3s; }
     @media (max-width: 768px) {
       .slider__stuff {
-        top: -15%; } }
+        top: -10%; } }
+    @media (max-width: 480px) {
+      .slider__stuff {
+        top: -20%;
+        left: -5%; } }
     .slider__stuff:hover {
       opacity: 1; }
     .slider__stuff:hover .slider__stuff-dropdown {
@@ -1251,6 +1255,9 @@ input {
       border-radius: 0.35714rem;
       padding: 1.42857rem;
       color: #2f3234; }
+      @media (max-width: 480px) {
+        .slider__stuff-dropdown {
+          padding: 0.35714rem; } }
   .slider__calorie {
     position: absolute;
     left: 0;
@@ -1261,7 +1268,11 @@ input {
         right: 0;
         left: initial;
         bottom: initial;
-        top: -15%; } }
+        top: -10%; } }
+    @media (max-width: 480px) {
+      .slider__calorie {
+        top: -20%;
+        right: -5%; } }
     .slider__calorie-svg {
       width: 60px;
       height: 60px; }
@@ -1343,6 +1354,9 @@ input {
         -ms-flex-pack: distribute;
         justify-content: space-around;
         text-align: center; } }
+  @media (max-width: 340px) {
+    .slider__header {
+      font-size: 1.71429rem; } }
   .slider__text {
     margin-top: 2.85714rem;
     line-height: 1.71214rem; }
@@ -1357,6 +1371,11 @@ input {
     -webkit-box-align: baseline;
     -ms-flex-align: baseline;
     align-items: baseline; }
+    @media (max-width: 768px) {
+      .slider__footer {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center; } }
   .slider__price {
     color: #e35028;
     display: -webkit-box;
@@ -1365,6 +1384,10 @@ input {
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end; }
+    @media (max-width: 340px) {
+      .slider__price {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
     .slider__price-left {
       line-height: initial;
       letter-spacing: -0.12786rem; }
@@ -1477,6 +1500,9 @@ input {
 .dropdown__table {
   width: 19.28571rem;
   height: 23.57143rem; }
+  @media (max-width: 340px) {
+    .dropdown__table {
+      width: 14.28571rem; } }
 
 .dropdown__tbody {
   vertical-align: center; }
