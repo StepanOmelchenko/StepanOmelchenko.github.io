@@ -20,38 +20,6 @@
             align-items: center;
         }
 
-        &__close-btn{
-            width: rem(20px);
-            height: rem(20px);
-            position: relative;
-            background-color: transparent;
-
-                &:hover{
-                    
-                    &:before,
-                    &:after{
-                        background-color: $orange-hover;
-                    }
-                }
-
-                &:before,
-                &:after{
-                    content: "";
-                    display: block;
-                    position: absolute;
-                    width: rem(20px);
-                    height: rem(3px);
-                    border-radius: 5%;
-                    transform: rotate(45deg);
-                    background-color: $white;
-                    opacity: .7;
-                }
-
-                &:after{
-                    transform: rotate(-45deg);
-                }
-        }
-
         &__list{
             display: flex;
             flex-direction: column;

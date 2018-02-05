@@ -1,12 +1,18 @@
 .dropdown{
+    z-index: 10;
 
-    &__table{
+    @include tablets{
+        display: flex;
+        justify-content: space-between;
+    }
+
+     &__table{
         width: rem(270px);
         height: rem(330px);
-
-        @include phones-less{
-            width: rem(200px);
-        }
+ 
+            @include phones-less{
+                width: rem(200px);
+            }
 
     }
 

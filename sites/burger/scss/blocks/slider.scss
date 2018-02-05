@@ -44,12 +44,8 @@
         transition: opacity .3s;
 
             @include tablets{
-                top: -10%;
-            }
-
-            @include phones{
-                top: -20%;
-                left: -5%;
+                top: 0;
+                left: 0;
             }
 
             &:hover{
@@ -99,14 +95,9 @@
             
             @include tablets{
                 right: 0;
+                top: 0;
                 left: initial;
                 bottom: initial;
-                top: -10%;
-            }
-
-            @include phones{
-                top: -20%;
-                right: -5%;
             }
 
             &-svg{
@@ -141,6 +132,7 @@
 
     &__list{
         width: 100%;
+
     }
 
     &__item{
@@ -153,6 +145,8 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                min-height: rem(650px);
+                padding-top: rem(90px);
             }
     }
 
@@ -170,7 +164,6 @@
     }
 
     &__left{
-
         justify-content: center;
         align-items: center;
 

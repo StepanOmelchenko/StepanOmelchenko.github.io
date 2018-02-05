@@ -42,6 +42,7 @@ function createOverlay(list) {
 
     let closeBtn = document.createElement('a');
     closeBtn.classList.add('overlay__close-btn');
+    closeBtn.classList.add('close-btn');
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
