@@ -56,7 +56,6 @@
             background-color: rgba(20, 20, 20, 0.7);
         }
 
-        &:hover + .fifth__container,
         &--active + .fifth__container{
             width: rem(400px);
         }

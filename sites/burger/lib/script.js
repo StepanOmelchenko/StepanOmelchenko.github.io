@@ -145,16 +145,33 @@ function checkSliderPosition(curentPosition, step) {
 
 // - team-menu
 
-const items = document.querySelector('#team-menu').querySelectorAll('.fourth__item');
+const teamItems = document.querySelector('#team-menu').querySelectorAll('.fourth__item');
 
-items.forEach((item) => {
+teamItems.forEach((item) => {
   item.addEventListener('click', (e) =>{
     e.preventDefault();
-    items.forEach((item) => {
+    teamItems.forEach((item) => {
        if (e.currentTarget != item) {
         item.classList.remove('fourth__item--active');
        }
       });
     item.classList.toggle('fourth__item--active');
+    });  
+});
+
+
+// - burgers-menu
+
+const burgersItems = document.querySelector('#burgers-menu').querySelectorAll('.fifth__link');
+
+burgersItems.forEach((item) => {
+  item.addEventListener('click', (e) =>{
+    e.preventDefault();
+    burgersItems.forEach((item) => {
+       if (e.currentTarget != item) {
+        item.classList.remove('fifth__link--active');
+       }
+      });
+    item.classList.toggle('fifth__link--active');
     });  
 });

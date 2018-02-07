@@ -678,7 +678,6 @@ input {
     top: 0;
     bottom: 0;
     background-color: rgba(20, 20, 20, 0.7); }
-  .fifth__link:hover + .fifth__container,
   .fifth__link--active + .fifth__container {
     width: 28.57143rem; }
   .fifth__link:hover, .fifth__link--active {
