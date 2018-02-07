@@ -142,3 +142,19 @@ function checkSliderPosition(curentPosition, step) {
   }  
   return curentPosition;
 }
+
+// - team-menu
+
+const items = document.querySelector('#team-menu').querySelectorAll('.fourth__item');
+
+items.forEach((item) => {
+  item.addEventListener('click', (e) =>{
+    e.preventDefault();
+    items.forEach((item) => {
+       if (e.currentTarget != item) {
+        item.classList.remove('fourth__item--active');
+       }
+      });
+    item.classList.toggle('fourth__item--active');
+    });  
+});

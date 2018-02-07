@@ -52,7 +52,7 @@
         }
 
         &--active .fourth__worker{
-            height: auto;
+            height: rem(100px);
         }
 
         &--active .fourth__link{
@@ -83,6 +83,7 @@
             border-top: rem(8px) solid $yellow;
             border-left: rem(5px) solid transparent;
             border-right: rem(5px) solid transparent;
+            transition: transform .2s;
         }
 
         &:hover{
@@ -100,6 +101,7 @@
     margin-top: rem(17px);
     display: flex;
     padding-left: rem(15px);
+    transition: height .2s;
 
         @include tablets{
             flex-direction: column;
