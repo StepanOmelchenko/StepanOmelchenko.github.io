@@ -117,109 +117,491 @@
         <section class="section third">
             <div class="container third__inner">
                 <div class="slider">
-                    <a class="slider__link slider__link--left" href="#">
+                    <a class="slider__link slider__link--left" id="slider-left" href="#">
                         <svg class="slider__arrow-left">
                             <use width="29" height="14" xlink:href="#first-arrow"></use>
                         </svg>
                     </a>
-                    <ul class="slider__list">
-                        <li class="slider__item">
-                            <a class="slider__stuff">
-                                <svg class="slider__stuff-svg">
-                                    <use width="46" height="44" xlink:href="#burger-stuff"></use>
-                                </svg>
-                                <div class="slider__stuff-title">Состав</div>
-                                <div class="slider__stuff-dropdown dropdown">
-                                    <table class="dropdown__table">
-                                        <tbody class="dropdow__tbody">
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="44" height="39">
-                                                        <use width="44" height="39" xlink:href="#stuff-beef"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Говядина</td>
-                                                <td class="dropdown__td-weight">300 г</td>
-                                            </tr>
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="48" height="30">
-                                                        <use width="48" height="30" xlink:href="#stuff-bread"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Булочки</td>
-                                                <td class="dropdown__td-weight">100 г</td>
-                                            </tr>
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="38" height="38">
-                                                        <use width="38" height="38" xlink:href="#stuff-salad"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Зелень</td>
-                                                <td class="dropdown__td-weight">70 г</td>
-                                            </tr>
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="41" height="43">
-                                                        <use width="41" height="43" xlink:href="#stuff-sauce"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Соус</td>
-                                                <td class="dropdown__td-weight">150 г</td>
-                                            </tr>
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="43" height="37">
-                                                        <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Овощи</td>
-                                                <td class="dropdown__td-weight">200 г</td>
-                                            </tr>
-                                            <tr class="dropdown__tr">
-                                                <td class="dropdown__td-img">
-                                                    <svg class="dropdown__td-svg" width="39" height="34">
-                                                        <use width="39" height="34" xlink:href="#stuff-cheese"></use>
-                                                    </svg>
-                                                </td>
-                                                <td class="dropdown__td-title">Сыр</td>
-                                                <td class="dropdown__td-weight">80 г</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="close-btn close-btn--dropdown"></div>
+                    <div class="slider__wrapper">
+                        <ul class="slider__list" id="slider-list">
+                            <li class="slider__item">
+                                <a class="slider__stuff">
+                                    <svg class="slider__stuff-svg">
+                                        <use width="46" height="44" xlink:href="#burger-stuff"></use>
+                                    </svg>
+                                    <div class="slider__stuff-title">Состав</div>
+                                    <div class="slider__stuff-dropdown dropdown">
+                                        <table class="dropdown__table">
+                                            <tbody class="dropdow__tbody">
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="44" height="39">
+                                                            <use width="44" height="39" xlink:href="#stuff-beef"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Говядина</td>
+                                                    <td class="dropdown__td-weight">300 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="48" height="30">
+                                                            <use width="48" height="30" xlink:href="#stuff-bread"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Булочки</td>
+                                                    <td class="dropdown__td-weight">100 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="38" height="38">
+                                                            <use width="38" height="38" xlink:href="#stuff-salad"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Зелень</td>
+                                                    <td class="dropdown__td-weight">70 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="41" height="43">
+                                                            <use width="41" height="43" xlink:href="#stuff-sauce"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Соус</td>
+                                                    <td class="dropdown__td-weight">150 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="43" height="37">
+                                                            <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Овощи</td>
+                                                    <td class="dropdown__td-weight">200 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="39" height="34">
+                                                            <use width="39" height="34" xlink:href="#stuff-cheese"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Сыр</td>
+                                                    <td class="dropdown__td-weight">80 г</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="close-btn close-btn--dropdown"></div>
+                                    </div>
+                                </a>
+                                <div class="slider__calorie">
+                                    <svg class="slider__calorie-svg">
+                                        <use width="60" height="60" xlink:href="#burger-calorie"></use>
+                                    </svg>
+                                    <div class="slider__calorie-title">1200</div>
                                 </div>
-                            </a>
-                            <div class="slider__calorie">
-                                <svg class="slider__calorie-svg">
-                                    <use width="60" height="60" xlink:href="#burger-calorie"></use>
-                                </svg>
-                                <div class="slider__calorie-title">1200</div>
-                            </div>
-                            <div class="slider__left">
-                                <img class="slider__left-img" src="img/content/burgers/first.png" alt="dark burger">
-                            </div>
-                            <div class="slider__right">
-                                <h2 class="slider__header common-header">Dark BEEF Burger</h2>
-                                <p class="slider__text">
-                                    Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
-                                    тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
-                                    салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
-                                </p>
-                                <footer class="slider__footer">
-                                    <div class="slider__price common-header">
-                                        <span class="slider__price-left">500</span>
-                                        <span class="slider__price-right">рублей</span>
+                                <div class="slider__left">
+                                    <img class="slider__left-img" src="img/content/burgers/first.png" alt="dark burger">
+                                </div>
+                                <div class="slider__right">
+                                    <h2 class="slider__header common-header">Dark BEEF Burger</h2>
+                                    <p class="slider__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <footer class="slider__footer">
+                                        <div class="slider__price common-header">
+                                            <span class="slider__price-left">500</span>
+                                            <span class="slider__price-right">рублей</span>
+                                        </div>
+                                        <div class="slider__btn">
+                                            <a class="order-btn" href="#order-section">Заказать</a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <a class="slider__stuff">
+                                    <svg class="slider__stuff-svg">
+                                        <use width="46" height="44" xlink:href="#burger-stuff"></use>
+                                    </svg>
+                                    <div class="slider__stuff-title">Состав</div>
+                                    <div class="slider__stuff-dropdown dropdown">
+                                        <table class="dropdown__table">
+                                            <tbody class="dropdow__tbody">
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="44" height="39">
+                                                            <use width="44" height="39" xlink:href="#stuff-beef"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Говядина</td>
+                                                    <td class="dropdown__td-weight">300 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="48" height="30">
+                                                            <use width="48" height="30" xlink:href="#stuff-bread"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Булочки</td>
+                                                    <td class="dropdown__td-weight">100 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="38" height="38">
+                                                            <use width="38" height="38" xlink:href="#stuff-salad"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Зелень</td>
+                                                    <td class="dropdown__td-weight">70 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="41" height="43">
+                                                            <use width="41" height="43" xlink:href="#stuff-sauce"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Соус</td>
+                                                    <td class="dropdown__td-weight">150 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="43" height="37">
+                                                            <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Овощи</td>
+                                                    <td class="dropdown__td-weight">200 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="39" height="34">
+                                                            <use width="39" height="34" xlink:href="#stuff-cheese"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Сыр</td>
+                                                    <td class="dropdown__td-weight">80 г</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="close-btn close-btn--dropdown"></div>
                                     </div>
-                                    <div class="slider__btn">
-                                        <a class="order-btn" href="#order-section">Заказать</a>
+                                </a>
+                                <div class="slider__calorie">
+                                    <svg class="slider__calorie-svg">
+                                        <use width="60" height="60" xlink:href="#burger-calorie"></use>
+                                    </svg>
+                                    <div class="slider__calorie-title">1200</div>
+                                </div>
+                                <div class="slider__left">
+                                    <img class="slider__left-img" src="img/content/burgers/Cheeseburger.png" alt="Cheeseburger">
+                                </div>
+                                <div class="slider__right">
+                                    <h2 class="slider__header common-header">Dark BEEF Burger</h2>
+                                    <p class="slider__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <footer class="slider__footer">
+                                        <div class="slider__price common-header">
+                                            <span class="slider__price-left">500</span>
+                                            <span class="slider__price-right">рублей</span>
+                                        </div>
+                                        <div class="slider__btn">
+                                            <a class="order-btn" href="#order-section">Заказать</a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <a class="slider__stuff">
+                                    <svg class="slider__stuff-svg">
+                                        <use width="46" height="44" xlink:href="#burger-stuff"></use>
+                                    </svg>
+                                    <div class="slider__stuff-title">Состав</div>
+                                    <div class="slider__stuff-dropdown dropdown">
+                                        <table class="dropdown__table">
+                                            <tbody class="dropdow__tbody">
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="44" height="39">
+                                                            <use width="44" height="39" xlink:href="#stuff-beef"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Говядина</td>
+                                                    <td class="dropdown__td-weight">300 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="48" height="30">
+                                                            <use width="48" height="30" xlink:href="#stuff-bread"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Булочки</td>
+                                                    <td class="dropdown__td-weight">100 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="38" height="38">
+                                                            <use width="38" height="38" xlink:href="#stuff-salad"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Зелень</td>
+                                                    <td class="dropdown__td-weight">70 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="41" height="43">
+                                                            <use width="41" height="43" xlink:href="#stuff-sauce"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Соус</td>
+                                                    <td class="dropdown__td-weight">150 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="43" height="37">
+                                                            <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Овощи</td>
+                                                    <td class="dropdown__td-weight">200 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="39" height="34">
+                                                            <use width="39" height="34" xlink:href="#stuff-cheese"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Сыр</td>
+                                                    <td class="dropdown__td-weight">80 г</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="close-btn close-btn--dropdown"></div>
                                     </div>
-                                </footer>
-                            </div>
-                        </li>
-                    </ul>
-                    <a class="slider__link slider__link--right" href="#">
+                                </a>
+                                <div class="slider__calorie">
+                                    <svg class="slider__calorie-svg">
+                                        <use width="60" height="60" xlink:href="#burger-calorie"></use>
+                                    </svg>
+                                    <div class="slider__calorie-title">1200</div>
+                                </div>
+                                <div class="slider__left">
+                                    <img class="slider__left-img" src="img/content/burgers/Chiken.png" alt="Chiken">
+                                </div>
+                                <div class="slider__right">
+                                    <h2 class="slider__header common-header">Dark BEEF Burger</h2>
+                                    <p class="slider__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <footer class="slider__footer">
+                                        <div class="slider__price common-header">
+                                            <span class="slider__price-left">500</span>
+                                            <span class="slider__price-right">рублей</span>
+                                        </div>
+                                        <div class="slider__btn">
+                                            <a class="order-btn" href="#order-section">Заказать</a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <a class="slider__stuff">
+                                    <svg class="slider__stuff-svg">
+                                        <use width="46" height="44" xlink:href="#burger-stuff"></use>
+                                    </svg>
+                                    <div class="slider__stuff-title">Состав</div>
+                                    <div class="slider__stuff-dropdown dropdown">
+                                        <table class="dropdown__table">
+                                            <tbody class="dropdow__tbody">
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="44" height="39">
+                                                            <use width="44" height="39" xlink:href="#stuff-beef"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Говядина</td>
+                                                    <td class="dropdown__td-weight">300 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="48" height="30">
+                                                            <use width="48" height="30" xlink:href="#stuff-bread"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Булочки</td>
+                                                    <td class="dropdown__td-weight">100 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="38" height="38">
+                                                            <use width="38" height="38" xlink:href="#stuff-salad"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Зелень</td>
+                                                    <td class="dropdown__td-weight">70 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="41" height="43">
+                                                            <use width="41" height="43" xlink:href="#stuff-sauce"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Соус</td>
+                                                    <td class="dropdown__td-weight">150 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="43" height="37">
+                                                            <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Овощи</td>
+                                                    <td class="dropdown__td-weight">200 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="39" height="34">
+                                                            <use width="39" height="34" xlink:href="#stuff-cheese"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Сыр</td>
+                                                    <td class="dropdown__td-weight">80 г</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="close-btn close-btn--dropdown"></div>
+                                    </div>
+                                </a>
+                                <div class="slider__calorie">
+                                    <svg class="slider__calorie-svg">
+                                        <use width="60" height="60" xlink:href="#burger-calorie"></use>
+                                    </svg>
+                                    <div class="slider__calorie-title">1200</div>
+                                </div>
+                                <div class="slider__left">
+                                    <img class="slider__left-img" src="img/content/burgers/sandwich.png" alt="sandwich">
+                                </div>
+                                <div class="slider__right">
+                                    <h2 class="slider__header common-header">Dark BEEF Burger</h2>
+                                    <p class="slider__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <footer class="slider__footer">
+                                        <div class="slider__price common-header">
+                                            <span class="slider__price-left">500</span>
+                                            <span class="slider__price-right">рублей</span>
+                                        </div>
+                                        <div class="slider__btn">
+                                            <a class="order-btn" href="#order-section">Заказать</a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <a class="slider__stuff">
+                                    <svg class="slider__stuff-svg">
+                                        <use width="46" height="44" xlink:href="#burger-stuff"></use>
+                                    </svg>
+                                    <div class="slider__stuff-title">Состав</div>
+                                    <div class="slider__stuff-dropdown dropdown">
+                                        <table class="dropdown__table">
+                                            <tbody class="dropdow__tbody">
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="44" height="39">
+                                                            <use width="44" height="39" xlink:href="#stuff-beef"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Говядина</td>
+                                                    <td class="dropdown__td-weight">300 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="48" height="30">
+                                                            <use width="48" height="30" xlink:href="#stuff-bread"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Булочки</td>
+                                                    <td class="dropdown__td-weight">100 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="38" height="38">
+                                                            <use width="38" height="38" xlink:href="#stuff-salad"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Зелень</td>
+                                                    <td class="dropdown__td-weight">70 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="41" height="43">
+                                                            <use width="41" height="43" xlink:href="#stuff-sauce"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Соус</td>
+                                                    <td class="dropdown__td-weight">150 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="43" height="37">
+                                                            <use width="43" height="37" xlink:href="#stuff-cucomber"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Овощи</td>
+                                                    <td class="dropdown__td-weight">200 г</td>
+                                                </tr>
+                                                <tr class="dropdown__tr">
+                                                    <td class="dropdown__td-img">
+                                                        <svg class="dropdown__td-svg" width="39" height="34">
+                                                            <use width="39" height="34" xlink:href="#stuff-cheese"></use>
+                                                        </svg>
+                                                    </td>
+                                                    <td class="dropdown__td-title">Сыр</td>
+                                                    <td class="dropdown__td-weight">80 г</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="close-btn close-btn--dropdown"></div>
+                                    </div>
+                                </a>
+                                <div class="slider__calorie">
+                                    <svg class="slider__calorie-svg">
+                                        <use width="60" height="60" xlink:href="#burger-calorie"></use>
+                                    </svg>
+                                    <div class="slider__calorie-title">1200</div>
+                                </div>
+                                <div class="slider__left">
+                                    <img class="slider__left-img" src="img/content/burgers/Spicy.png" alt="Spicy">
+                                </div>
+                                <div class="slider__right">
+                                    <h2 class="slider__header common-header">Dark BEEF Burger</h2>
+                                    <p class="slider__text">
+                                        Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины,
+                                        тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком,
+                                        салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                                    </p>
+                                    <footer class="slider__footer">
+                                        <div class="slider__price common-header">
+                                            <span class="slider__price-left">500</span>
+                                            <span class="slider__price-right">рублей</span>
+                                        </div>
+                                        <div class="slider__btn">
+                                            <a class="order-btn" href="#order-section">Заказать</a>
+                                        </div>
+                                    </footer>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="slider__link slider__link--right" id="slider-right" href="#">
                         <svg class="slider__arrow-right">
                             <use width="29" height="14" xlink:href="#first-arrow"></use>
                         </svg>

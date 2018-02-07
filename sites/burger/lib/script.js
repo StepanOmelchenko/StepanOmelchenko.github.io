@@ -1,3 +1,6 @@
+
+// -hamburger
+
 var menuList = [
     {
         name: 'о нас',
@@ -83,4 +86,59 @@ function createOverlay(list) {
 
     return overlay;
 
+}
+
+// -slider
+
+const slider = document.querySelector('#slider-list');
+const sliderItems = slider.querySelectorAll('li');
+const sliderItemsNumber = sliderItems.length;
+const sliderItem = slider.querySelector('li');
+const sliderLeftBtn = document.querySelector('#slider-left');
+const sliderRightBtn = document.querySelector('#slider-right');
+const sliderMinPosition = 0;
+
+sliderLeftBtn.addEventListener('click', (e) =>{
+  e.preventDefault();
+  let params = getSliderSize(sliderItem, slider);
+  if (params.curentPosition > 0) {
+    setSliderPosition(params.curentPosition, -(params.step));
+  } else {
+    setSliderPosition(params.maxPosition, 0);
+  }
+});
+
+sliderRightBtn.addEventListener('click', (e) =>{
+  e.preventDefault();
+  let params = getSliderSize(sliderItem, slider);
+  if (params.curentPosition < params.maxPosition) {
+    setSliderPosition(params.curentPosition, params.step);
+  } else {
+    setSliderPosition(0, 0);
+  }
+});
+
+function getSliderSize(item, slider) {
+  let step = parseInt(getComputedStyle(item).width);
+  let curent = checkSliderPosition(parseInt(getComputedStyle(slider).right), step);
+  let max = parseInt(getComputedStyle(slider).width) - step;
+  
+  return {
+    curentPosition: curent,
+    step: step,
+    maxPosition: max
+  };
+}
+
+function setSliderPosition(curentPosition, step) {
+  slider.style.right = curentPosition + step + 'px';
+}
+
+function checkSliderPosition(curentPosition, step) {
+  let checkVal = curentPosition % step;
+  if (checkVal != 0) {
+    slider.style.right = 0;
+    return 0;
+  }  
+  return curentPosition;
 }

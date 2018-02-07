@@ -9,7 +9,7 @@
 }
 
 @mixin tablets {
-    @media (max-width: 768px){  //tablets
+    @media (max-width: 780px){  //tablets
         @content;
     }
 }
