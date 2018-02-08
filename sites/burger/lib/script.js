@@ -153,35 +153,24 @@ function checkSliderPosition(curentPosition, step) {
   return curentPosition;
 }
 
-// - team-menu
+// - accordions
 
 const teamItems = document.querySelector('#team-menu').querySelectorAll('.fourth__item');
-
-teamItems.forEach((item) => {
-  item.addEventListener('click', (e) =>{
-    e.preventDefault();
-    teamItems.forEach((item) => {
-       if (e.currentTarget != item) {
-        item.classList.remove('fourth__item--active');
-       }
-      });
-    item.classList.toggle('fourth__item--active');
-    });  
-});
-
-
-// - burgers-menu
-
 const burgersItems = document.querySelector('#burgers-menu').querySelectorAll('.fifth__link');
 
-burgersItems.forEach((item) => {
-  item.addEventListener('click', (e) =>{
-    e.preventDefault();
-    burgersItems.forEach((item) => {
-       if (e.currentTarget != item) {
-        item.classList.remove('fifth__link--active');
-       }
-      });
-    item.classList.toggle('fifth__link--active');
-    });  
-});
+createAccordionMenu(teamItems, 'fourth__item--active');
+createAccordionMenu(burgersItems, 'fifth__link--active');
+
+function createAccordionMenu(menuList, activeClassList) {
+  menuList.forEach((item) => {
+    item.addEventListener('click', (e) =>{
+      e.preventDefault();
+      menuList.forEach((item) => {
+         if (e.currentTarget != item) {
+          item.classList.remove(activeClassList);
+         }
+        });
+      item.classList.toggle(activeClassList);
+      });  
+  });
+}

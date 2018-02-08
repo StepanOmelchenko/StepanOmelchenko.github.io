@@ -53,6 +53,11 @@
 
         &--active .fourth__worker{
             height: rem(100px);
+
+                @include tablets{
+                    height: rem(190px);
+                }
+
         }
 
         &--active .fourth__link{

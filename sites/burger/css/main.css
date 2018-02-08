@@ -530,6 +530,9 @@ input {
     margin-bottom: 0; }
   .fourth__item--active .fourth__worker {
     height: 7.14286rem; }
+    @media (max-width: 780px) {
+      .fourth__item--active .fourth__worker {
+        height: 13.57143rem; } }
   .fourth__item--active .fourth__link {
     color: #f9b43b; }
     .fourth__item--active .fourth__link:before {
