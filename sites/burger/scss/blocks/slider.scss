@@ -32,47 +32,39 @@
         display: flex;
         align-items: center;
         overflow: hidden;
-        height: rem(650px);
-        width: rem(880px);
     }
 
     &__item{
         position: relative;
         display: flex;
         align-items: center;
-        //justify-content: center;
-        width: rem(880px);
-        height: rem(480px);
-        //box-sizing: content-box;
-        //padding: 5% 0;
 
             @include tablets{
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 min-height: rem(600px);
-                //padding-bottom: 0;
-                //padding-top: 10%;
             }
     }
 
     &__wrapper,
     &__item{
+        width: 880px;
 
         @include horizontal{
-            width: rem(720px);
+            width: 720px;
         }
 
         @include tablets{
-            width: rem(420px);
+            width: 420px;
         }
 
         @include phones{
-            width: rem(300px);
+            width: 300px;
         }
 
         @include phones-less{
-            width: rem(260px);
+            width: 260px;
         }
 
     }
@@ -100,6 +92,11 @@
             &:hover &-dropdown{
                 left: 100%;
                 opacity: .9;
+
+                    @include phones{
+                        left: 0;
+                    }
+
             }
 
             &-svg{
@@ -186,9 +183,7 @@
     &__left,
     &__right{
         display: flex;
-        //align-items: center;
         width: 50%;
-        //height: 100%;
         overflow: hidden;
 
             @include tablets{

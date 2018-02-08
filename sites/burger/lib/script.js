@@ -97,6 +97,16 @@ const sliderItem = slider.querySelector('li');
 const sliderLeftBtn = document.querySelector('#slider-left');
 const sliderRightBtn = document.querySelector('#slider-right');
 const sliderMinPosition = 0;
+const dropdownCloseBtns = slider.querySelectorAll('.close-btn--dropdown');
+
+//doesn work well
+/*dropdownCloseBtns.forEach((closeBtn) => {
+  closeBtn.addEventListener('click', (e) => {
+    let dropdown = e.target.parentNode;
+    dropdown.style.left = '-9999px';
+    dropdown.style.opacity = 0;
+  });
+});*/
 
 sliderLeftBtn.addEventListener('click', (e) =>{
   e.preventDefault();
