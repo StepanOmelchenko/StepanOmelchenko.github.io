@@ -36,6 +36,7 @@ const overlay = createOverlay(menuList);
 button.addEventListener('click', function(e){
     e.preventDefault();
     body.appendChild(overlay);
+    body.style.overflow = 'hidden';
 });
 
 
@@ -50,6 +51,7 @@ function createOverlay(list) {
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         body.removeChild(overlay);
+        body.style.overflow = 'initial';
     });
 
     let header = document.createElement('div');
@@ -69,6 +71,7 @@ function createOverlay(list) {
         link.textContent = list[i].name;
         link.addEventListener('click', function(e) {
             body.removeChild(overlay);
+            body.style.overflow = 'initial';
         });
 
         const item = document.createElement('li');
