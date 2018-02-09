@@ -66,7 +66,8 @@
     align-items: flex-start;
 
         @include tablets{
-            width: 80%;
+            width: 100%;
+            height: 100%;
             align-items: center;
         }
 }
@@ -89,6 +90,7 @@
 
         @include tablets{
             text-align: center;
+            line-height: initial;
         }
 
         @include phones{
