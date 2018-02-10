@@ -99,7 +99,12 @@
 
 }
 
-.sixth__inner-btn{
+.sixth__inner-link{
+    text-align: center;
+    padding: rem(10px);
+    font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
+    font-size: rem(13px);
+    text-transform: uppercase;
     background-color: $black;
     display: inline-block;
     border-radius: 5%;
@@ -107,12 +112,4 @@
     &:hover{
         background-color: $black-hover;
     }
-}
-
-.sixth__inner-link{
-    text-align: center;
-    padding: rem(10px);
-    font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
-    font-size: rem(13px);
-    text-transform: uppercase;
 }

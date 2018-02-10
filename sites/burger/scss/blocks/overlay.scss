@@ -1,12 +1,13 @@
 .overlay{
     position: fixed;
+    display: flex;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     overflow: hidden;
-    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: $black;
     opacity: .9;
@@ -18,6 +19,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            &--reviews{
+                padding: 0;
+            }
+
         }
 
         &__list{
@@ -54,6 +60,59 @@
 
         &__link:hover{
             color: $orange;
+        }
+
+        &__close-btn{
+            @extend .close-btn;
+
+            &:before,
+            &:after{
+                background-color: $orange;
+            }
+
+        }
+
+        &__box{
+            width: rem(463px);
+            border-radius: rem(10px);
+            background-color: $white;
+            padding: rem(20px);
+
+            @include phones{
+                width: rem(300px);
+            }
+
+        }
+
+        &__title{
+            @extend .sixth__inner-title;
+
+            @include phones{
+                font-size: rem(14px);
+            }
+
+        }
+
+        &__text{
+            @extend .sixth__inner-text;
+
+            margin-top: rem(30px);
+
+                @include tablets{
+                    text-align: left;
+                    line-height: rem(24px);
+                }
+
+                @include phones{
+                    margin-top: 0;
+                    display: block;
+                }
+
+        }
+
+        &__text,
+        &__title{
+            color: $black;
         }
 
 }

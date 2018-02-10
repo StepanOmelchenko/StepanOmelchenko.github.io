@@ -45,7 +45,7 @@ function createOverlay(list) {
     logo.classList.add('overlay__logo');
 
     let closeBtn = document.createElement('a');
-    closeBtn.classList.add('overlay__close-btn');
+    //closeBtn.classList.add('overlay__close-btn');
     closeBtn.classList.add('close-btn');
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
@@ -176,4 +176,39 @@ function createAccordionMenu(menuList, activeClassList) {
       item.classList.toggle(activeClassList);
       });  
   });
+}
+
+// rewievs overlay
+
+const reviewsList = document.querySelector('#reviews-list');
+const reviewsBtns = reviewsList.querySelectorAll('.sixth__inner-link');
+const reviewsOverlay = createReviewsOverlay();
+const reviewsOverlayBtn = reviewsOverlay.querySelector('#reviews-overlay-btn');
+const sixthSection = document.querySelector('#sixth-section');
+
+reviewsBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    let text = e.target.parentNode.querySelector('.sixth__inner-text').innerText;
+    let title = e.target.parentNode.querySelector('.sixth__inner-title').innerText;
+    e.preventDefault();
+    body.style.overflow = 'hidden';
+    reviewsOverlay.querySelector('.overlay__title').innerText = title;
+    reviewsOverlay.querySelector('.overlay__text').innerText = text;
+    sixthSection.appendChild(reviewsOverlay);
+  });
+});
+
+reviewsOverlayBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  body.style.overflow = 'initial';
+  sixthSection.removeChild(reviewsOverlay);
+});
+
+
+function createReviewsOverlay() {
+  let overlay =  document.createElement('div');
+  overlay.innerHTML = document.querySelector('#reviews-overlay').innerHTML;
+  overlay.classList.add('overlay');
+
+  return overlay;
 }
