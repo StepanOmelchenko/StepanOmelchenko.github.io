@@ -61,11 +61,11 @@
         }
 
         @include phones{
-            width: 300px;
+            width: 280px;
         }
 
         @include phones-less{
-            width: 260px;
+            width: 245px;
         }
 
     }
@@ -195,7 +195,7 @@
     }
 
     &__left{
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
 
             &-img{
