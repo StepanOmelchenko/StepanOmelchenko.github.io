@@ -173,85 +173,6 @@ input {
   -ms-flex-align: center;
   align-items: center; }
 
-.first__header {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-right: 0.5rem;
-  padding-left: 1.35714rem; }
-  @media (max-width: 780px) {
-    .first__header {
-      padding-right: 0;
-      padding-left: 0.71429rem; } }
-  @media (max-width: 340px) {
-    .first__header {
-      padding-left: 0; } }
-
-.first__logo {
-  width: 6.57143rem;
-  height: 4.92857rem;
-  margin-right: auto;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  -o-transition: transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s; }
-  .first__logo-svg {
-    width: 92px;
-    height: 69px; }
-  .first__logo:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1); }
-
-.first-menu__list {
-  font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
-  font-size: 0.92857rem;
-  text-transform: uppercase; }
-  @media (max-width: 780px) {
-    .first-menu__list {
-      display: none; } }
-
-.first-menu__item {
-  display: inline-block; }
-  .first-menu__item:before {
-    content: "";
-    display: inline-block;
-    margin-right: 0.78571rem;
-    margin-left: 0.85714rem;
-    background-color: #fff;
-    width: 0.35714rem;
-    height: 0.35714rem;
-    border-radius: 50%;
-    vertical-align: middle; }
-  .first-menu__item:first-child:before {
-    display: none; }
-
-.first-menu__link {
-  vertical-align: middle; }
-  .first-menu__link:hover {
-    text-decoration: underline; }
-
-.first__btn {
-  display: inline-block;
-  margin-left: 1.35714rem; }
-
-.first__hamburger {
-  display: none;
-  margin-left: 1.78571rem;
-  width: 1.71429rem;
-  height: 1.71429rem; }
-  @media (max-width: 780px) {
-    .first__hamburger {
-      display: inline-block; } }
-  @media (max-width: 340px) {
-    .first__hamburger {
-      margin-left: 0.71429rem; } }
-
 .first-box {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -892,6 +813,79 @@ input {
 .eighth {
   position: relative;
   background-image: url("../img/bg/eighth-map.jpg"); }
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 0.5rem;
+  padding-left: 1.35714rem; }
+  @media (max-width: 780px) {
+    .header {
+      padding-right: 0;
+      padding-left: 0.71429rem; } }
+  @media (max-width: 340px) {
+    .header {
+      padding-left: 0; } }
+  .header__logo {
+    width: 6.57143rem;
+    height: 4.92857rem;
+    margin-right: auto;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    -o-transition: transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s; }
+    .header__logo-svg {
+      width: 92px;
+      height: 69px; }
+    .header__logo:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+  .header-menu__list {
+    font-family: "ubuntumedium", Arial, Helvetica, sans-serif;
+    font-size: 0.92857rem;
+    text-transform: uppercase; }
+    @media (max-width: 780px) {
+      .header-menu__list {
+        display: none; } }
+  .header-menu__item {
+    display: inline-block; }
+    .header-menu__item:before {
+      content: "";
+      display: inline-block;
+      margin-right: 0.78571rem;
+      margin-left: 0.85714rem;
+      background-color: #fff;
+      width: 0.35714rem;
+      height: 0.35714rem;
+      border-radius: 50%;
+      vertical-align: middle; }
+    .header-menu__item:first-child:before {
+      display: none; }
+  .header-menu__link {
+    vertical-align: middle; }
+    .header-menu__link:hover {
+      text-decoration: underline; }
+  .header__btn {
+    display: inline-block;
+    margin-left: 1.35714rem; }
+  .header__hamburger {
+    display: none;
+    margin-left: 1.78571rem;
+    width: 1.71429rem;
+    height: 1.71429rem; }
+    @media (max-width: 780px) {
+      .header__hamburger {
+        display: inline-block; } }
+    @media (max-width: 340px) {
+      .header__hamburger {
+        margin-left: 0.71429rem; } }
 
 .form {
   width: 100%;
