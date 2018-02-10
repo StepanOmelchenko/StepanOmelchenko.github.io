@@ -212,3 +212,27 @@ function createReviewsOverlay() {
 
   return overlay;
 }
+
+
+// one page scroll
+
+const wrapper = document.querySelector('#wrapper');
+const sectionsArray = wrapper.querySelectorAll('section');
+const section = wrapper.querySelector('section');
+const sectionStep = parseInt(getComputedStyle(section).height);
+const maxLength = (sectionsArray.length - 1) * sectionStep;
+var curentSection = 0;
+
+document.addEventListener("wheel", (e) =>{
+  //console.log(e.deltaY);
+  //console.log(getComputedStyle(section).height);
+  if ((e.deltaY > 0)&&(curentSection < maxLength)) {
+    curentSection += sectionStep;
+  }
+  if ((e.deltaY < 0)&&(curentSection > 0)) {
+    curentSection -= sectionStep;
+  }
+
+  wrapper.style.top = -1 * curentSection + 'px';
+  console.log(wrapper.style.top);
+});
