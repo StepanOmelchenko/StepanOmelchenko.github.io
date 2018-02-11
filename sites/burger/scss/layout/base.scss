@@ -29,7 +29,8 @@ html{
             position: relative;
             width: 100%;
             height: 100%;
-            transition: top .9s;
+            top: 0;
+            //transition: cubic-bezier(.5, -.5, .7, 1.5) top .9s;
         }
 
 }

@@ -63,9 +63,7 @@ html {
     position: relative;
     width: 100%;
     height: 100%;
-    -webkit-transition: top .9s;
-    -o-transition: top .9s;
-    transition: top .9s; }
+    top: 0; }
 
 ul {
   list-style-type: none; }

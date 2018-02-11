@@ -216,23 +216,75 @@ function createReviewsOverlay() {
 
 // one page scroll
 
-const wrapper = document.querySelector('#wrapper');
-const sectionsArray = wrapper.querySelectorAll('section');
-const section = wrapper.querySelector('section');
+const onPageScrollWrapper = document.querySelector('#wrapper-scroll');
+const onePageScrollAnimationDuration = 900;
+const sectionsArray = onPageScrollWrapper.querySelectorAll('section');
+const section = onPageScrollWrapper.querySelector('section');
 const sectionStep = parseInt(getComputedStyle(section).height);
-const maxLength = (sectionsArray.length - 1) * sectionStep;
-var curentSection = 0;
+const sectionsArrayLength = sectionsArray.length - 1;
+var isBeingAnimated = false;
 
 document.addEventListener("wheel", (e) =>{
-  //console.log(e.deltaY);
-  //console.log(getComputedStyle(section).height);
-  if ((e.deltaY > 0)&&(curentSection < maxLength)) {
-    curentSection += sectionStep;
-  }
-  if ((e.deltaY < 0)&&(curentSection > 0)) {
-    curentSection -= sectionStep;
-  }
+  
+  if (!isBeingAnimated) {
+    let curentParams = getCurentParamsToScroll(section, 'height', onPageScrollWrapper, 'top');
+    let max = sectionsArrayLength * curentParams.sliderStep;
 
-  wrapper.style.top = -1 * curentSection + 'px';
-  console.log(wrapper.style.top);
+    if ((e.deltaY > 0)&&(Math.abs(curentParams.curentPosition) < max)) {
+      isBeingAnimated = true;
+      //onPageScrollWrapper.style.top = curentParams.curentPosition - curentParams.sliderStep + 'px';
+      animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
+    }
+    if ((e.deltaY < 0)&&(Math.abs(curentParams.curentPosition) > 0)) {
+      isBeingAnimated = true;
+      //onPageScrollWrapper.style.top = curentParams.curentPosition + curentParams.sliderStep + 'px';
+      animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
+    }
+  }
+ // console.log('параметры ', curentParams);
+  //console.log('позиция слайдера ', onPageScrollWrapper.style.top);
 });
+
+function getCurentParamsToScroll(item, itemProp, slider, sliderProp) {
+  let itemSize = Math.abs(parseInt(getComputedStyle(item)[itemProp]));
+  let curent = checkSliderPosition(parseInt(getComputedStyle(slider)[sliderProp]), sliderProp, itemSize, slider);
+  
+  return {
+    curentPosition: curent,
+    sliderStep: itemSize,
+  };
+
+  function checkSliderPosition(curentPosition, sliderProp, step, slider) {
+    let checkVal = curentPosition % step;
+    if (checkVal != 0) {
+      slider.style[sliderProp] = 0;
+      return 0;
+     // console.warn('Неверное смещение ', checkVal);
+    }  
+    return curentPosition;
+  }
+}
+
+function animateProp(elem, prop, from, to, duration) {
+  return new Promise((resolve) => {
+    function animation() {
+      const currentTime = Date.now();
+      const timesLeft = startTime + duration - currentTime;
+
+      if (timesLeft <= 0) {
+        elem.style[prop] = to + 'px';
+        isBeingAnimated = false;
+        resolve();
+      } else {
+        const progress = 1/duration * (duration - timesLeft);
+        elem.style[prop] = from + (to - from) * progress + 'px';
+        requestAnimationFrame(animation);
+      }
+    }
+
+    const startTime = Date.now();
+
+    requestAnimationFrame(animation);
+
+  });
+}
