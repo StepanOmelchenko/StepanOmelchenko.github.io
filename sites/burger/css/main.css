@@ -1508,9 +1508,7 @@ input {
 
 .overlay {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   left: 0;
   right: 0;
   top: 0;

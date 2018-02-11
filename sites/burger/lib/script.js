@@ -33,9 +33,12 @@ const body = document.body;
 const button = document.querySelector('#hamburger');
 const overlay = createOverlay(menuList);
 
+body.appendChild(overlay);
+
 button.addEventListener('click', function(e){
     e.preventDefault();
-    body.appendChild(overlay);
+    //body.appendChild(overlay);
+    overlay.style.display = 'flex';
     body.style.overflow = 'hidden';
 });
 
@@ -49,7 +52,8 @@ function createOverlay(list) {
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        body.removeChild(overlay);
+        //body.removeChild(overlay);
+        overlay.style.display = 'none';
         body.style.overflow = 'initial';
     });
 
@@ -71,7 +75,8 @@ function createOverlay(list) {
         link.textContent = list[i].name;
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            body.removeChild(overlay);
+            overlay.style.display = 'none';
+            //body.removeChild(overlay);
             body.style.overflow = 'initial';
         });
 
