@@ -150,6 +150,7 @@ function createReviewsOverlay() {
   let overlay =  document.createElement('div');
   overlay.innerHTML = document.querySelector('#reviews-overlay').innerHTML;
   overlay.classList.add('overlay');
+  overlay.classList.add('overlay--rewievs');
 
   return overlay;
 }
@@ -256,7 +257,6 @@ function setActiveItemInNavMenu(targetPosition, step) {
   asideNavigation.forEach((btn) => {
     btn.parentNode.classList.remove('navigation__item--active');
   });
-  console.log(activ);
   asideNavigation[activ].parentNode.classList.add('navigation__item--active');
 };
 
