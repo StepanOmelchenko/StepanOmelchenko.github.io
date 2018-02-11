@@ -8,23 +8,23 @@ var menuList = [
     },
     {
         name: 'бургеры',
-        href: '#'
+        href: '#third-section'
     },
     {
         name: 'команда',
-        href: '#'
+        href: '#fourth-section'
     },
     {
         name: 'меню',
-        href: '#'
+        href: '#fifth-section'
     },
     {
         name: 'отзывы',
-        href: '#'
+        href: '#sixth-section'
     },
     {
         name: 'контакты',
-        href: '#'
+        href: '#eighth-section'
     }
 ];
 
@@ -45,7 +45,6 @@ function createOverlay(list) {
     logo.classList.add('overlay__logo');
 
     let closeBtn = document.createElement('a');
-    //closeBtn.classList.add('overlay__close-btn');
     closeBtn.classList.add('close-btn');
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
@@ -67,9 +66,11 @@ function createOverlay(list) {
 
         const link = document.createElement('a');
         link.classList.add('overlay__link');
+        link.classList.add('nav-btn');
         link.href = list[i].href;
         link.textContent = list[i].name;
         link.addEventListener('click', function(e) {
+            e.preventDefault();
             body.removeChild(overlay);
             body.style.overflow = 'initial';
         });
@@ -89,71 +90,6 @@ function createOverlay(list) {
 
     return overlay;
 
-}
-
-// -slider
-
-const slider = document.querySelector('#slider-list');
-const sliderItems = slider.querySelectorAll('li');
-const sliderItemsNumber = sliderItems.length;
-const sliderItem = slider.querySelector('li');
-const sliderLeftBtn = document.querySelector('#slider-left');
-const sliderRightBtn = document.querySelector('#slider-right');
-const sliderMinPosition = 0;
-const dropdownCloseBtns = slider.querySelectorAll('.close-btn--dropdown');
-
-//doesn work well
-/*dropdownCloseBtns.forEach((closeBtn) => {
-  closeBtn.addEventListener('click', (e) => {
-    let dropdown = e.target.parentNode;
-    dropdown.style.left = '-9999px';
-    dropdown.style.opacity = 0;
-  });
-});*/
-
-sliderLeftBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  let params = getSliderSize(sliderItem, slider);
-  if (params.curentPosition > 0) {
-    setSliderPosition(params.curentPosition, -(params.step));
-  } else {
-    setSliderPosition(params.maxPosition, 0);
-  }
-});
-
-sliderRightBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  let params = getSliderSize(sliderItem, slider);
-  if (params.curentPosition < params.maxPosition) {
-    setSliderPosition(params.curentPosition, params.step);
-  } else {
-    setSliderPosition(0, 0);
-  }
-});
-
-function getSliderSize(item, slider) {
-  let step = parseInt(getComputedStyle(item).width);
-  let curent = checkSliderPosition(parseInt(getComputedStyle(slider).right), step);
-  let max = parseInt(getComputedStyle(slider).width) - step;
-  
-  return {
-    curentPosition: curent,
-    step: step,
-    maxPosition: max
-  };
-}
-
-function setSliderPosition(curentPosition, step) {
-  slider.style.right = curentPosition + step + 'px';
-}
-
-function checkSliderPosition(curentPosition, step) {
-  let checkVal = curentPosition % step;
-  if (checkVal != 0) {
-    slider.style.right = 0;
-    return 0;
-  }  
-  return curentPosition;
 }
 
 // - accordions
@@ -232,17 +168,15 @@ document.addEventListener("wheel", (e) =>{
 
     if ((e.deltaY > 0)&&(Math.abs(curentParams.curentPosition) < max)) {
       isBeingAnimated = true;
-      //onPageScrollWrapper.style.top = curentParams.curentPosition - curentParams.sliderStep + 'px';
+      setActiveItemInNavMenu(curentParams.curentPosition - curentParams.sliderStep, curentParams.sliderStep);
       animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
     }
     if ((e.deltaY < 0)&&(Math.abs(curentParams.curentPosition) > 0)) {
       isBeingAnimated = true;
-      //onPageScrollWrapper.style.top = curentParams.curentPosition + curentParams.sliderStep + 'px';
+      setActiveItemInNavMenu(curentParams.curentPosition + curentParams.sliderStep, curentParams.sliderStep);
       animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
     }
   }
- // console.log('параметры ', curentParams);
-  //console.log('позиция слайдера ', onPageScrollWrapper.style.top);
 });
 
 function getCurentParamsToScroll(item, itemProp, slider, sliderProp) {
@@ -257,9 +191,8 @@ function getCurentParamsToScroll(item, itemProp, slider, sliderProp) {
   function checkSliderPosition(curentPosition, sliderProp, step, slider) {
     let checkVal = curentPosition % step;
     if (checkVal != 0) {
-      slider.style[sliderProp] = 0;
-      return 0;
-     // console.warn('Неверное смещение ', checkVal);
+      let newPosition = (parseInt(curentPosition/step) ) * step;
+      return newPosition;
     }  
     return curentPosition;
   }
@@ -283,8 +216,97 @@ function animateProp(elem, prop, from, to, duration) {
     }
 
     const startTime = Date.now();
-
     requestAnimationFrame(animation);
 
   });
 }
+
+// navigation menu
+
+const navBtns = document.querySelectorAll('.nav-btn');
+const asideNavigation = document.querySelectorAll('.navigation__link');
+
+navBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let target = document.querySelector(btn.hash);
+    let curentParams = getCurentParamsToScroll(section, 'height', onPageScrollWrapper, 'top');
+    let targetPosition = -target.offsetTop;
+    if (e.currentTarget.classList.contains('navigation__link')) {
+      asideNavigation.forEach((btn) => {
+        btn.parentNode.classList.remove('navigation__item--active');
+      });
+      e.currentTarget.parentNode.classList.add('navigation__item--active');
+    } else {
+      setActiveItemInNavMenu(targetPosition, curentParams.sliderStep);
+    }
+    isBeingAnimated = true;
+    animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, targetPosition, onePageScrollAnimationDuration);
+  });
+});
+
+function setActiveItemInNavMenu(targetPosition, step) {
+  //console.log(curentPosition, step);
+  let activ = Math.abs(parseInt(targetPosition/step));
+  asideNavigation.forEach((btn) => {
+    btn.parentNode.classList.remove('navigation__item--active');
+  });
+  console.log(activ);
+  asideNavigation[activ].parentNode.classList.add('navigation__item--active');
+};
+
+// -slider
+
+const slider = document.querySelector('#slider-list');
+const sliderItems = slider.querySelectorAll('li');
+const sliderItemsNumber = sliderItems.length;
+const sliderItem = slider.querySelector('li');
+const sliderLeftBtn = document.querySelector('#slider-left');
+const sliderRightBtn = document.querySelector('#slider-right');
+const sliderMinPosition = 0;
+
+sliderLeftBtn.addEventListener('click', (e) =>{
+  e.preventDefault();
+  let params = getSliderSize(sliderItem, slider);
+  if (params.curentPosition > 0) {
+    setSliderPosition(params.curentPosition, -(params.step));
+  } else {
+    setSliderPosition(params.maxPosition, 0);
+  }
+});
+
+sliderRightBtn.addEventListener('click', (e) =>{
+  e.preventDefault();
+  let params = getSliderSize(sliderItem, slider);
+  if (params.curentPosition < params.maxPosition) {
+    setSliderPosition(params.curentPosition, params.step);
+  } else {
+    setSliderPosition(0, 0);
+  }
+});
+
+function getSliderSize(item, slider) {
+  let step = parseInt(getComputedStyle(item).width);
+  let curent = checkSliderPosition(parseInt(getComputedStyle(slider).right), step);
+  let max = parseInt(getComputedStyle(slider).width) - step;
+  
+  return {
+    curentPosition: curent,
+    step: step,
+    maxPosition: max
+  };
+}
+
+function setSliderPosition(curentPosition, step) {
+  slider.style.right = curentPosition + step + 'px';
+}
+
+function checkSliderPosition(curentPosition, step) {
+  let checkVal = curentPosition % step;
+  if (checkVal != 0) {
+    slider.style.right = 0;
+    return 0;
+  }  
+  return curentPosition;
+}
+
