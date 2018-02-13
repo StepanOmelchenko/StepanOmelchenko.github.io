@@ -37,7 +37,6 @@ body.appendChild(overlay);
 
 button.addEventListener('click', function(e){
     e.preventDefault();
-    //body.appendChild(overlay);
     overlay.style.display = 'flex';
     body.style.overflow = 'hidden';
 });
@@ -52,7 +51,6 @@ function createOverlay(list) {
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        //body.removeChild(overlay);
         overlay.style.display = 'none';
         body.style.overflow = 'initial';
     });
@@ -76,7 +74,6 @@ function createOverlay(list) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             overlay.style.display = 'none';
-            //body.removeChild(overlay);
             body.style.overflow = 'initial';
         });
 
@@ -252,7 +249,6 @@ navBtns.forEach((btn) => {
 });
 
 function setActiveItemInNavMenu(targetPosition, step) {
-  //console.log(curentPosition, step);
   let activ = Math.abs(parseInt(targetPosition/step));
   asideNavigation.forEach((btn) => {
     btn.parentNode.classList.remove('navigation__item--active');
@@ -313,5 +309,51 @@ function checkSliderPosition(curentPosition, step) {
     return 0;
   }  
   return curentPosition;
+}
+
+
+// map
+
+ymaps.ready(init);
+var myMap;
+var coords = [
+  [59.961368, 30.288778],
+  [59.913992, 30.302168],
+  [59.944665, 30.373579],
+  [59.931572, 30.435377]
+];
+
+
+
+function init(){     
+  myMap = new ymaps.Map("map", {
+    center: [59.941392, 30.293756],
+    zoom: 12,
+    controls: ['zoomControl']
+  });  
+  myMap.behaviors.disable('scrollZoom');
+
+  var placemarks = createPlacemarks(coords);
+
+  placemarks.forEach((placemark) => {
+    myMap.geoObjects.add(placemark);
+  });
+
+  function createPlacemarks(array) {
+    let placemarks = [];
+  
+    array.forEach((coord) => {
+      let oneMark = new ymaps.Placemark([coord[0], coord[1]], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/icons/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [0, 0]
+      });  
+      placemarks.push(oneMark);
+    });
+  
+    return placemarks;
+  }
+  
 }
 
