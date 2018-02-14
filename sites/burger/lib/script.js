@@ -80,7 +80,6 @@ function createOverlay(list) {
         const item = document.createElement('li');
         item.classList.add('overlay__item');
         item.appendChild(link);
-
         menu.appendChild(item);
 
     }

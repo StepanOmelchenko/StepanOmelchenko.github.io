@@ -1590,7 +1590,7 @@ input {
     padding: 1.42857rem; }
     @media (max-width: 480px) {
       .overlay__box {
-        width: 21.42857rem; } }
+        width: 90%; } }
   @media (max-width: 480px) {
     .overlay__title {
       font-size: 1rem; } }
