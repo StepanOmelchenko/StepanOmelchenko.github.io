@@ -848,7 +848,7 @@
             <section class="section seventh" id="order-section">
                 <div class="seventh__inner container">
                     <h2 class="seventh__header common-header">Закажите доставку</h2>
-                    <form class="seventh__form form" action="post">
+                    <form class="seventh__form form" action="server.php" method="post" id="order-form">
                         <div class="form__column">
                             <div class="form__row">
                                 <label class="form__label">
@@ -869,19 +869,19 @@
                             <div class="form__row">
                                 <label class="form__label">
                                     <span class="form__label-title">Дом</span>
-                                    <input class="form__input" type="text" name="name" required>
+                                    <input class="form__input" type="text" name="house" required>
                                 </label>
                                 <label class="form__label">
                                     <span class="form__label-title">Корпус</span>
-                                    <input class="form__input" type="text" name="phone" required>
+                                    <input class="form__input" type="text" name="housing" required>
                                 </label>
                                 <label class="form__label">
                                     <span class="form__label-title">Квартира</span>
-                                    <input class="form__input" type="text" name="name" required>
+                                    <input class="form__input" type="text" name="app" required>
                                 </label>
                                 <label class="form__label">
                                     <span class="form__label-title">Этаж</span>
-                                    <input class="form__input" type="text" name="phone" required>
+                                    <input class="form__input" type="text" name="floor" required>
                                 </label>
                             </div>
                         </div>
@@ -889,31 +889,31 @@
                             <div class="form__row">
                                 <label class="form__label">
                                     <span class="form__title">Комментарий</span>
-                                    <textarea class="form__textarea"></textarea>
+                                    <textarea class="form__textarea" name="text"></textarea>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__radio">
-                                    <input class="form__radio-btn" type="radio" name="pay" checked>
+                                    <input class="form__radio-btn" type="radio" name="pay" value="cash" checked>
                                     <span class="form__radio-img"></span>
                                     <span class="form__radio-title">Потребуется сдача</span>
                                 </label>
                                 <label class="form__radio">
-                                    <input class="form__radio-btn" type="radio" name="pay">
+                                    <input class="form__radio-btn" type="radio" name="pay" value="card">
                                     <span class="form__radio-img"></span>
                                     <span class="form__radio-title">Оплата по карте</span>
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__checkbox">
-                                    <input class="form__checkbox-btn" type="checkbox" name="callback">
+                                    <input class="form__checkbox-btn" type="checkbox" name="callback" value="1">
                                     <span class="form__checkbox-img"></span>
                                     <span class="form__checkbox-title">Не перезванивать</span>
                                 </label>
                             </div>
                             <div class="form__btns-set">
                                 <div class="form__btn">
-                                    <a class="order-btn" href="#">Заказать</a>
+                                    <button class="order-btn" id="form-submit" type="submit">Заказать</button>
                                 </div>
                                 <label class="form__reset">
                                     <span class="form__reset-title">Очистить</span>

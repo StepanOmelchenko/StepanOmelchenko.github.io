@@ -356,3 +356,11 @@ function init(){
   
 }
 
+// form sender
+
+/*var formSubmit = document.querySelector('#form-submit');
+
+formSubmit.addEventListener('submit', (e) =>{
+
+});*/
+

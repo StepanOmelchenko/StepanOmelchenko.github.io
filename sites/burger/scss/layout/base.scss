@@ -45,6 +45,12 @@ a{
     display: inline-block;
 }
 
+button{
+    border: none;
+    color: inherit;
+    cursor: pointer;
+}
+
 .hidden{
     visibility: hidden;
 }
