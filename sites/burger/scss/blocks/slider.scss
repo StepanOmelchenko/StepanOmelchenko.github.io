@@ -178,7 +178,7 @@
         display: flex;
         right: 0;
         will-change: right;
-        transition: cubic-bezier(.5, -.5, .7, 1.5) right .9s;
+        transition: cubic-bezier(.6, 0, .5, .9) right .9s;
     }
 
     &__left,
