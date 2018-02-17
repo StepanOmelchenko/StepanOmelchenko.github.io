@@ -788,14 +788,14 @@ input {
       text-align: center;
       font-size: 24px; } }
 
-.sixth__inner-text, .overlay__text {
+.sixth__inner-text, .overlay__text, .order-modal__text {
   line-height: 1.71429rem; }
   @media (max-width: 780px) {
-    .sixth__inner-text, .overlay__text {
+    .sixth__inner-text, .overlay__text, .order-modal__text {
       text-align: center;
       line-height: initial; } }
   @media (max-width: 480px) {
-    .sixth__inner-text, .overlay__text {
+    .sixth__inner-text, .overlay__text, .order-modal__text {
       display: none; } }
 
 .sixth__inner-link {
@@ -1640,3 +1640,12 @@ input {
     font-family: "ubuntumedium", Arial, Helvetica, sans-serif; }
   .dropdown__td-weight {
     text-align: right; }
+
+.order-modal__box {
+  border-radius: 0.71429rem;
+  background-color: #fff;
+  padding: 1.42857rem;
+  width: 14.28571rem; }
+
+.order-modal__text {
+  color: #2f3234; }

@@ -47,5 +47,5 @@
         $data['resp'] = "Where is some server error";
     }
 
-    echo $data;
+    echo $data['resp'];
 ?>

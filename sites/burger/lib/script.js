@@ -358,9 +358,73 @@ function init(){
 
 // form sender
 
-/*var formSubmit = document.querySelector('#form-submit');
+var orderSection = document.querySelector('#order-section'),
+    orderForm = document.querySelector('#order-form');
 
-formSubmit.addEventListener('submit', (e) =>{
+var orderOverlay = document.createElement('div');
+    orderOverlay.innerHTML = document.querySelector('#order-overlay').innerHTML;
+    orderOverlay.classList.add('overlay');
+    orderOverlay.classList.add('overlay--rewievs');
+var orderCloseBtn = orderOverlay.querySelector('#order-close-btn');
 
-});*/
+orderCloseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  orderSection.removeChild(orderOverlay);
+});
+
+orderForm.addEventListener('submit', (e) =>{
+  console.log('in form');
+  e.preventDefault();
+  createReq(orderForm).then(
+    (mes) => {
+      console.log('in resolve');
+      console.log(mes);
+      createOrderModalWindow(orderSection, orderOverlay, mes);
+    },
+    (error) =>{
+      console.log('in reject');
+      console.log(error);
+      createOrderModalWindow(orderSection, orderOverlay, error);
+    }
+  );
+});
+
+function createReq(form) {
+  return new Promise((resolve, reject) => {
+    let xhr = new XMLHttpRequest(),
+        method = form.method,
+        url = form.action,
+        data = new FormData(form);
+
+        console.log(form);
+        console.log(data);
+
+
+    xhr.open(method, url, true);
+    xhr.send(data);
+    
+    xhr.onerror = (erroe) =>{
+      reject(error);
+    }
+
+    xhr.onreadystatechange = () =>{
+      if (xhr.readyState != 4) return;
+      
+      if (xhr.responseText == 'OK') {
+        resolve(xhr.responseText);
+      }else{
+        reject(xhr.responseText);
+      }
+    }
+
+  });
+}
+
+function createOrderModalWindow(parent, child, text) {
+  if (!text) {
+    text = 'no response';
+  }
+  child.querySelector('.order-modal__text').innerText = text;
+  parent.appendChild(child);
+}
 
