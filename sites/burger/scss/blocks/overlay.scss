@@ -9,8 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $black;
-    opacity: .9;
+    background-color: rgba($black, .9);
     color: $white;
 
         &__header{

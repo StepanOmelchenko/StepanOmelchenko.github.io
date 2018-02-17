@@ -1533,8 +1533,7 @@ input {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #2f3234;
-  opacity: .9;
+  background-color: rgba(47, 50, 52, 0.9);
   color: #fff; }
   .overlay__header {
     width: 100%;
