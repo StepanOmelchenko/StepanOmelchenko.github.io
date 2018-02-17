@@ -373,17 +373,12 @@ orderCloseBtn.addEventListener('click', (e) => {
 });
 
 orderForm.addEventListener('submit', (e) =>{
-  console.log('in form');
   e.preventDefault();
   createReq(orderForm).then(
     (mes) => {
-      console.log('in resolve');
-      console.log(mes);
       createOrderModalWindow(orderSection, orderOverlay, mes);
     },
     (error) =>{
-      console.log('in reject');
-      console.log(error);
       createOrderModalWindow(orderSection, orderOverlay, error);
     }
   );
@@ -396,14 +391,10 @@ function createReq(form) {
         url = form.action,
         data = new FormData(form);
 
-        console.log(form);
-        console.log(data);
-
-
     xhr.open(method, url, true);
     xhr.send(data);
     
-    xhr.onerror = (erroe) =>{
+    xhr.onerror = (error) =>{
       reject(error);
     }
 
