@@ -32,7 +32,7 @@
     
     ';
 
-    $headers =  "From: Ever Best Burger <best-burger@thelookingglass.com>\r\n".
+    $headers =  "From: Ever Best Burger <ors_step.obj@mail.ru>\r\n".
                 "MIME-Version: 1.0" . "\r\n" .
                 "Content-type: text/html; charset=UTF-8" . "\r\n";
 
