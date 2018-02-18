@@ -121,7 +121,6 @@ const reviewsList = document.querySelector('#reviews-list');
 const reviewsBtns = reviewsList.querySelectorAll('.sixth__inner-link');
 const reviewsOverlay = createReviewsOverlay();
 const reviewsOverlayBtn = reviewsOverlay.querySelector('#reviews-overlay-btn');
-const sixthSection = document.querySelector('#sixth-section');
 
 reviewsBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -131,14 +130,14 @@ reviewsBtns.forEach((btn) => {
     body.style.overflow = 'hidden';
     reviewsOverlay.querySelector('.overlay__title').innerText = title;
     reviewsOverlay.querySelector('.overlay__text').innerText = text;
-    sixthSection.appendChild(reviewsOverlay);
+    body.appendChild(reviewsOverlay);
   });
 });
 
 reviewsOverlayBtn.addEventListener('click', (e) => {
   e.preventDefault();
   body.style.overflow = 'initial';
-  sixthSection.removeChild(reviewsOverlay);
+  body.removeChild(reviewsOverlay);
 });
 
 
@@ -322,8 +321,6 @@ var coords = [
   [59.931572, 30.435377]
 ];
 
-
-
 function init(){     
   myMap = new ymaps.Map("map", {
     center: [59.941392, 30.293756],
@@ -358,10 +355,8 @@ function init(){
 
 // form sender
 
-var orderSection = document.querySelector('#order-section'),
-    orderForm = document.querySelector('#order-form');
-
-var orderOverlay = document.createElement('div');
+var orderForm = document.querySelector('#order-form');
+    orderOverlay = document.createElement('div');
     orderOverlay.innerHTML = document.querySelector('#order-overlay').innerHTML;
     orderOverlay.classList.add('overlay');
     orderOverlay.classList.add('overlay--rewievs');
@@ -369,17 +364,17 @@ var orderCloseBtn = orderOverlay.querySelector('#order-close-btn');
 
 orderCloseBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  orderSection.removeChild(orderOverlay);
+  body.removeChild(orderOverlay);
 });
 
 orderForm.addEventListener('submit', (e) =>{
   e.preventDefault();
   createReq(orderForm).then(
     (mes) => {
-      createOrderModalWindow(orderSection, orderOverlay, mes);
+      createOrderModalWindow(body, orderOverlay, mes);
     },
     (error) =>{
-      createOrderModalWindow(orderSection, orderOverlay, error);
+      createOrderModalWindow(body, orderOverlay, error);
     }
   );
 });

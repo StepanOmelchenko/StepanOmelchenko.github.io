@@ -1644,7 +1644,8 @@ input {
   border-radius: 0.71429rem;
   background-color: #fff;
   padding: 1.42857rem;
-  width: 14.28571rem; }
+  width: 14.28571rem;
+  text-align: center; }
 
 .order-modal__text {
   color: #2f3234; }
