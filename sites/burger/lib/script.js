@@ -164,18 +164,20 @@ var isBeingAnimated = false;
 document.addEventListener("wheel", (e) =>{
   
   if (!isBeingAnimated) {
-    let curentParams = getCurentParamsToScroll(section, 'height', onPageScrollWrapper, 'top');
+    let curentParams = getCurentParamsToScroll(section, 'height', onPageScrollWrapper, 'transform');
     let max = sectionsArrayLength * curentParams.sliderStep;
 
     if ((e.deltaY > 0)&&(Math.abs(curentParams.curentPosition) < max)) {
       isBeingAnimated = true;
       setActiveItemInNavMenu(curentParams.curentPosition - curentParams.sliderStep, curentParams.sliderStep);
-      animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
+      //animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
+      animateTranslateY(onPageScrollWrapper, curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
     }
     if ((e.deltaY < 0)&&(Math.abs(curentParams.curentPosition) > 0)) {
       isBeingAnimated = true;
       setActiveItemInNavMenu(curentParams.curentPosition + curentParams.sliderStep, curentParams.sliderStep);
-      animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
+      //animateProp(onPageScrollWrapper, 'top', curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
+      animateTranslateY(onPageScrollWrapper, curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
     }
   }
 });
@@ -183,7 +185,7 @@ document.addEventListener("wheel", (e) =>{
 function getCurentParamsToScroll(item, itemProp, slider, sliderProp) {
   let itemSize = Math.abs(parseInt(getComputedStyle(item)[itemProp]));
   let curent = checkSliderPosition(parseInt(getComputedStyle(slider)[sliderProp]), sliderProp, itemSize, slider);
-  
+  console.log(getComputedStyle(slider)[sliderProp]);
   return {
     curentPosition: curent,
     sliderStep: itemSize,
@@ -199,7 +201,7 @@ function getCurentParamsToScroll(item, itemProp, slider, sliderProp) {
   }
 }
 
-function animateProp(elem, prop, from, to, duration) {
+/*function animateProp(elem, prop, from, to, duration) {
   return new Promise((resolve) => {
     function animation() {
       const currentTime = Date.now();
@@ -219,6 +221,31 @@ function animateProp(elem, prop, from, to, duration) {
     const startTime = Date.now();
     requestAnimationFrame(animation);
 
+  });
+}*/
+
+function animateTranslateY(elem, from, to, duration) {
+  return new Promise((resolve) => {
+    function animate() {
+      const currentTime = Date.now();
+      const timesLeft = startTime + duration - currentTime;
+
+      if (timesLeft <= 0) {
+        elem.style.transform = `translate(0, ${to}px)`;
+        //console.log(to);
+        isBeingAnimated = false;
+        resolve();
+      } else {
+        const progress = 1/duration * (duration - timesLeft);
+        const offset = from + (to - from) * progress + 'px';
+        //console.log(offset);
+        elem.style['transform'] = `translate(0, ${offset})`;
+        requestAnimationFrame(animate);
+      }
+    }
+
+    const startTime = Date.now();
+    requestAnimationFrame(animate);
   });
 }
 
