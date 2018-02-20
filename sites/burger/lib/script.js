@@ -163,25 +163,30 @@ var isBeingAnimated = false;
 var sectionPosition = 0;
 
 document.addEventListener("wheel", (e) =>{
-  
   if (!isBeingAnimated) {
     let curentParams = getCurentParamsToScroll(section, 'height', sectionPosition);
     let max = sectionsArrayLength * curentParams.sliderStep;
 
     if ((e.deltaY > 0)&&(Math.abs(curentParams.curentPosition) < max)) {
-      isBeingAnimated = true;
-      setActiveItemInNavMenu(curentParams.curentPosition - curentParams.sliderStep, curentParams.sliderStep);
+      let moveTo = curentParams.curentPosition - curentParams.sliderStep;
       sectionPosition--;
-      animateTranslateY(onPageScrollWrapper, curentParams.curentPosition, curentParams.curentPosition - curentParams.sliderStep, onePageScrollAnimationDuration);
+      prepareToAnimate(onPageScrollWrapper, curentParams.curentPosition, moveTo, onePageScrollAnimationDuration, curentParams.sliderStep);
     }
     if ((e.deltaY < 0)&&(Math.abs(curentParams.curentPosition) > 0)) {
-      isBeingAnimated = true;
-      setActiveItemInNavMenu(curentParams.curentPosition + curentParams.sliderStep, curentParams.sliderStep);
+      let moveTo = curentParams.curentPosition + curentParams.sliderStep;
       sectionPosition++;
-      animateTranslateY(onPageScrollWrapper, curentParams.curentPosition, curentParams.curentPosition + curentParams.sliderStep, onePageScrollAnimationDuration);
+      prepareToAnimate(onPageScrollWrapper, curentParams.curentPosition, moveTo, onePageScrollAnimationDuration, curentParams.sliderStep);
     }
   }
 });
+
+function prepareToAnimate(onPageScrollWrapper, fromPosition, toPosition, duration, sliderStep) {
+  isBeingAnimated = true;
+  setActiveItemInNavMenu(toPosition, sliderStep);
+  animateTranslateY(onPageScrollWrapper, fromPosition, toPosition, duration).then(() => {
+    isBeingAnimated = false;
+  });
+}
 
 function getCurentParamsToScroll(item, itemProp, sliderPosition) {
   let itemSize = Math.abs(parseInt(getComputedStyle(item)[itemProp]));
@@ -200,7 +205,6 @@ function animateTranslateY(elem, from, to, duration) {
 
       if (timesLeft <= 0) {
         elem.style.transform = `translate(0, ${to}px)`;
-        isBeingAnimated = false;
         resolve();
       } else {
         const progress = 1/duration * (duration - timesLeft);
@@ -245,6 +249,7 @@ function setActiveItemInNavMenu(targetPosition, step) {
     btn.parentNode.classList.remove('navigation__item--active');
   });
   asideNavigation[activ].parentNode.classList.add('navigation__item--active');
+  console.log(activ);
 };
 
 // -slider
