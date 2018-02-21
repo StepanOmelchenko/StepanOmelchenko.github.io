@@ -157,44 +157,47 @@ const onPageScrollWrapper = document.querySelector('#wrapper-scroll');
 const onePageScrollAnimationDuration = 900;
 const sectionsArray = onPageScrollWrapper.querySelectorAll('section');
 const section = onPageScrollWrapper.querySelector('section');
-//const sectionStep = parseInt(getComputedStyle(section).height);
-const sectionsArrayLength = sectionsArray.length - 1;
+const sectionsArrayMaxPosition = sectionsArray.length - 1;
+var sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
+var maxPosition = sectionsArrayMaxPosition * sectionHeight;
 var isBeingAnimated = false;
 var sectionPosition = 0;
 
 document.addEventListener("wheel", (e) =>{
   if (!isBeingAnimated) {
-    let curentParams = getCurentParamsToScroll(section, 'height', sectionPosition);
-    let max = sectionsArrayLength * curentParams.sliderStep;
 
-    if ((e.deltaY > 0)&&(Math.abs(curentParams.curentPosition) < max)) {
-      let moveTo = curentParams.curentPosition - curentParams.sliderStep;
-      sectionPosition--;
-      prepareToAnimate(onPageScrollWrapper, curentParams.curentPosition, moveTo, onePageScrollAnimationDuration, curentParams.sliderStep);
+    if ((e.deltaY < 0)&&(sectionPosition > 0)) {
+      prepareToAnimate('down');
     }
-    if ((e.deltaY < 0)&&(Math.abs(curentParams.curentPosition) > 0)) {
-      let moveTo = curentParams.curentPosition + curentParams.sliderStep;
-      sectionPosition++;
-      prepareToAnimate(onPageScrollWrapper, curentParams.curentPosition, moveTo, onePageScrollAnimationDuration, curentParams.sliderStep);
+
+    if ((e.deltaY > 0)&&(sectionPosition < sectionsArrayMaxPosition)) {
+      prepareToAnimate('up');
     }
+
   }
 });
 
-function prepareToAnimate(onPageScrollWrapper, fromPosition, toPosition, duration, sliderStep) {
+function prepareToAnimate(direction) {
+  
   isBeingAnimated = true;
-  setActiveItemInNavMenu(toPosition, sliderStep);
-  animateTranslateY(onPageScrollWrapper, fromPosition, toPosition, duration).then(() => {
+  let currentPosition = getcurrentPosition(sectionPosition);
+  let toPosition = 0;
+  let duration = onePageScrollAnimationDuration;
+
+  if (direction === 'down') {
+    toPosition = (sectionPosition - 1) * -sectionHeight;
+  } else if (direction === 'up') {
+    toPosition = (sectionPosition + 1) * -sectionHeight;
+  }
+
+  setActiveItemInNavMenu(toPosition, sectionHeight);
+  animateTranslateY(onPageScrollWrapper, currentPosition, toPosition, duration).then(() => {
     isBeingAnimated = false;
   });
 }
 
-function getCurentParamsToScroll(item, itemProp, sliderPosition) {
-  let itemSize = Math.abs(parseInt(getComputedStyle(item)[itemProp]));
-  let curent = sliderPosition * itemSize;
-  return {
-    curentPosition: curent,
-    sliderStep: itemSize,
-  };
+function getcurrentPosition(position) {
+  return -position * sectionHeight;
 }
 
 function animateTranslateY(elem, from, to, duration) {
@@ -227,19 +230,17 @@ const asideNavigation = document.querySelectorAll('.navigation__link');
 navBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    let target = document.querySelector(btn.hash);
-    let curentParams = getCurentParamsToScroll(section, 'height', sectionPosition);
-    let targetPosition = -target.offsetTop;
-    if (e.currentTarget.classList.contains('navigation__link')) {
-      asideNavigation.forEach((btn) => {
-        btn.parentNode.classList.remove('navigation__item--active');
+    if (!isBeingAnimated) {
+      let target = document.querySelector(btn.hash);
+      let currentPosition = getcurrentPosition(sectionPosition);
+      let targetPosition = -target.offsetTop;
+      isBeingAnimated = true;
+
+      setActiveItemInNavMenu(targetPosition, sectionHeight);
+      animateTranslateY(onPageScrollWrapper, currentPosition, targetPosition, onePageScrollAnimationDuration).then(() => {
+        isBeingAnimated = false;
       });
-      e.currentTarget.parentNode.classList.add('navigation__item--active');
-    } else {
-      setActiveItemInNavMenu(targetPosition, curentParams.sliderStep);
     }
-    isBeingAnimated = true;
-    animateTranslateY(onPageScrollWrapper, curentParams.curentPosition, targetPosition, onePageScrollAnimationDuration);
   });
 });
 
@@ -249,7 +250,7 @@ function setActiveItemInNavMenu(targetPosition, step) {
     btn.parentNode.classList.remove('navigation__item--active');
   });
   asideNavigation[activ].parentNode.classList.add('navigation__item--active');
-  console.log(activ);
+  sectionPosition = activ;
 };
 
 // -slider
@@ -265,8 +266,8 @@ const sliderMinPosition = 0;
 sliderLeftBtn.addEventListener('click', (e) =>{
   e.preventDefault();
   let params = getSliderSize(sliderItem, slider);
-  if (params.curentPosition > 0) {
-    setSliderPosition(params.curentPosition, -(params.step));
+  if (params.currentPosition > 0) {
+    setSliderPosition(params.currentPosition, -(params.step));
   } else {
     setSliderPosition(params.maxPosition, 0);
   }
@@ -275,8 +276,8 @@ sliderLeftBtn.addEventListener('click', (e) =>{
 sliderRightBtn.addEventListener('click', (e) =>{
   e.preventDefault();
   let params = getSliderSize(sliderItem, slider);
-  if (params.curentPosition < params.maxPosition) {
-    setSliderPosition(params.curentPosition, params.step);
+  if (params.currentPosition < params.maxPosition) {
+    setSliderPosition(params.currentPosition, params.step);
   } else {
     setSliderPosition(0, 0);
   }
@@ -288,23 +289,23 @@ function getSliderSize(item, slider) {
   let max = parseInt(getComputedStyle(slider).width) - step;
   
   return {
-    curentPosition: curent,
+    currentPosition: curent,
     step: step,
     maxPosition: max
   };
 }
 
-function setSliderPosition(curentPosition, step) {
-  slider.style.right = curentPosition + step + 'px';
+function setSliderPosition(currentPosition, step) {
+  slider.style.right = currentPosition + step + 'px';
 }
 
-function checkSliderPosition(curentPosition, step) {
-  let checkVal = curentPosition % step;
+function checkSliderPosition(currentPosition, step) {
+  let checkVal = currentPosition % step;
   if (checkVal != 0) {
     slider.style.right = 0;
     return 0;
   }  
-  return curentPosition;
+  return currentPosition;
 }
 
 
