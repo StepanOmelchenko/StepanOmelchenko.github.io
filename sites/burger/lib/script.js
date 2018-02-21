@@ -159,9 +159,16 @@ const sectionsArray = onPageScrollWrapper.querySelectorAll('section');
 const section = onPageScrollWrapper.querySelector('section');
 const sectionsArrayMaxPosition = sectionsArray.length - 1;
 var sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
-var maxPosition = sectionsArrayMaxPosition * sectionHeight;
 var isBeingAnimated = false;
 var sectionPosition = 0;
+
+window.addEventListener('resize', () => {
+  sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
+  if (!isBeingAnimated) {
+    let resize = -1 * sectionHeight * sectionPosition;
+    onPageScrollWrapper.style['transform'] = `translate(0, ${resize}px)`;
+  }
+});
 
 document.addEventListener("wheel", (e) =>{
   if (!isBeingAnimated) {
