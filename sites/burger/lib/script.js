@@ -160,17 +160,34 @@ const section = onPageScrollWrapper.querySelector('section');
 const sectionsArrayMaxPosition = sectionsArray.length - 1;
 const navBtns = document.querySelectorAll('.nav-btn');
 const asideNavigation = document.querySelectorAll('.navigation__link');
-var sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
+var sectionHeight = parseInt(getComputedStyle(section).height);
 var isBeingAnimated = false;
 var sectionPosition = 0;
 
 window.addEventListener('resize', () => {
-  sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
-  if (!isBeingAnimated) {
-    let resize = -1 * sectionHeight * sectionPosition;
-    onPageScrollWrapper.style['transform'] = `translate(0, ${resize}px)`;
-  }
+    delayFunc(() =>{
+      resizeWindow();
+    }, 1000);
 });
+
+delayFunc = (function(){
+  var timer = 0;
+  return function(callback, ms) {
+    clearTimeout(timer);
+    timer = setTimeout(callback, ms);
+  }
+})();
+
+function resizeWindow() {
+  sectionHeight = parseInt(getComputedStyle(section).height);
+  sliderItemHeight = parseInt(getComputedStyle(sliderItem).width);
+  if (!isBeingAnimated) {
+    let resizeOnePageScroll = -1 * sectionHeight * sectionPosition;
+    onPageScrollWrapper.style['transform'] = `translate(0, ${resizeOnePageScroll}px)`;
+    let resizeSlider = -1 * sliderItemHeight * sliderCurentPosition;
+    slider.style['transform'] = `translate(${resizeSlider}px, 0)`;
+  }
+}
 
 document.addEventListener("wheel", (e) =>{
   if (!isBeingAnimated) {
@@ -264,9 +281,9 @@ function setActiveItemInNavMenu(targetPosition, step) {
 const slider = document.querySelector('#slider-list');
 const sliderItemsNumber = slider.querySelectorAll('li').length - 1;
 const sliderItem = slider.querySelector('li');
-const sliderItemHeight = parseInt(getComputedStyle(sliderItem).width);
 const sliderLeftBtn = document.querySelector('#slider-left');
 const sliderRightBtn = document.querySelector('#slider-right');
+var sliderItemHeight = parseInt(getComputedStyle(sliderItem).width);
 var sliderCurentPosition = 0;
 
 sliderRightBtn.addEventListener('click', (e) =>{
