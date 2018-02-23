@@ -158,6 +158,8 @@ const onePageScrollAnimationDuration = 900;
 const sectionsArray = onPageScrollWrapper.querySelectorAll('section');
 const section = onPageScrollWrapper.querySelector('section');
 const sectionsArrayMaxPosition = sectionsArray.length - 1;
+const navBtns = document.querySelectorAll('.nav-btn');
+const asideNavigation = document.querySelectorAll('.navigation__link');
 var sectionHeight = Math.abs(parseInt(getComputedStyle(section).height));
 var isBeingAnimated = false;
 var sectionPosition = 0;
@@ -174,22 +176,23 @@ document.addEventListener("wheel", (e) =>{
   if (!isBeingAnimated) {
 
     if ((e.deltaY < 0)&&(sectionPosition > 0)) {
-      prepareToAnimate('down');
+      onePageScrollPrepareToAnimate('down');
     }
 
     if ((e.deltaY > 0)&&(sectionPosition < sectionsArrayMaxPosition)) {
-      prepareToAnimate('up');
+      onePageScrollPrepareToAnimate('up');
     }
 
   }
 });
 
-function prepareToAnimate(direction) {
+function onePageScrollPrepareToAnimate(direction) {
   
   isBeingAnimated = true;
   let currentPosition = getcurrentPosition(sectionPosition);
   let toPosition = 0;
   let duration = onePageScrollAnimationDuration;
+  const animatedProp = 'translateY';
 
   if (direction === 'down') {
     toPosition = (sectionPosition - 1) * -sectionHeight;
@@ -198,7 +201,7 @@ function prepareToAnimate(direction) {
   }
 
   setActiveItemInNavMenu(toPosition, sectionHeight);
-  animateTranslateY(onPageScrollWrapper, currentPosition, toPosition, duration).then(() => {
+  animateTranslate(onPageScrollWrapper, animatedProp, currentPosition, toPosition, duration).then(() => {
     isBeingAnimated = false;
   });
 }
@@ -207,19 +210,19 @@ function getcurrentPosition(position) {
   return -position * sectionHeight;
 }
 
-function animateTranslateY(elem, from, to, duration) {
+function animateTranslate(elem, prop, from, to, duration) { //prop = translateX, translateY
   return new Promise((resolve) => {
     function animate() {
       const currentTime = Date.now();
       const timesLeft = startTime + duration - currentTime;
 
       if (timesLeft <= 0) {
-        elem.style.transform = `translate(0, ${to}px)`;
+        elem.style.transform = `${prop}(${to}px)`;
         resolve();
       } else {
         const progress = 1/duration * (duration - timesLeft);
-        const offset = from + (to - from) * progress + 'px';
-        elem.style['transform'] = `translate(0, ${offset})`;
+        const offset = from + (to - from) * progress;
+        elem.style.transform = `${prop}(${offset}px)`;
         requestAnimationFrame(animate);
       }
     }
@@ -229,22 +232,18 @@ function animateTranslateY(elem, from, to, duration) {
   });
 }
 
-// navigation menu
-
-const navBtns = document.querySelectorAll('.nav-btn');
-const asideNavigation = document.querySelectorAll('.navigation__link');
-
 navBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
     e.preventDefault();
     if (!isBeingAnimated) {
+      isBeingAnimated = true;
+      const animatedProp = 'translateY';
       let target = document.querySelector(btn.hash);
       let currentPosition = getcurrentPosition(sectionPosition);
       let targetPosition = -target.offsetTop;
-      isBeingAnimated = true;
 
       setActiveItemInNavMenu(targetPosition, sectionHeight);
-      animateTranslateY(onPageScrollWrapper, currentPosition, targetPosition, onePageScrollAnimationDuration).then(() => {
+      animateTranslate(onPageScrollWrapper, animatedProp, currentPosition, targetPosition, onePageScrollAnimationDuration).then(() => {
         isBeingAnimated = false;
       });
     }
@@ -263,58 +262,53 @@ function setActiveItemInNavMenu(targetPosition, step) {
 // -slider
 
 const slider = document.querySelector('#slider-list');
-const sliderItems = slider.querySelectorAll('li');
-const sliderItemsNumber = sliderItems.length;
+const sliderItemsNumber = slider.querySelectorAll('li').length - 1;
 const sliderItem = slider.querySelector('li');
+const sliderItemHeight = parseInt(getComputedStyle(sliderItem).width);
 const sliderLeftBtn = document.querySelector('#slider-left');
 const sliderRightBtn = document.querySelector('#slider-right');
-const sliderMinPosition = 0;
-
-sliderLeftBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  let params = getSliderSize(sliderItem, slider);
-  if (params.currentPosition > 0) {
-    setSliderPosition(params.currentPosition, -(params.step));
-  } else {
-    setSliderPosition(params.maxPosition, 0);
-  }
-});
+var sliderCurentPosition = 0;
 
 sliderRightBtn.addEventListener('click', (e) =>{
-  e.preventDefault();
-  let params = getSliderSize(sliderItem, slider);
-  if (params.currentPosition < params.maxPosition) {
-    setSliderPosition(params.currentPosition, params.step);
-  } else {
-    setSliderPosition(0, 0);
-  }
+    e.preventDefault();
+    if (!isBeingAnimated) {
+        let curentPosition = getSliderCurentPosition(sliderCurentPosition, sliderItemHeight);
+        if (sliderCurentPosition < sliderItemsNumber) {
+            sliderCurentPosition++;
+        } else {
+            sliderCurentPosition = 0;
+        }  
+        sliderAnimationPrepare(slider, curentPosition);
+    }
 });
 
-function getSliderSize(item, slider) {
-  let step = parseInt(getComputedStyle(item).width);
-  let curent = checkSliderPosition(parseInt(getComputedStyle(slider).right), step);
-  let max = parseInt(getComputedStyle(slider).width) - step;
-  
-  return {
-    currentPosition: curent,
-    step: step,
-    maxPosition: max
-  };
+sliderLeftBtn.addEventListener('click', (e) =>{
+    e.preventDefault();
+    if (!isBeingAnimated) {
+        let curentPosition = getSliderCurentPosition(sliderCurentPosition, sliderItemHeight);
+        if (sliderCurentPosition > 0) {
+            sliderCurentPosition--;
+        } else {
+            sliderCurentPosition = sliderItemsNumber;
+        }  
+        sliderAnimationPrepare(slider, curentPosition);
+    }
+});
+
+function getSliderCurentPosition(position, itemHeight) {
+    return -1 * position * itemHeight;
 }
 
-function setSliderPosition(currentPosition, step) {
-  slider.style.right = currentPosition + step + 'px';
-}
+function sliderAnimationPrepare(slider, curentPosition) {
+    const sliderProp = 'translateX';
+    const sliderAnimationDuration = 1000;
+    let moveTo = getSliderCurentPosition(sliderCurentPosition, sliderItemHeight);
+    isBeingAnimated = true;
 
-function checkSliderPosition(currentPosition, step) {
-  let checkVal = currentPosition % step;
-  if (checkVal != 0) {
-    slider.style.right = 0;
-    return 0;
-  }  
-  return currentPosition;
+    animateTranslate(slider, sliderProp, curentPosition, moveTo, sliderAnimationDuration).then(() =>{
+        isBeingAnimated = false;
+    });
 }
-
 
 // map
 
