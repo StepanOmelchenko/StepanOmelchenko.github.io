@@ -44,6 +44,8 @@ button.addEventListener('click', function(e){
 
 function createOverlay(list) {
     let logo = document.querySelector('#logo').cloneNode(true);
+    let copiedMenu = document.querySelector('#main-menu').cloneNode(true);
+    //console.log(copiedMenu);
     logo.classList.add('overlay__logo');
 
     let closeBtn = document.createElement('a');
@@ -83,7 +85,7 @@ function createOverlay(list) {
         menu.appendChild(item);
 
     }
-
+   // console.log(menu);
     header.appendChild(logo);
     header.appendChild(closeBtn);
     overlay.appendChild(header);
