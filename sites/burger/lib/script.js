@@ -165,6 +165,7 @@ const asideNavigation = document.querySelectorAll('.navigation__link');
 var sectionHeight = parseInt(getComputedStyle(section).height);
 var isBeingAnimated = false;
 var sectionPosition = 0;
+var mobileStartY = 0;
 
 window.addEventListener('resize', () => {
     delayFunc(() =>{
@@ -196,34 +197,36 @@ document.addEventListener('touchstart', (e) => {
 
   if (mobileTouch && mobileTouch.length) {
     e.preventDefault();
-    let startY = mobileTouch[0].pageY;
+    mobileStartY = mobileTouch[0].pageY;
 
     document.addEventListener('touchmove', touchMove);
-
-    function touchMove(e) {
-      let mobileMove = e.touches;
-
-      if (mobileMove && mobileMove.length) {
-        e.preventDefault();
-        let deltaY = startY -  mobileMove[0].pageY;
-        if (!isBeingAnimated) {
-          if ((deltaY > 50) && (sectionPosition < sectionsArrayMaxPosition)) {
-            console.log('up');
-            onePageScrollPrepareToAnimate('up');
-            document.removeEventListener('touchmove', touchMove);
-          }
-
-          if ((deltaY < -50) && (sectionPosition > 0)) {
-            console.log('down');
-            onePageScrollPrepareToAnimate('down');
-            document.removeEventListener('touchmove', touchMove);
-          }
-        }
-      }
-
-    }
   }
 });
+    
+function touchMove(e) {
+  let mobileMove = e.touches;
+
+  if (mobileMove && mobileMove.length) {
+    e.preventDefault();
+    let deltaY = mobileStartY - mobileMove[0].pageY;
+    if (!isBeingAnimated) {
+      if ((deltaY > 50) && (sectionPosition < sectionsArrayMaxPosition)) {
+        isBeingAnimated = true;
+        onePageScrollPrepareToAnimate('up');
+        document.removeEventListener('touchmove', touchMove);
+      }
+
+      if ((deltaY < -50) && (sectionPosition > 0)) {
+        isBeingAnimated = true;
+        onePageScrollPrepareToAnimate('down');
+        document.removeEventListener('touchmove', touchMove);
+      }
+    }
+  }
+
+}
+  
+
 
 
 
