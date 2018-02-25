@@ -196,7 +196,7 @@ document.addEventListener('touchstart', (e) => {
   let mobileTouch = e.touches;
 
   if (mobileTouch && mobileTouch.length) {
-    e.preventDefault();
+    //e.preventDefault();
     mobileStartY = mobileTouch[0].pageY;
 
     document.addEventListener('touchmove', touchMove);
@@ -207,7 +207,7 @@ function touchMove(e) {
   let mobileMove = e.touches;
 
   if (mobileMove && mobileMove.length) {
-    e.preventDefault();
+    //e.preventDefault();
     let deltaY = mobileStartY - mobileMove[0].pageY;
     if (!isBeingAnimated) {
       if ((deltaY > 50) && (sectionPosition < sectionsArrayMaxPosition)) {
@@ -225,10 +225,6 @@ function touchMove(e) {
   }
 
 }
-  
-
-
-
 
 document.addEventListener("wheel", (e) =>{
   if (!isBeingAnimated) {

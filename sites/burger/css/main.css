@@ -47,6 +47,9 @@ html {
   height: 100%;
   width: 100%; }
 
+body {
+  overflow-y: hidden; }
+
 html {
   font-size: 14px;
   font-family: "ubuntulight", Arial, Helvetica, sans-serif;
