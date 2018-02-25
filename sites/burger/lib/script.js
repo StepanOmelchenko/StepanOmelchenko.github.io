@@ -38,7 +38,7 @@ body.appendChild(overlay);
 button.addEventListener('click', function(e){
     e.preventDefault();
     overlay.style.display = 'flex';
-    body.style.overflow = 'hidden';
+    //body.style.overflow = 'hidden';
 });
 
 
@@ -54,7 +54,7 @@ function createOverlay(list) {
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         overlay.style.display = 'none';
-        body.style.overflow = 'initial';
+        //body.style.overflow = 'initial';
     });
 
     let header = document.createElement('div');
@@ -76,7 +76,7 @@ function createOverlay(list) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             overlay.style.display = 'none';
-            body.style.overflow = 'initial';
+            //body.style.overflow = 'initial';
         });
 
         const item = document.createElement('li');
@@ -129,7 +129,7 @@ reviewsBtns.forEach((btn) => {
     let text = e.target.parentNode.querySelector('.sixth__inner-text').innerText;
     let title = e.target.parentNode.querySelector('.sixth__inner-title').innerText;
     e.preventDefault();
-    body.style.overflow = 'hidden';
+    //body.style.overflow = 'hidden';
     reviewsOverlay.querySelector('.overlay__title').innerText = title;
     reviewsOverlay.querySelector('.overlay__text').innerText = text;
     body.appendChild(reviewsOverlay);
@@ -138,7 +138,7 @@ reviewsBtns.forEach((btn) => {
 
 reviewsOverlayBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  body.style.overflow = 'initial';
+  //body.style.overflow = 'initial';
   body.removeChild(reviewsOverlay);
 });
 
