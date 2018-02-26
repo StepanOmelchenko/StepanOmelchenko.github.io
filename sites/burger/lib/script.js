@@ -1,96 +1,50 @@
 
 // -hamburger
 
-var menuList = [
-    {
-        name: 'о нас',
-        href: '#second-section'
-    },
-    {
-        name: 'бургеры',
-        href: '#third-section'
-    },
-    {
-        name: 'команда',
-        href: '#fourth-section'
-    },
-    {
-        name: 'меню',
-        href: '#fifth-section'
-    },
-    {
-        name: 'отзывы',
-        href: '#sixth-section'
-    },
-    {
-        name: 'контакты',
-        href: '#eighth-section'
-    }
-];
-
-
 const body = document.body;
 const button = document.querySelector('#hamburger');
-const overlay = createOverlay(menuList);
+const overlay = createOverlay();
 
 body.appendChild(overlay);
 
-button.addEventListener('click', function(e){
+button.addEventListener('click', (e) => {
     e.preventDefault();
     overlay.style.display = 'flex';
-    //body.style.overflow = 'hidden';
 });
 
-
-function createOverlay(list) {
+function createOverlay() {
     let logo = document.querySelector('#logo').cloneNode(true);
-    let copiedMenu = document.querySelector('#main-menu').cloneNode(true);
-    //console.log(copiedMenu);
-    logo.classList.add('overlay__logo');
-
+    let copiedMenu = document.querySelector('#main-menu .header-menu__list').cloneNode(true);
+    let menuLinks = copiedMenu.querySelectorAll('.nav-btn');
+    let allElems = copiedMenu.querySelectorAll('*');
+    allElems.forEach((elem) => {
+        elem.classList = null;
+    });
+    let overlay = document.createElement('div');
+    overlay.innerHTML = document.querySelector('#main-overlay').innerHTML;
+    overlay.classList.add('overlay');
     let closeBtn = document.createElement('a');
     closeBtn.classList.add('close-btn');
     closeBtn.href = '#';
     closeBtn.addEventListener('click', function(e) {
         e.preventDefault();
         overlay.style.display = 'none';
-        //body.style.overflow = 'initial';
+    }); 
+    copiedMenu.classList.add('overlay__list');
+
+    menuLinks.forEach((link) => {
+         link.classList.add('overlay__link');
+         link.classList.add('nav-btn');
+         link.parentNode.classList.add('overlay__item');
+         link.addEventListener('click', function(e) {
+             e.preventDefault();
+             overlay.style.display = 'none';
+         });
     });
-
-    let header = document.createElement('div');
-    header.classList.add('overlay__header');
-
-    let overlay = document.createElement('div');
-    overlay.classList.add('overlay');
     
-    let menu = document.createElement('ul');
-    menu.classList.add('overlay__list');
-
-    for (i = 0; i < list.length; i++) {
-
-        const link = document.createElement('a');
-        link.classList.add('overlay__link');
-        link.classList.add('nav-btn');
-        link.href = list[i].href;
-        link.textContent = list[i].name;
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            overlay.style.display = 'none';
-            //body.style.overflow = 'initial';
-        });
-
-        const item = document.createElement('li');
-        item.classList.add('overlay__item');
-        item.appendChild(link);
-        menu.appendChild(item);
-
-    }
-   // console.log(menu);
-    header.appendChild(logo);
-    header.appendChild(closeBtn);
-    overlay.appendChild(header);
-    overlay.appendChild(menu);
-
+    overlay.querySelector('header').appendChild(logo);
+    overlay.querySelector('header').appendChild(closeBtn);
+    overlay.querySelector('nav').appendChild(copiedMenu);    
     return overlay;
 
 }
@@ -129,7 +83,6 @@ reviewsBtns.forEach((btn) => {
     let text = e.target.parentNode.querySelector('.sixth__inner-text').innerText;
     let title = e.target.parentNode.querySelector('.sixth__inner-title').innerText;
     e.preventDefault();
-    //body.style.overflow = 'hidden';
     reviewsOverlay.querySelector('.overlay__title').innerText = title;
     reviewsOverlay.querySelector('.overlay__text').innerText = text;
     body.appendChild(reviewsOverlay);
@@ -138,7 +91,6 @@ reviewsBtns.forEach((btn) => {
 
 reviewsOverlayBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  //body.style.overflow = 'initial';
   body.removeChild(reviewsOverlay);
 });
 
@@ -196,7 +148,6 @@ document.addEventListener('touchstart', (e) => {
   let mobileTouch = e.touches;
 
   if (mobileTouch && mobileTouch.length) {
-    //e.preventDefault();
     mobileStartY = mobileTouch[0].pageY;
 
     document.addEventListener('touchmove', touchMove);
@@ -207,7 +158,6 @@ function touchMove(e) {
   let mobileMove = e.touches;
 
   if (mobileMove && mobileMove.length) {
-    //e.preventDefault();
     let deltaY = mobileStartY - mobileMove[0].pageY;
     if (!isBeingAnimated) {
       if ((deltaY > 50) && (sectionPosition < sectionsArrayMaxPosition)) {
