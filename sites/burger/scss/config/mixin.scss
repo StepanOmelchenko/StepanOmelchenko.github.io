@@ -25,3 +25,9 @@
         @content;
     }
 }
+
+@mixin phones-height{
+    @media (max-height: 650px){
+        @content;
+    }
+}

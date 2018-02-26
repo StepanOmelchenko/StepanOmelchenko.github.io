@@ -10,6 +10,10 @@
             margin-left: auto;
         }
 
+        @include phones-height{
+            margin-top: 0;
+        }
+
 }
 
 .form__column{
@@ -45,6 +49,10 @@
             justify-content: center;
         }
 
+        @include phones-height{
+            margin-top: rem(3px);
+        }
+
 }
 
 .form__label{
@@ -68,6 +76,10 @@
 
         @include phones{
             padding: rem(10px) rem(5px);
+        }
+
+        @include phones-height{
+            margin-top: rem(2px);
         }
 }
 
@@ -205,6 +217,10 @@
         @include phones{
             justify-content: center;
             margin-top: rem(15px);
+        }
+
+        @include phones-height{
+            margin-top: rem(5px);
         }
 
 }

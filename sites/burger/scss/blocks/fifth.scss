@@ -102,6 +102,10 @@
             font-size: rem(24px);
         }
 
+        @include phones-height{
+            flex: 0 0 rem(400px);
+        }
+
 }
 
 

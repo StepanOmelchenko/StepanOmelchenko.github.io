@@ -167,6 +167,13 @@
             }
     }
 
+    &__stuff,
+    &__calorie{
+        @include phones-height{
+            display: none;
+        }
+    }
+
     &__arrow-left,
     &__arrow-right{
         width: 29px;
@@ -223,13 +230,17 @@
                 justify-content: space-around;
                 text-align: center;
             }
+
+            @include phones-height{
+                justify-content: flex-start;
+            }
     }
 
-    &__header{
+    /*&__header{
         @include phones-less{
             font-size: rem(24px);
         }
-    }
+    }*/
     
     &__text{
         margin-top: rem(40px);
@@ -237,6 +248,10 @@
 
             @include tablets{
                 margin-top: rem(5px);
+            }
+
+            @include phones-height{
+                display: none;
             }
 
     }

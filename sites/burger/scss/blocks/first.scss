@@ -44,6 +44,10 @@
             width: 100%;
         }
 
+        @include phones-height{
+            display: none;
+        }
+
 }
 
 .first-box__header{

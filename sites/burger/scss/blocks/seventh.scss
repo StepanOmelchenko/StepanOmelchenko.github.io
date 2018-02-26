@@ -7,4 +7,8 @@
 
 .seventh__header{
     color: $yellow;
+
+        @include phones-height{
+            font-size: rem(24px);
+        }
 }
