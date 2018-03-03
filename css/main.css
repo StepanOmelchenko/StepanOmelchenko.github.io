@@ -12,24 +12,19 @@ body, html, .main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-style: sans-serif;
     color: #000;
 }
 
 .main__wrapper{
-    width: 1024px;
-    padding: 50px 0;
-    text-align: center;
-}
-
-.main__header{
-    font-size: 24px;
+   width: 90%;
+   height: 90%;
 }
 
 .main__list{
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
