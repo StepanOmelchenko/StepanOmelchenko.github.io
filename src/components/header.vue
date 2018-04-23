@@ -1,6 +1,6 @@
 <template lang="pug">
     .header
-        h1 Hello Page
+        h1 Vue Test Page
 </template>
 
 <script>
