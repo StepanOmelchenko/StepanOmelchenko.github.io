@@ -1,14 +1,12 @@
 {
-  "name": "hellopage",
+  "name": "welcomepage",
   "version": "1.0.0",
-  "description": "Hello page!!!",
+  "description": "Welcome page!!!",
   "main": "index.js",
   "dependencies": {
     "normalize.css": "^8.0.0",
     "pug": "^2.0.3",
-    "vue": "^2.5.16",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vue": "^2.5.16"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

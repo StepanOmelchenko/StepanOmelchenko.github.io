@@ -4,8 +4,6 @@
             app-header
         .menu
             app-menu
-        .content
-            router-view
 </template>
 
 <script>
