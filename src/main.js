@@ -1,7 +1,2 @@
 import './styles/main.scss';
-
-function test() {
-    return {
-        
-    }
-}
+import './lib/parallax.js';
