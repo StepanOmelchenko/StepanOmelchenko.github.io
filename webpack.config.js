@@ -3,45 +3,18 @@ var path = require('path');
 
 module.exports = {
     entry: {
-        main: './src/main.js',
-        styles: './src/styles/index.js'
+        main: './src/main.js'
     },
     output: {
         path: path.resolve(__dirname, './dist'),
         publicPath: '/dist/',
-        filename: "[name].bundle.js"
+        filename: "bundle.js"
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use: ['vue-style-loader', 'css-loader']
-            },
-            {
                 test: /\.scss$/,
-                use: ['vue-style-loader', 'css-loader', 'svg-fill-loader/encodeSharp', 'sass-loader']
-            },
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        scss: [
-                            'vue-style-loader',
-                            'css-loader',
-                            'sass-loader',
-                            {
-                                loader: 'sass-resources-loader',
-                                options: {
-                                    resources: [
-                                        './scr/styles/variables.scss',
-                                        './src/styles/mixins.scss'
-                                    ]
-                                }
-                            }
-                        ]
-                    }
-                }
+                use: [ { loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'sass-loader' } ]
             },
             {
                 test: /\.js$/,
@@ -52,27 +25,10 @@ module.exports = {
                 test: /\.(png|jpg|gif)$/,
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]?[hash]'
+                    name: 'img/[name].[ext]'
                 }
-            },
-            {
-                test: /\.svg$/,
-                use: [
-                    'url-loader',
-                    {
-                        loader: 'svg-fill-loader?fill=#fff'
-                    }
-                ]
             }
         ]
-    },
-    resolve: {
-        alias: {
-            vue$: 'vue/dist/vue.esm.js',
-            styles: path.resolve(__dirname, 'src/styles/components/'),
-            images: path.resolve(__dirname, 'src/assets/img/')
-        },
-        extensions: ['*', '.js', '.vue', '.json']
     },
     devServer: {
         historyApiFallback: true,
@@ -94,12 +50,6 @@ if (process.env.NODE_ENV === 'production') {
                 NODE_ENV: '"production"'
             }
         }),
-        /* new webpack.optimize.UglifyJsPlugin({
-            sourceMap: true,
-            compress: {
-                warnings: false
-            }
-        }), */
         new webpack.LoaderOptionsPlugin({
             minimize: true
         })

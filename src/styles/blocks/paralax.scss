@@ -1,0 +1,45 @@
+.paralax{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fedcc8;
+
+    &__item{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__item--layer1{
+        background-image: url('../img/bg/layer-01.png');
+    }
+
+    &__item--layer2{
+        background-image: url('../img/bg/layer-02.png');
+    }
+
+    &__item--layer3{
+        background-image: url('../img/bg/layer-03.png');
+    }
+
+    &__item--layer4{
+        background-image: url('../img/bg/layer-04.png');
+    }
+
+    &__item--layer5{
+        background-image: url('../img/bg/layer-05.png');
+    }
+
+    &__item--layer6{
+        background-image: url('../img/bg/layer-06.png');
+    }
+
+    &__item--layer7{
+        background-image: url('../img/bg/layer-07.png');
+    }
+}
