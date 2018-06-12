@@ -14,10 +14,12 @@
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15"
+    "webpack-cli": "^2.0.15",
+    "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "build": "webpack --progress --hide-modules"
+    "build": "webpack --progress --hide-modules",
+    "dev": "webpack-dev-server --hot --mode=development"
   },
   "repository": {
     "type": "git",
