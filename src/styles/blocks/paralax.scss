@@ -5,6 +5,10 @@
     background-color: #fedcc8;
     overflow: hidden;
 
+    /* @include horizontal{
+        display: none;
+    } */
+
     &__item{
         position: absolute;
         left: -5%;
