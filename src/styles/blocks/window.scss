@@ -4,7 +4,7 @@
     left: 10%;
 
     @include horizontal{
-        top: 10%;
+        top: 5%;
         left: 50%;
         transform: translateX(-50%);
         max-width: 90%;
@@ -13,7 +13,8 @@
 
     &__header1{
         @include minheight{
-            font-size: 28px;
+            font-size: 24px;
+            margin-top: 0;
         }
     }
 
@@ -21,7 +22,7 @@
         margin-bottom: 20px;
 
         @include minheight{
-            font-size: 24px;
+            font-size: 22px;
             margin-bottom: 15px;
         }
     }
@@ -39,7 +40,7 @@
         font-size: 22px;
 
         @include minheight{
-            color: #CCCCCC;
+            font-size: 18px;
             font-weight: 800;
         }
 
