@@ -5,9 +5,12 @@
     background-color: #fedcc8;
     overflow: hidden;
 
-    /* @include horizontal{
-        display: none;
-    } */
+    @include horizontal{
+        background-image: url('../img/bg/fullScr.jpg');
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
     &__item{
         position: absolute;
@@ -19,6 +22,10 @@
         background-size: 150%, auto, cover;
         background-repeat: no-repeat;
         will-change: transform;
+
+        @include horizontal{
+            display: none;
+        }
     }
 
     &__item--layer1{

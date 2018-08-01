@@ -43,7 +43,6 @@ if (preloader) {
         let precent = Math.ceil(current / total * 100);
 
         preloaterTitle.innerText = precent + '%';
-        console.log(precent, '%');
 
         if (precent >= 100) {
             preloader.classList.add('preloader--hide');

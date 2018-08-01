@@ -18,8 +18,8 @@
     "webpack-dev-server": "^3.1.4"
   },
   "scripts": {
-    "build": "webpack --progress --hide-modules --watch",
-    "dev": "webpack-dev-server --hot --mode=development"
+    "build": "webpack --progress --hide-modules --mode=production",
+    "dev": "webpack-dev-server --hot --watch --mode=development"
   },
   "repository": {
     "type": "git",
