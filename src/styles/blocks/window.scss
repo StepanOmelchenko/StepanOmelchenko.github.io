@@ -3,8 +3,27 @@
     top: 10%;
     left: 10%;
 
+    @include horizontal{
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    &__header1{
+        @include minheight{
+            font-size: 28px;
+        }
+    }
+
     &__header2{
         margin-bottom: 20px;
+
+        @include minheight{
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
     }
 
     &__item{
@@ -16,8 +35,13 @@
     }
 
     &__link{
-        color: #000;
+        color: #333333;
         font-size: 22px;
+
+        @include minheight{
+            color: #CCCCCC;
+            font-weight: 800;
+        }
 
         &:hover{
             color: #909;
