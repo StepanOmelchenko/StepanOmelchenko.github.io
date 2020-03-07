@@ -36,8 +36,9 @@
     }
 
     &__link{
-        color: #333333;
+        color: inherit;
         font-size: 22px;
+        transition: color .2s;
 
         @include minheight{
             font-size: 18px;
@@ -45,7 +46,7 @@
         }
 
         &:hover{
-            color: #909;
+            color: $hover;
         }
     }
 }
