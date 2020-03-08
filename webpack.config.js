@@ -9,6 +9,11 @@ module.exports = {
         publicPath: '/dist/',
         filename: "bundle.js"
     },
+    resolve: {
+        alias: {
+            root: path.resolve(__dirname, 'src'),
+        }
+    },
     module: {
         rules: [
             {
@@ -57,6 +62,9 @@ module.exports = {
         ]
     },
     devServer: {
-        contentBase: path.resolve(__dirname, './')
+        contentBase: path.resolve(__dirname, './'),
+        publicPath: 'dist',
+        compress: true,
+        port: 9000
     }
 };

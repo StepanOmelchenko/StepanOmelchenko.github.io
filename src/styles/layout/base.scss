@@ -1,26 +1,26 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 16px;
     font-family: roboto, Arial, Helvetica, sans-serif;
     color: $primary;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-a{
+a {
     display: inline-block;
     text-decoration: none;
     color: inherit;
 }
 
-.container{
+.container {
     width: 100%;
     height: 100vh;
     position: relative;
