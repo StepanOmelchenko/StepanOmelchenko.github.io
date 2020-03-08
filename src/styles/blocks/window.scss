@@ -1,9 +1,9 @@
-.window{
+.window {
     position: absolute;
     top: 10%;
     left: 10%;
 
-    @include horizontal{
+    @include horizontal {
         top: 5%;
         left: 50%;
         transform: translateX(-50%);
@@ -11,41 +11,47 @@
         max-height: 90%;
     }
 
-    &__header1{
-        @include minheight{
-            font-size: 24px;
+    &__header {
+        margin-bottom: 8px;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 4px;
+
+        @include minheight {
+            font-size: 16px;
             margin-top: 0;
         }
     }
 
-    &__header2{
-        margin-bottom: 20px;
-
-        @include minheight{
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
+    &__subtitle {
+        font-size: 20px;
     }
 
-    &__item{
-        margin-bottom: 10px;
+    &__info {
+        margin-bottom: 8px;
+        padding-left: 8px;
+    }
 
-        &:last-child{
+    &__item {
+        margin-bottom: 8px;
+
+        &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__link{
+    &__link {
         color: inherit;
-        font-size: 22px;
         transition: color .2s;
 
-        @include minheight{
-            font-size: 18px;
+        @include minheight {
+            font-size: 14px;
             font-weight: 800;
         }
 
-        &:hover{
+        &:hover {
             color: $hover;
         }
     }

@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="dist/css/main.css">
 </head>
 <body>
-    <div class="preloader" id="preloader">
+    <section class="preloader" id="preloader">
         <span class="preloader__title" id="preloader-title">0%</span>
-    </div>
-    <div class="container">        
+    </section>
+    <section class="container">
         <ul class="parallax"></ul>
-    </div>
-    <div class="window">
-        <h1 class="window__header1">Stepan Omelchenko</h1>
-        <ul class="window__info">
-            <li></li>
-            <li></li>
-        </ul>
-        <h2 class="window__header2">frontend developer</h2>
+    </section>
+    <section class="window">
+        <header class="window__header">
+            <h1 class="window__title">Stepan Omelchenko</h1>
+            <p class="window__subtitle">frontend developer</p>
+        </header>
+        <div class="window__info">
+            <a class="window__link" href="https://t.me/StepanOmelchenko" target="_blank">telegram</a>
+            <a class="window__link" href="https://www.linkedin.com/in/stepan-omelchenko" target="_blank">linkedin</a>
+        </div>
         <ul class="window__list">
             <li class="window__item">
                 <a class="window__link" href="https://stepanomelchenko.github.io/loftschool-geo/dist/" target="_blank">Geo notes</a>
@@ -38,7 +40,7 @@
                 <a class="window__link" href="https://stepanomelchenko.github.io/airplanet/build/" target="_blank">Airplanet</a>
             </li>
         </ul>
-    </div>    
+    </section>
     <script src="/dist/bundle.js"></script>
 </body>
 </html>
