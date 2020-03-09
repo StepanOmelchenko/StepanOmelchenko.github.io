@@ -1,9 +1,9 @@
 const preloader = document.querySelector('#preloader');
 
 if (preloader) {
-    let precentTotal = 0;
-    let paths = [];
-    let preloaterTitle = document.querySelector('#preloader-title');
+    let percentageTotal = 0;
+    const paths = [];
+    let preloaderTitle = document.querySelector('#preloader-title');
 
     document.querySelectorAll('img').forEach((img) => {
         paths.push(img.src);
@@ -19,8 +19,8 @@ if (preloader) {
     if (paths.length) {
         paths.forEach((path) => {
             imgLoader(path).then(() => {
-                precentTotal++;
-                setPrecent(paths.length, precentTotal);
+                percentageTotal++;
+                setPercentage(paths.length, percentageTotal);
             });
         });
     }
@@ -32,19 +32,19 @@ if (preloader) {
             fakeImg.src = path;
             fakeImg.addEventListener('load', () => {
                 resolve();
-            })
+            });
             fakeImg.addEventListener('error', () => {
                 resolve();
             });
         });
     }
 
-    function setPrecent(total, current) {
-        let precent = Math.ceil(current / total * 100);
+    function setPercentage(total, current) {
+        const percentage = Math.ceil(current / total * 100);
 
-        preloaterTitle.innerText = precent + '%';
+        preloaderTitle.innerText = percentage + '%';
 
-        if (precent >= 100) {
+        if (percentage >= 100) {
             preloader.classList.add('preloader--hide');
         }
     }
