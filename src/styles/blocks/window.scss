@@ -12,7 +12,7 @@
     }
 
     &__header {
-        margin-bottom: 4px;
+        // margin-bottom: 4px;
     }
 
     &__title {
@@ -47,6 +47,10 @@
         margin-left: 8px;
     }
 
+    &__block-title {
+        margin-bottom: 8px;
+    }
+
     &__list {
 
     }
@@ -60,6 +64,7 @@
     }
 
     &__link {
+        display: inline-block;
         color: inherit;
         transition: color .2s;
 
