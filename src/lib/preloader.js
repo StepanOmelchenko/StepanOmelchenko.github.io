@@ -1,15 +1,15 @@
-const preloader = document.querySelector('#preloader');
+const preloader = document.querySelector('.preloader');
 
 if (preloader) {
     let percentageTotal = 0;
     const paths = [];
-    let preloaderTitle = document.querySelector('#preloader-title');
+    const preloaderTitle = document.querySelector('.preloader__title');
 
     document.querySelectorAll('img').forEach((img) => {
         paths.push(img.src);
     });
     document.querySelectorAll('*').forEach((elem) => {
-        let backGround = getComputedStyle(elem).getPropertyValue('background-image');
+        const backGround = getComputedStyle(elem).getPropertyValue('background-image');
 
         if (backGround && backGround !== 'none') {
             paths.push(backGround.replace('url("', '').replace('")', ''));
