@@ -5,14 +5,7 @@
 
     @include horizontal {
         top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        max-width: 90%;
-        max-height: 90%;
-    }
-
-    &__header {
-        // margin-bottom: 4px;
+        left: 5%;
     }
 
     &__title {
@@ -20,13 +13,17 @@
         margin-bottom: 0;
 
         @include minheight {
-            font-size: 16px;
+            font-size: 20px;
         }
     }
 
     &__subtitle {
         font-size: 20px;
         margin-bottom: 0;
+
+        @include minheight {
+            font-size: 16px;
+        }
     }
 
     &__blocks {

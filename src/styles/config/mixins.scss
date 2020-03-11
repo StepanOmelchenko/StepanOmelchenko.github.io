@@ -1,11 +1,11 @@
 @mixin horizontal {
-    @media (max-width: 980px) {
+    @media (max-width: 992px) {
         @content;
     }
 }
 
 @mixin minheight {
-    @media (max-height: 630px) {
+    @media (max-height: 576px) {
         @content;
     }
 }
