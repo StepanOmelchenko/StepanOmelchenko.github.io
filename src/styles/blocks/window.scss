@@ -74,4 +74,9 @@
             color: $hover;
         }
     }
+
+    &__link-prefix {
+        display: inline-block;
+        margin-right: 4px;
+    }
 }
