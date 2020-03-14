@@ -12,7 +12,7 @@
         margin-top: 0;
         margin-bottom: 0;
 
-        @include minheight {
+        @include minHeight {
             font-size: 20px;
         }
     }
@@ -21,7 +21,7 @@
         font-size: 20px;
         margin-bottom: 0;
 
-        @include minheight {
+        @include minHeight {
             font-size: 16px;
         }
     }
@@ -65,7 +65,7 @@
         color: inherit;
         transition: color .2s;
 
-        @include minheight {
+        @include minHeight {
             font-size: 14px;
             font-weight: 800;
         }
