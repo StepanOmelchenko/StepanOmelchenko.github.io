@@ -12,7 +12,7 @@ const production = [
         title: 'Aerosol tech'
     }
 ];
-const pets = [
+/*const pets = [
     {
         href: 'https://stepanomelchenko.github.io/portfolio/build/',
         title: 'Portfolio',
@@ -29,10 +29,10 @@ const pets = [
         href: 'https://stepanomelchenko.github.io/airplanet/build/',
         title: 'Airplanet',
     }
-];
+];*/
 
 createProjects('prod', production);
-createProjects('pets', pets);
+// createProjects('pets', pets);
 
 /**
 * @param containerName: {string}
