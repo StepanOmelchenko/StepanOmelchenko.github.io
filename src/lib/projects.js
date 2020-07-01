@@ -6,16 +6,20 @@ const production = [
     {
         href: 'https://dogovor24.ru',
         title: 'Договор 24'
+    },
+    {
+        href: 'https://aerosoltech.ru',
+        title: 'Aerosol tech'
     }
 ];
 const pets = [
     {
         href: 'https://stepanomelchenko.github.io/portfolio/build/',
-        title: 'Portfolio (adp.)',
+        title: 'Portfolio',
     },
     {
         href: 'https://stepanomelchenko.github.io/burger/build/',
-        title: 'BurgerShop (adp.)',
+        title: 'BurgerShop',
     },
     {
         href: 'https://stepanomelchenko.github.io/coworking/build/',
