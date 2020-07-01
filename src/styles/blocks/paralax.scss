@@ -6,7 +6,7 @@
     overflow: hidden;
 
     @include horizontal{
-        background-image: url('../img/bg/fullScr.jpg');
+        background-image: url('~root/img/bg/fullScr.jpg');
         background-position: bottom;
         background-repeat: no-repeat;
         background-size: cover;
@@ -29,30 +29,30 @@
     }
 
     &__item--layer1{
-        background-image: url('../img/bg/layer-01.png');
+        background-image: url('~root/img/bg/layer-01.png');
     }
 
     &__item--layer2{
-        background-image: url('../img/bg/layer-02.png');
+        background-image: url('~root/img/bg/layer-02.png');
     }
 
     &__item--layer3{
-        background-image: url('../img/bg/layer-03.png');
+        background-image: url('~root/img/bg/layer-03.png');
     }
 
     &__item--layer4{
-        background-image: url('../img/bg/layer-04.png');
+        background-image: url('~root/img/bg/layer-04.png');
     }
 
     &__item--layer5{
-        background-image: url('../img/bg/layer-05.png');
+        background-image: url('~root/img/bg/layer-05.png');
     }
 
     &__item--layer6{
-        background-image: url('../img/bg/layer-06.png');
+        background-image: url('~root/img/bg/layer-06.png');
     }
 
     &__item--layer7{
-        background-image: url('../img/bg/layer-07.png');
+        background-image: url('~root/img/bg/layer-07.png');
     }
 }
