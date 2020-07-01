@@ -1,16 +1,20 @@
 const production = [
     {
         href: 'http://app.swapwallet.com',
-        title: 'SWAP Wallet'
+        title: 'SWAP Wallet',
     },
     {
         href: 'https://dogovor24.ru',
-        title: 'Договор 24'
+        title: 'Договор 24',
     },
     {
         href: 'https://aerosoltech.ru',
-        title: 'Aerosol tech'
-    }
+        title: 'Aerosol tech',
+    },
+    {
+        href: 'https://dglyphs.com/',
+        title: 'dGlyphs',
+    },
 ];
 /*const pets = [
     {
