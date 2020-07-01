@@ -6,16 +6,16 @@
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "css-loader": "^0.28.11",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.21.0",
-    "webpack": "^4.6.0",
-    "webpack-cli": "^2.0.15",
-    "webpack-dev-server": "^3.1.4"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "build": "webpack --progress --hide-modules --watch --mode=production",
