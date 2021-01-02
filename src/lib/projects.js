@@ -1,11 +1,11 @@
 const production = [
     {
         href: 'http://app.swapwallet.com',
-        title: 'SWAP Wallet (Vue)',
+        title: 'SWAP Wallet (Vue, Vuex, TS)',
     },
     {
         href: 'https://dogovor24.ru',
-        title: 'Договор 24 (Nuxt, TS, Angular)',
+        title: 'Договор 24 (Nuxt, Vue, Vuex, TS, Angular)',
     },
     {
         href: 'https://aerosoltech.ru',
@@ -16,24 +16,6 @@ const production = [
         title: 'dGlyphs (React)',
     },
 ];
-/*const pets = [
-    {
-        href: 'https://stepanomelchenko.github.io/portfolio/build/',
-        title: 'Portfolio',
-    },
-    {
-        href: 'https://stepanomelchenko.github.io/burger/build/',
-        title: 'BurgerShop',
-    },
-    {
-        href: 'https://stepanomelchenko.github.io/coworking/build/',
-        title: 'Coworking',
-    },
-    {
-        href: 'https://stepanomelchenko.github.io/airplanet/build/',
-        title: 'Airplanet',
-    }
-];*/
 
 createProjects('prod', production);
 // createProjects('pets', pets);
