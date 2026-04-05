@@ -1,19 +1,29 @@
 const links = [
     {
-        title: 'linkedin',
-        href: 'https://www.linkedin.com/in/stepan-omelchenko',
+        title: 'MAX',
+        href: 'https://max.ru/u/f9LHodD0cOIe7Yz-hO32AjJtX3Tk2cd6kByj2m9MDxBqIpN1WEPUWiogmDA',
         prefix: '->',
     },
     {
-        title: 'telegram',
+        title: 'Почта',
+        href: 'mailto:steve.omelchenko@yandex.ru',
+        prefix: '->',
+    },
+    {
+        title: 'Telegram',
         href: 'https://t.me/StepanOmelchenko',
         prefix: '->',
     },
     {
-        title: 'github',
+        title: 'Github',
         href: 'https://github.com/StepanOmelchenko',
         prefix: '->',
-    }
+    },
+    {
+        title: 'Linkedin',
+        href: 'https://www.linkedin.com/in/stepan-omelchenko',
+        prefix: '->',
+    },
 ];
 
 const container = document.querySelector('.links');
